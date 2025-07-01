@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="it-IT" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7cc0ec6e28dd2386a2cdc6b6/script.js"></script>
+
+<title>Comprendere il codice Bacon-Shor nell'informatica quantistica</title>
+<meta name="description" content="Esplora il Codice Bacon-Shor, una pietra miliare dell&#039;informatica quantistica per la correzione affidabile degli errori e la gestione sicura dei dati nell&#039;era quantistica.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/">
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comprendere il codice Bacon-Shor nell&#039;informatica quantistica">
+<meta property="og:description" content="Esplora il Codice Bacon-Shor, una pietra miliare dell&#039;informatica quantistica per la correzione affidabile degli errori e la gestione sicura dei dati nell&#039;era quantistica.">
+<meta property="og:url" content="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/">
+<meta property="og:site_name" content="quantumai.co">
+<meta property="article:section" content="Che cosa è">
+<meta property="og:updated_time" content="2024-01-07T10:05:41+00:00">
+<meta property="og:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Bacon-Shor-Code.jpg">
+<meta property="og:image:secure_url" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Bacon-Shor-Code.jpg">
+<meta property="og:image:width" content="1344">
+<meta property="og:image:height" content="768">
+<meta property="og:image:alt" content="Codice Bacon-Shor">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2024-01-07T10:05:37+00:00">
+<meta property="article:modified_time" content="2024-01-07T10:05:41+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comprendere il codice Bacon-Shor nell&#039;informatica quantistica">
+<meta name="twitter:description" content="Esplora il Codice Bacon-Shor, una pietra miliare dell&#039;informatica quantistica per la correzione affidabile degli errori e la gestione sicura dei dati nell&#039;era quantistica.">
+<meta name="twitter:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Bacon-Shor-Code.jpg">
+<meta name="twitter:label1" content="Scritto da">
+<meta name="twitter:data1" content="Kristof George">
+<meta name="twitter:label2" content="Tempo di lettura">
+<meta name="twitter:data2" content="24 minuti">
+<script type="application/ld+json" class="rank-math-schema-pro">{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https:\/\/quantumai.co\/it\/#person",
+            "name": "quantumai.co",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/it\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "it-IT",
+                "width": "789",
+                "height": "152"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/it\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "it-IT",
+                "width": "789",
+                "height": "152"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https:\/\/quantumai.co\/it\/#website",
+            "url": "https:\/\/quantumai.co\/it\/",
+            "name": "quantumai.co",
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/it\/#person"
+            },
+            "inLanguage": "it-IT"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/Bacon–Shor-Code.jpg",
+            "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/Bacon–Shor-Code.jpg",
+            "width": "1344",
+            "height": "768",
+            "caption": "Bacon–Shor Code",
+            "inLanguage": "it-IT"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": "1",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co",
+                        "name": "Casa"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "2",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/it\/categoria\/cosa-e\/",
+                        "name": "Che cosa è"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "3",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/",
+                        "name": "Comprendere il codice Bacon-Shor nell'informatica quantistica"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#webpage",
+            "url": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/",
+            "name": "Comprendere il codice Bacon-Shor nell'informatica quantistica",
+            "datePublished": "2024-01-07T10:05:37+00:00",
+            "dateModified": "2024-01-07T10:05:41+00:00",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/it\/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/Bacon–Shor-Code.jpg"
+            },
+            "inLanguage": "it-IT",
+            "breadcrumb": {
+                "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#breadcrumb"
+            },
+            "headline": "Understanding the Bacon–Shor Code in Quantum Computing",
+            "lastReviewed": "Gennaio 7, 2024",
+            "relatedLink": [
+                "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing"
+            ],
+            "significantLink": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/\/elon-musk\/",
+            "mainEntityOfPage": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/",
+            "sameAs": [],
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "quantistico",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_mechanics",
+                        "https:\/\/www.google.com\/search?q=quantum&kgmid=\/m\/02qvmkh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commercianti",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trader_(finance)",
+                        "https:\/\/www.google.com\/search?q=traders&kgmid=\/m\/0cncxk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bitcoin",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Bitcoin",
+                        "https:\/\/www.google.com\/search?q=bitcoin&kgmid=\/m\/0135y0by"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "app",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Mobile_app",
+                        "https:\/\/www.google.com\/search?q=app&kgmid=\/m\/0h94y36"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "criptovaluta",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrency&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligenza artificiale",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=artificial+intelligence&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "informatica quantistica",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computing&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "strumento",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Tool",
+                        "https:\/\/www.google.com\/search?q=tool&kgmid=\/m\/07k1x"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "rischio",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Risk",
+                        "https:\/\/www.google.com\/search?q=risk&kgmid=\/m\/06d5f"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "software",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Software",
+                        "https:\/\/www.google.com\/search?q=software&kgmid=\/m\/01mf0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "seo",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Search_engine_optimization",
+                        "https:\/\/www.google.com\/search?q=seo&kgmid=\/m\/019qb_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "algoritmi",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Algorithm",
+                        "https:\/\/www.google.com\/search?q=algorithms&kgmid=\/m\/02qcyvp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "opzioni",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Option_(finance)",
+                        "https:\/\/www.google.com\/search?q=options&kgmid=\/m\/01lm23"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "piattaforma di trading",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Electronic_trading_platform",
+                        "https:\/\/www.google.com\/search?q=trading+platform&kgmid=\/m\/09rjlk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "in tempo reale",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Real-time_computing",
+                        "https:\/\/www.google.com\/search?q=real-time&kgmid=\/m\/026y7m6"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "parametri",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Parameter",
+                        "https:\/\/www.google.com\/search?q=parameters&kgmid=\/m\/068f8"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investimento",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investment",
+                        "https:\/\/www.google.com\/search?q=investment&kgmid=\/m\/0g_fl"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "elon musk",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Elon_Musk",
+                        "https:\/\/www.google.com\/search?q=elon+musk&kgmid=\/m\/03nzf1"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crittografia",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investitori",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investor",
+                        "https:\/\/www.google.com\/search?q=investors&kgmid=\/m\/03krjh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "broker",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Broker",
+                        "https:\/\/www.google.com\/search?q=brokers&kgmid=\/m\/0cmc2y9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commercio",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trade",
+                        "https:\/\/www.google.com\/search?q=trading&kgmid=\/m\/07br0"
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "contratti per differenza (cfds)",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=contracts+for+difference+(cfds)&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "cfd",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=cfd&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "trading automatizzato",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                        "https:\/\/www.google.com\/search?q=automated+trading&kgmid=\/m\/02pqr_n"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "criptovalute",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrencies&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligenza artificiale quantistica",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+artificial+intelligence&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "basato su cloud",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cloud_computing",
+                        "https:\/\/www.google.com\/search?q=cloud-based&kgmid=\/m\/02y_9m3"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "strategia per i social media",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=social+media+strategy&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "analisi predittiva",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Predictive_analytics",
+                        "https:\/\/www.google.com\/search?q=predictive+analytics&kgmid=\/m\/0bl93g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "tecniche di apprendimento automatico",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Machine_learning",
+                        "https:\/\/www.google.com\/search?q=machine+learning+techniques&kgmid=\/m\/01hyh_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "facile da usare",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Usability",
+                        "https:\/\/www.google.com\/search?q=user-friendly&kgmid=\/m\/01qb0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "attività in criptovaluta",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto+assets&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprendimento automatico quantistico",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+machine+learning&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "analitica",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Analytics",
+                        "https:\/\/www.google.com\/search?q=analytics&kgmid=\/m\/02gcn9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "processori quantistici",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+processors&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "computer quantistici",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computers&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "marketing digitale",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=digital+marketing&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "prova di lavoro",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Proof_of_work",
+                        "https:\/\/www.google.com\/search?q=proof+of+work&kgmid=\/m\/05bdrw"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "informazione quantistica",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_information",
+                        "https:\/\/www.google.com\/search?q=quantum+information&kgmid=\/m\/06b0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bilanciamento del carico",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Load_balancing_(computing)",
+                        "https:\/\/www.google.com\/search?q=load+balancing&kgmid=\/m\/0gl7w"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ai bot",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai+bots&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprendimento profondo",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Deep_learning",
+                        "https:\/\/www.google.com\/search?q=deep+learning&kgmid=\/m\/0h1fn8h"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https:\/\/quantumai.co\/it\/author\/gio\/",
+            "name": "Kristof George",
+            "url": "https:\/\/quantumai.co\/it\/author\/gio\/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "url": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "caption": "Kristof George",
+                "inLanguage": "it-IT"
+            },
+            "sameAs": [
+                "https:\/\/wordpress-1142890-4220391.cloudwaysapps.com"
+            ]
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "Understanding the Bacon–Shor Code in Quantum Computing",
+            "keywords": "Bacon–Shor Code",
+            "datePublished": "2024-01-07T10:05:37+00:00",
+            "dateModified": "2024-01-07T10:05:41+00:00",
+            "articleSection": "What is",
+            "author": {
+                "@id": "https:\/\/quantumai.co\/it\/author\/gio\/",
+                "name": "Kristof George"
+            },
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/it\/#person"
+            },
+            "description": "Esplora il Codice Bacon-Shor, una pietra miliare dell'informatica quantistica per la correzione affidabile degli errori e la gestione sicura dei dati nell'era quantistica.",
+            "name": "Comprendere il codice Bacon-Shor nell'informatica quantistica",
+            "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#richSnippet",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#webpage"
+            },
+            "image": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/Bacon–Shor-Code.jpg"
+            },
+            "inLanguage": "it-IT",
+            "mainEntityOfPage": {
+                "@id": "https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://quantumai.b-cdn.net/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Feed" href="https://quantumai.co/it/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Feed dei commenti" href="https://quantumai.co/it/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Understanding the Bacon–Shor Code in Quantum Computing Feed dei commenti" href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/quantumai.b-cdn.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍🔥","🐦​🔥")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://quantumai.b-cdn.net/wp-includes/css/dist/block-library/style.min.css" media="all">
+<style id="rank-math-toc-block-style-inline-css">.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") " ";counter-increment:item}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="trp-floater-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-floater-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-popup-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/css/trp-popup.css" media="all">
+<link rel="stylesheet" id="immediate-style-css" href="https://quantumai.b-cdn.net/wp-content/themes/immediate/style.css" media="all">
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script id="trp-language-cookie-js-extra">var trp_language_cookie_data = {"abs_home":"https:\/\/quantumai.co","url_slugs":{"en_GB":"en_gb","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi"},"cookie_name":"trp_language","cookie_age":"30","cookie_path":"\/","default_language":"en_GB","publish_languages":["en_GB","de_DE","es_ES","fr_FR","it_IT","ja","ru_RU","pt_BR","bg_BG","cs_CZ","da_DK","nl_NL","et","fi"],"trp_ald_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-business\/add-ons-pro\/automatic-language-detection\/includes\/trp-ald-ajax.php","detection_method":"browser-ip","popup_option":"popup","popup_type":"normal_popup","popup_textarea":"We've detected you might be speaking a different language. Do you want to change to:","popup_textarea_change_button":"Change Language","popup_textarea_close_button":"Close and do not switch language","iso_codes":{"en_GB":"en","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi","en_US":"en"},"language_urls":{"en_GB":"https:\/\/quantumai.co\/understanding-the-bacon-shor-code-in-quantum-computing\/?simply_static_page=12191","de_DE":"https:\/\/quantumai.co\/de\/verstandnis-des-bacon-shor-codes-im-quantencomputing\/?simply_static_page=12191","es_ES":"https:\/\/quantumai.co\/es\/entender-el-codigo-bacon-shor-en-la-computacion-cuantica\/?simply_static_page=12191","fr_FR":"https:\/\/quantumai.co\/fr\/comprendre-le-code-bacon-shor-en-informatique-quantique\/?simply_static_page=12191","it_IT":"https:\/\/quantumai.co\/it\/comprendere-il-codice-bacon-shor-nellinformatica-quantistica\/?simply_static_page=12191","ja":"https:\/\/quantumai.co\/ja\/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e3%83%99%e3%83%bc%e3%82%b3%e3%83%b3%e3%83%bb%e3%82%b7%e3%83%a7%e3%83%bc%e3%82%b3\/?simply_static_page=12191","ru_RU":"https:\/\/quantumai.co\/ru\/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%b4%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2\/?simply_static_page=12191","pt_BR":"https:\/\/quantumai.co\/pt\/compreensao-do-codigo-bacon-shor-na-computacao-quantica\/?simply_static_page=12191","bg_BG":"https:\/\/quantumai.co\/bg\/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%be%d0%b4%d0%b0-%d0%bd%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be\/?simply_static_page=12191","cs_CZ":"https:\/\/quantumai.co\/cs\/pochopeni-kodu-bacon-shor-v-kvantove-vypocetni-technice\/?simply_static_page=12191","da_DK":"https:\/\/quantumai.co\/da\/forsta-bacon-shor-koden-i-kvantecomputere\/?simply_static_page=12191","nl_NL":"https:\/\/quantumai.co\/nl\/het-begrijpen-van-de-bacon-shor-code-in-quantum-computing\/?simply_static_page=12191","et":"https:\/\/quantumai.co\/et\/peekoni-shor-koodi-moistmine-kvantarvutites\/?simply_static_page=12191","fi":"https:\/\/quantumai.co\/fi\/kvanttilaskennassa-kaytettavan-pekoni-shor-koodin-ymmartaminen\/?simply_static_page=12191"},"english_name":{"en_GB":"English","de_DE":"German","es_ES":"Spanish","fr_FR":"French","it_IT":"Italian","ja":"Japanese","ru_RU":"Russian","pt_BR":"Portuguese","bg_BG":"Bulgarian","cs_CZ":"Czech","da_DK":"Danish","nl_NL":"Dutch","et":"Estonian","fi":"Finnish"},"is_iphone_user_check":""};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/js/trp-language-cookie.js" id="trp-language-cookie-js"></script>
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TWTG3RS4" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["quantumai.co"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWTG3RS4");</script>
+
+
+<link rel="https://api.w.org/" href="https://quantumai.co/it/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://quantumai.co/it/wp-json/wp/v2/posts/505504">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantumai.co/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://quantumai.co/it/?p=505504">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://quantumai.co/it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fit%2Fcomprendere-il-codice-bacon-shor-nellinformatica-quantistica%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://quantumai.co/it/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fit%2Fcomprendere-il-codice-bacon-shor-nellinformatica-quantistica%2F#038;format=xml">
+		<script type="text/javascript">(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "l9090pzye1");</script>
+		<link rel="alternate" hreflang="en-GB" href="https://quantumai.co/understanding-the-bacon-shor-code-in-quantum-computing/">
+<link rel="alternate" hreflang="de-DE" href="https://quantumai.co/de/verstandnis-des-bacon-shor-codes-im-quantencomputing/">
+<link rel="alternate" hreflang="es-ES" href="https://quantumai.co/es/entender-el-codigo-bacon-shor-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr-FR" href="https://quantumai.co/fr/comprendre-le-code-bacon-shor-en-informatique-quantique/">
+<link rel="alternate" hreflang="it-IT" href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ja" href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e3%83%99%e3%83%bc%e3%82%b3%e3%83%b3%e3%83%bb%e3%82%b7%e3%83%a7%e3%83%bc%e3%82%b3/">
+<link rel="alternate" hreflang="ru-RU" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%b4%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2/">
+<link rel="alternate" hreflang="pt-BR" href="https://quantumai.co/pt/compreensao-do-codigo-bacon-shor-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg-BG" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%be%d0%b4%d0%b0-%d0%bd%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be/">
+<link rel="alternate" hreflang="cs-CZ" href="https://quantumai.co/cs/pochopeni-kodu-bacon-shor-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da-DK" href="https://quantumai.co/da/forsta-bacon-shor-koden-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl-NL" href="https://quantumai.co/nl/het-begrijpen-van-de-bacon-shor-code-in-quantum-computing/">
+<link rel="alternate" hreflang="et" href="https://quantumai.co/et/peekoni-shor-koodi-moistmine-kvantarvutites/">
+<link rel="alternate" hreflang="fi" href="https://quantumai.co/fi/kvanttilaskennassa-kaytettavan-pekoni-shor-koodin-ymmartaminen/">
+<link rel="alternate" hreflang="en" href="https://quantumai.co/understanding-the-bacon-shor-code-in-quantum-computing/">
+<link rel="alternate" hreflang="de" href="https://quantumai.co/de/verstandnis-des-bacon-shor-codes-im-quantencomputing/">
+<link rel="alternate" hreflang="es" href="https://quantumai.co/es/entender-el-codigo-bacon-shor-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr" href="https://quantumai.co/fr/comprendre-le-code-bacon-shor-en-informatique-quantique/">
+<link rel="alternate" hreflang="it" href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ru" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%b4%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2/">
+<link rel="alternate" hreflang="pt" href="https://quantumai.co/pt/compreensao-do-codigo-bacon-shor-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%be%d0%b4%d0%b0-%d0%bd%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be/">
+<link rel="alternate" hreflang="cs" href="https://quantumai.co/cs/pochopeni-kodu-bacon-shor-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da" href="https://quantumai.co/da/forsta-bacon-shor-koden-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl" href="https://quantumai.co/nl/het-begrijpen-van-de-bacon-shor-code-in-quantum-computing/">
+<link rel="alternate" hreflang="x-default" href="https://quantumai.co/understanding-the-bacon-shor-code-in-quantum-computing/">
+			                <meta name="ssp-config-path" content="/wp-content/uploads/simply-static/configs/">
+			
+						
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-180x180.png">
+<meta name="msapplication-TileImage" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-270x270.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-505504 single-format-standard wp-embed-responsive wp-theme-immediate translatepress-it_IT">
+
+
+	<div id="top-bar-info" class="sticky top-0 z-[60] py-5 bg-gradient-to-tr from-indigo-600 to-blue-600 text-white text-xs lg:text-center pr-6">
+		<div class="max-w-7xl mx-auto px-6 relative">
+			<p>Non investite se non siete disposti a perdere tutto il denaro investito. Si tratta di un investimento ad alto rischio e non dovete aspettarvi di essere protetti se qualcosa va storto.</p>
+			<button class="absolute right-0 top-0 opacity-25 hover:opacity-50 transition-opacity p-0.5" onclick="hideTopBar()" aria-label="Chiudere la barra delle informazioni">
+				<svg class="w-3.5 h-3.5" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.99979 4.00028C6.74392 4.00028 6.48776 4.09775 6.29276 4.29325L4.29276 6.29325C3.90176 6.68425 3.90176 7.31731 4.29276 7.70731L11.5857 15.0003L4.29276 22.2932C3.90176 22.6842 3.90176 23.3173 4.29276 23.7073L6.29276 25.7073C6.68376 26.0983 7.31682 26.0983 7.70682 25.7073L14.9998 18.4143L22.2928 25.7073C22.6828 26.0983 23.3168 26.0983 23.7068 25.7073L25.7068 23.7073C26.0978 23.3163 26.0978 22.6832 25.7068 22.2932L18.4139 15.0003L25.7068 7.70731C26.0978 7.31731 26.0978 6.68325 25.7068 6.29325L23.7068 4.29325C23.3158 3.90225 22.6828 3.90225 22.2928 4.29325L14.9998 11.5862L7.70682 4.29325C7.51132 4.09775 7.25567 4.00028 6.99979 4.00028Z" fill="white"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>// Hide top bar when clicked
+	// Adds a cookie and hides element
+	function hideTopBar() {
+	    document.cookie = "top_bar_disclaimer=hidden;max-age=31536000; path=/";
+	    document.getElementById("top-bar-info").style.display = 'none';
+	}</script>
+
+	
+<div id="page" class="relative">
+	<a href="#content" class="sr-only" data-no-translation="" data-trp-gettext="">Vai al contenuto</a>
+
+	
+<header id="masthead" class="lg:overflow-y-visible absolute w-full z-50 top-2 md:top-4" x-data="{ menuOpen: false }">
+
+	<div class="mx-auto max-w-7xl px-2.5 sm:px-4">
+        <div class="relative flex max-lg:justify-between gap-6 sm:gap-8 px-3 shadow sm:px-6 lg:px-8 rounded-xl h-[70px] md:h-[88px]">
+          <div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-75 backdrop-blur-md rounded-xl z-0"></div>
+          <div class="flex flex-shrink-0 items-center relative z-10">
+          							<a href="https://quantumai.co/it/">
+	            		<img class="block h-7 md:h-8 w-auto" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+	            	</a>
+				          </div>
+          
+          <div class="flex items-center gap-2 lg:hidden relative z-10">
+          					    <a href="https://quantumai.co/it/iscriviti/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Iscriviti</a>
+			              
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Aprire il menu" x-show="!menuOpen">
+                <i class="ph-fill ph-list"></i>
+              </button>
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Chiudere il menu" x-show="menuOpen">
+                <i class="ph-fill ph-x"></i>
+              </button>
+          </div>
+          <nav class="hidden lg:flex lg:justify-between w-full z-10 menu-nav-desktop">
+
+          	<div class="flex gap-6">
+          		<div id="menu-nav-desktop">
+          		<ul id="menu-main" class="lg:flex flex-shrink-0 gap-6 text-base relative z-10 h-full">
+<li id="menu-item-505175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 h-full relative"><a href="https://quantumai.co/it/prodotti/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Prodotti</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 h-full relative"><a href="https://quantumai.co/it/chi-siamo/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Chi siamo</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 h-full relative"><a href="https://quantumai.co/it/squadra/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Squadra</a></li>
+<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 h-full relative"><a href="https://quantumai.co/it/blog/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 h-full relative"><a href="https://quantumai.co/it/contattateci/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Contattateci</a></li>
+</ul>          	</div>
+
+          	<div id="menu-nav-desktop-multi-page" class="relative" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		
+          		<div class="absolute left-0 top-full z-30 mt-2 py-1 w-auto origin-top focus:outline-none" x-show="dropdownOpen" x-transition x-cloak>
+          			<div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 rounded-lg z-0"></div>
+          			<ul id="menu-dropdown" class="min-w-[200px] menu-nav-desktop-multi-page-menu py-1">
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://quantumai.co/it/chi-siamo/" class="flex justify-between items-center gap-x-4 px-6 py-2.5 text-base text-gray-700 hover:text-gray-900 relative z-10 leading-5">Chi siamo</a></li>
+</ul>          		</div>
+          		
+          	</div>
+          	</div>
+          	
+          	
+          	<div class="flex gap-3 items-center flex-shrink-0">
+          					    <a href="https://quantumai.co/it/accedere/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Accedi</a>
+									    <a href="https://quantumai.co/it/iscriviti/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Iscriviti</a>
+			            </div>
+          </nav>
+
+          <script>
+          	let menuElements = document.querySelectorAll('#menu-nav-desktop .menu-item-has-children');
+          	for (let i=0, il=menuElements.length; i < il; ++i) {
+		        let menuElementObj = menuElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:keydown.escape.stop', 'dropdownOpen = false');
+		        menuElement.setAttribute('x-on:click.away', 'dropdownOpen = false');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiElements = document.querySelectorAll('#menu-nav-desktop-multi-page .menu-item-has-children');
+          	
+		    for (let i=0, il=menuMultiElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:mouseover', 'dropdownOpen = true');
+		        menuElement.setAttribute('x-on:mouseleave', 'dropdownOpen = false');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-right transition"><\/i>'
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiSubmenuElements = document.querySelectorAll('.menu-nav-desktop-multi-page-menu .sub-menu');
+		    for (let i=0, il=menuMultiSubmenuElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiSubmenuElements[i];
+		        let div = document.createElement("div");
+		        div.classList.add('absolute', 'w-[calc(100%_-_8px)]', 'h-full', 'top-0', 'right-0', 'bg-white', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'ring-1', 'ring-black', 'ring-opacity-5', 'rounded-lg', 'z-0');
+				menuElementObj.prepend(div);
+		    }
+          </script>
+          
+          
+        </div>
+      </div>
+      
+      <nav class="lg:hidden mt-3 md:max-w-lg px-4 sm:px-6 lg:px-8 ml-auto relative z-10" aria-label="Globale" x-show="menuOpen" @keydown.escape.stop="menuOpen = false" @click.away="menuOpen = false" x-trap="menuOpen" x-transition x-cloak id="menu-nav-mobile">
+      	<div class="overflow-hidden bg-white bg-opacity-80 backdrop-blur-md shadow rounded-xl text-gray-700 py-2">
+      		<ul id="menu-main-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/prodotti/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Prodotti</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/chi-siamo/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Chi siamo</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/squadra/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Squadra</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/blog/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/contattateci/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Contattateci</a></li>
+</ul>
+          	<div id="menu-nav-desktop-multi-page" class="relative flex flex-col items-center" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		<button class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent" x-on:click.prevent="dropdownOpen = !dropdownOpen">
+          			Risorse          			<i class="ph-fill ph-caret-down transition" :class="{ 'rotate-180': dropdownOpen }"></i>
+          		</button>
+          		<div class="flex flex-col gap-y-1.5 items-center text-center px-6 w-full min-w-full">
+          			<div class="flex flex-col gap-y-1 p-4 rounded-lg bg-gray-900/5 w-full min-w-full" x-show="dropdownOpen" x-transition x-cloak>
+	          			<ul id="menu-dropdown-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/it/chi-siamo/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Chi siamo</a></li>
+</ul>	          		</div>
+          		</div>
+          		
+          	</div>
+
+          	
+
+          	<div class="flex gap-3 items-center flex-shrink-0 px-6 pb-3 justify-center pt-3">
+              			    <a href="https://quantumai.co/it/accedere/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Accedi</a>
+									    <a href="https://quantumai.co/it/iscriviti/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Iscriviti</a>
+			            </div>
+      	</div>
+          	
+          </nav>
+          <script>
+          	let menuElementsMobile = document.querySelectorAll('#menu-nav-mobile .menu-item-has-children');
+          	for (let i=0, il=menuElementsMobile.length; i < il; ++i) {
+		        let menuElementObj = menuElementsMobile[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+          </script>
+	<div>
+
+
+
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+
+<article itemscope itemtype="https://schema.org/NewsArticle" id="post-505504" class="post-505504 post type-post status-publish format-standard has-post-thumbnail hentry category-what-is">
+	<div class="relative">
+	    	<img class="absolute z-0 w-full h-full object-cover pointer-events-none hero-angle" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/bg.svg" alt="">
+		<div class="relative pt-4 pb-16 sm:pb-24">
+		<main class="mt-16 sm:mt-16 pt-[60px] md:pt-[75px]">
+          <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 relative z-10">
+              <div class="text-center max-lg:mx-auto md:max-w-2xl lg:col-span-6 xl:col-span-7 lg:flex lg:items-center lg:text-left lg:pb-20 lg:pt-10">
+                <div>
+                	<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+	  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	    <a itemprop="item" href="https://quantumai.co/it/">
+	        <span itemprop="name">Casa</span></a>
+	    <meta itemprop="position" content="1">
+	  </li> / 
+  
+
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="https://quantumai.co/it/blog/">
+		    <span itemprop="name">Blog</span></a>
+		<meta itemprop="position" content="2">
+		</li> / 
+	  
+	  <li class="hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		    <span itemprop="name">Comprendere il codice Bacon-Shor nell'informatica quantistica</span>
+		<meta itemprop="position" content="2">
+		</li>
+	  </ol>                							<h1 itemprop="headline" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[66px]">Comprendere il codice Bacon-Shor nell'informatica quantistica</h1>					
+					<meta itemprop="image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Bacon–Shor-Code.jpg">
+                		                  
+	                <div class="mt-3 text-base sm:text-lg text-gray-600 sm:mt-5 lg:mt-7 flex items-center max-lg:justify-center flex-wrap gap-x-4 gap-y-2">
+	                	<div class="text-gray-700"><a href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/" rel="bookmark"><time datetime="2024-01-07T10:05:37+00:00" itemprop="datePublished" content="2024-01-07T10:05:37+00:00">7 gennaio 2024</time></a></div>
+<a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/it/categoria/cosa-e/">Che cosa è</a>	                </div>
+                </div>
+              </div>
+
+                           
+            </div>
+          </div>
+        </main>
+	</div>
+</div>
+
+	<div class="mt-20 sm:mt-24 pb-32 sm:pb-40 max-w-6xl px-6 sm:px-8 mx-auto">
+				
+		<div class="mt-16 sm:mt-24">
+				<div class="entry-content prose prose-neutral max-w-none prose-a:text-primary">
+			<p>Nel nostro tentativo di inaugurare il <strong>l'era quantistica</strong>uno sviluppo cruciale che non può essere trascurato è la <strong>Codice Bacon-Shor</strong>. Un perno per <strong>gestione affidabile dei dati</strong> in <strong>informatica quantistica</strong>, questo <strong>codice di correzione degli errori</strong> è emersa come una tecnologia fondamentale. Siamo alle soglie di una rivoluzione tecnologica trasformativa, e il <b>Codice Bacon-Shor</b> è un'innovazione strumentale che ci allinea ai prossimi progressi.</p>
+<p>Come innovatori del settore, riconosciamo le complicazioni associate alla codifica e alla conservazione delle informazioni in un sistema quantistico. È per questo che la semplicità e l'efficienza del sistema <b>Codice Bacon-Shor</b> non si tratta di un semplice miglioramento, ma di un cambiamento di paradigma <b>correzione degli errori</b> metodologie. Dal nostro punto di vista, è chiaro che l'acquisizione di questo codice è fondamentale per padroneggiare l'intricata danza dei qubit in un paesaggio quantistico che è intrinsecamente pieno di errori e instabilità.</p>
+<h2>L'importanza della correzione degli errori nel calcolo quantistico</h2>
+<p>Nel tentativo di sfruttare le <strong>informatica quantistica</strong>Siamo all'avanguardia di una rivoluzione tecnologica. Tuttavia, i nostri progressi si muovono sull'orlo di un'arma a doppio taglio, in cui l'immensa potenza di calcolo va di pari passo con l'accresciuta sensibilità alle <em>disturbi ambientali</em> e <em>decoerenza</em>. La capacità di un computer quantistico di elaborare calcoli estesi a velocità senza precedenti può essere facilmente compromessa in assenza di una robusta <strong>codice di correzione degli errori</strong> meccanismi in atto per salvaguardare l'integrità di <strong>sicurezza informatica quantistica</strong>.</p>
+<h3>Le sfide dei disturbi ambientali e della decoerenza</h3>
+<p>Una preoccupazione imperativa che dobbiamo affrontare in questo campo nascente è che gli elementi quintessenziali dei sistemi quantistici, i qubit, sono profondamente suscettibili alla più piccola <em>disturbi ambientali</em>. Anche le fluttuazioni termiche o le onde elettromagnetiche apparentemente trascurabili possono portare a <strong>decoerenza</strong>, un fenomeno in cui gli stati quantistici cruciali perdono la loro coerenza, facendo degenerare le informazioni in modo rapido e imprevedibile.</p>
+<h3>Sviluppare metodi robusti per proteggere le informazioni quantistiche</h3>
+<p>In risposta, lo sviluppo di metodi solidi per proteggere e preservare le informazioni quantistiche rimane una priorità assoluta. Siamo costantemente alla ricerca di metodi innovativi <b>correzione degli errori</b> codici che non solo rilevano e correggono gli errori nel momento in cui si verificano, ma prevengono anche potenziali vulnerabilità. Di seguito è riportata una tabella comparativa che illustra l'evoluzione e le caratteristiche dei vari codici <b>correzione quantistica degli errori</b> codici, mostrando i progressi compiuti nel settore per contrastare <b>decoerenza</b> e sostenere <b>sicurezza dell'informazione quantistica.</b></p>
+<table>
+<tr>
+<th>Codice di correzione degli errori</th>
+<th>Resistenza alla decoerenza</th>
+<th>Sensibilità ai disturbi ambientali</th>
+<th>Sicurezza informatica quantistica</th>
+<th>Complessità operativa</th>
+</tr>
+<tr>
+<td><b>Codice Bacon-Shor</b></td>
+<td>Alto</td>
+<td>Basso</td>
+<td>Potenziato</td>
+<td>Ridotto</td>
+</tr>
+<tr>
+<td>Codice di superficie</td>
+<td>Alto</td>
+<td>Intermedio</td>
+<td>Forte</td>
+<td>Moderato</td>
+</tr>
+<tr>
+<td>Codice Torico</td>
+<td>Medio</td>
+<td>Alto</td>
+<td>Sicuro</td>
+<td>Complesso</td>
+</tr>
+</table>
+<p>Affrontiamo queste sfide investendo nella ricerca e collaborando con i pionieri del settore per adattare codici come l'acclamato <strong>Codice Bacon-Shor</strong>che esemplifica la resilienza contro <b>disturbi ambientali</b> e fortifica <strong>sicurezza informatica quantistica</strong>. Man mano che ci addentriamo nell'era quantistica, l'inesorabile necessità di avere un livello superiore di <b>correzione degli errori</b> non potrà che amplificarsi, e la nostra determinazione ad affrontare queste sfide cresce ugualmente, assicurando che <b>informatica quantistica</b> realizza il suo pieno potenziale senza soccombere alla sua innata fragilità.</p>
+<h2>Che cos'è il Codice Bacon-Shor?</h2>
+<p>Il cuore di <b>informatica quantistica</b> è la questione critica della correzione degli errori, una sfida complessa affrontata con eleganza dal codice Bacon-Shor. Operando all'interno di un sottosistema di un <em>Spazio di Hilbert</em>Questo codice si discosta dal tradizionale <b>correzione quantistica degli errori</b> codici. L'approccio innovativo del codice Bacon-Shor attenua le complessità comuni, presentando un paradigma in cui sono necessari meno stabilizzatori per individuare e correggere gli errori in <b>informazioni quantistiche.</b> La genialità di questo codice sta nella sua semplicità; ci permette elegantemente di prevedere un futuro in cui <b>correzione quantistica degli errori</b> processi sono più gestibili, aprendo in definitiva la strada ad applicazioni pratiche di <b>informatica quantistica</b>.</p>
+<p>La nostra adozione di simmetrie di gauge all'interno del codice Bacon-Shor condensa in modo efficiente il numero di stabilizzatori necessari per la misurazione degli errori. Questa riduzione non è solo teorica, ma ha anche implicazioni pratiche, in quanto lavoriamo verso un paradigma in cui l'overhead della correzione degli errori quantistici è significativamente ridotto, migliorando le prestazioni delle operazioni di calcolo quantistico.</p>
+<p>L'integrazione del codice Bacon-Shor nelle attuali metodologie di calcolo quantistico segna un passo avanti nella ricerca di sistemi tolleranti ai guasti in grado di mantenere l'integrità dei dati. <b>informazioni quantistiche.</b> Mentre ci addentriamo nelle possibilità dell'era quantistica, la consapevolezza che la correzione degli errori può essere semplificata senza compromettere l'efficacia ci dà la fiducia di credere in un futuro in cui l'informatica quantistica non è solo un modello teorico ma una realtà pratica, che ci proietta in una nuova era di progresso tecnologico.</p>
+<h2>Codici di sottosistema e loro ruolo nella correzione degli errori quantistici</h2>
+<p>Mentre ci addentriamo nell'intricato mondo di <em>correzione quantistica degli errori</em>, diventa sempre più evidente che <strong>codici del sottosistema</strong> offrono vantaggi rivoluzionari. In particolare, il <strong>Codice Bacon-Shor</strong>, un ottimo esempio di codice di sottosistema, rivoluziona il modo in cui affrontiamo la correzione degli errori nei sistemi quantistici.</p>
+<p><img fetchpriority="high" decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/Quantum-Error-Correction-1024x585.jpg" alt="Correzione degli errori quantistici" title="Correzione degli errori quantistici" width="1024" height="585" class="aligncenter size-large wp-image-505507" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Quantum-Error-Correction-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Quantum-Error-Correction-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Quantum-Error-Correction-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Quantum-Error-Correction.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<h3>Vantaggi del sottosistema rispetto ai codici sottospaziali</h3>
+<p>Nel regno dell'informatica quantistica, sfruttare la potenza di <b>codici del sottosistema</b> implica un salto verso la semplificazione e l'efficienza. Questi codici hanno spostato il paradigma dai tradizionali metodi subspaziali. Consideriamo i numerosi vantaggi che <b>codici del sottosistema</b> nel panorama della correzione quantistica degli errori:</p>
+<ul>
+<li>Suddivisione di <b>Spazio di Hilbert</b> nei sottosistemi consente di realizzare applicazioni di correzione degli errori più mirate.</li>
+<li>Riduce la complessità operativa, consentendo così un rilevamento e una correzione degli errori più rapidi ed efficienti.</li>
+<li>Un'enfasi distinta sulla <strong>procedure di correzione degli errori</strong> è semplificato grazie alla minore intensità di risorse rispetto ai codici subspaziali.</li>
+</ul>
+<h3>L'impatto delle procedure semplificate di correzione degli errori</h3>
+<p>L'influenza di <strong>procedure semplificate di correzione degli errori</strong> non dovrebbe essere sottovalutato. <b>Informatica quantistica pratica</b> richiede non solo precisione teorica, ma anche facilità operativa e resilienza. <b>Codici del sottosistema</b>che incorporano la correzione degli errori con un overhead ridotto, sono essenziali per sostenere le operazioni dei processori quantistici in presenza di disturbi e interferenze ambientali.</p>
+<table>
+<tr>
+<th>Funzione di correzione degli errori</th>
+<th>Codice del sottosistema (Bacon-Shor)</th>
+<th>Codice del sottospazio</th>
+</tr>
+<tr>
+<td>
+<b>Spazio di Hilbert</b> Requisiti</td>
+<td>Suddivisione in sottosistemi</td>
+<td>Intero spazio utilizzato per la codifica</td>
+</tr>
+<tr>
+<td>Complessità degli stabilizzatori</td>
+<td>Meno stabilizzatori necessari</td>
+<td>Sono necessari più stabilizzatori per il rilevamento degli errori</td>
+</tr>
+<tr>
+<td>Misura dello stabilizzatore</td>
+<td>Numero ridotto di misure</td>
+<td>Protocolli di misura estesi</td>
+</tr>
+<tr>
+<td>Facilità di implementazione</td>
+<td>Semplificato, più pratico</td>
+<td>Spesso complesso e ad alta intensità di risorse</td>
+</tr>
+</table>
+<p>Ciò che diventa sorprendentemente chiaro attraverso il nostro esame è il potenziale dei codici del sottosistema come il codice Bacon-Shor di ridefinire <em>correzione quantistica degli errori</em> presentando non solo una soluzione alternativa, ma un approccio più sfumato e scalabile, adatto all'avanzare dell'era quantistica.</p>
+<h2>L'origine di Bacon-Shor: Contributi di Dave Bacon e Peter Shor</h2>
+<p>La nostra esplorazione nel regno dell'informatica quantistica ci porta ai contributi fondamentali di due figure chiave: <b>Dave Bacon</b> e <b>Peter Shor</b>. Il loro lavoro innovativo sulla correzione degli errori ha ridefinito il nostro approccio alla codifica. <b>informazioni quantistiche.</b> La collaborazione tra questi due scienziati ha portato alla creazione del codice Bacon-Shor, una pietra miliare <em>innovazione a correzione d'errore</em> che ha lasciato un'impronta indelebile sulla <strong>eredità del calcolo quantistico</strong>.</p>
+<p>Il codice Bacon-Shor è nato da un'idea semplice ma profonda: codificare le informazioni all'interno di un sottosistema per semplificare il processo di correzione degli errori. Questo approccio è stato fondamentale per aggirare la miriade di problemi che l'informatica quantistica si trova ad affrontare, come ad esempio <b>decoerenza</b> e interferenze ambientali. Affrontando queste problematiche, <b>Dave Bacon</b> e <b>Peter Shor</b> hanno gettato le basi per la creazione di un ambiente di calcolo quantistico più tollerante ai guasti, fondamentale per proteggere ed elaborare efficacemente i dati quantistici.</p>
+<ul>
+<li>La semplicità dell'approccio alla correzione degli errori del codice Bacon-Shor</li>
+<li>Come la codifica dei sottosistemi rende più efficiente la gestione dei dati quantistici</li>
+<li>L'impatto duraturo delle ricerche di Bacon e Shor sui moderni sistemi quantistici</li>
+</ul>
+<p>Approfondiamo i componenti chiave che definiscono il codice Bacon-Shor:</p>
+<table>
+<tr>
+<th>Caratteristica</th>
+<th>Descrizione</th>
+<th>Impatto</th>
+</tr>
+<tr>
+<td>Correzione errori del sottosistema</td>
+<td>Dividere il <b>Spazio di Hilbert</b> in sottosistemi per affrontare sindromi di errore specifiche.</td>
+<td>Riduce la complessità e migliora la tolleranza ai guasti.</td>
+</tr>
+<tr>
+<td>Simmetrie di gauge</td>
+<td>Utilizzo delle simmetrie di gauge per ridurre al minimo i requisiti di stabilizzazione.</td>
+<td>Efficienza nel rilevamento degli errori e riduzione del numero di misure necessarie.</td>
+</tr>
+<tr>
+<td>Collaborazione tra Bacon e Shor</td>
+<td>Gli sforzi sinergici di due ricercatori pionieri della codifica quantistica.</td>
+<td>Crea un precedente per le future ricerche sull'informatica quantistica e sulle metodologie di correzione degli errori.</td>
+</tr>
+</table>
+<p>È proprio attraverso il codice Bacon-Shor che si può constatare la potenza della combinazione di fondamenti teorici e innovazione pratica. Questo acclamato <strong>innovazione a correzione d'errore</strong> personifica la ricerca di sfruttare le stranezze della meccanica quantistica a nostro vantaggio, ed è notevole vedere come l'ingegno di <b>Dave Bacon</b> e <b>Peter Shor</b> è stato determinante a tal fine.</p>
+<h2>Capire la disposizione a griglia dei Qubit nel codice Bacon-Shor</h2>
+<p>Nella nostra esplorazione del codice Bacon-Shor, scopriamo la precisione della disposizione a griglia dei qubit, che costituisce un aspetto critico di questa strategia di correzione degli errori quantistici. La disposizione a reticolo quadrato non solo facilita la rilevazione e la correzione degli errori, ma svolge un ruolo fondamentale nel migliorare la tolleranza ai guasti nei sistemi di calcolo quantistico.</p>
+<h3>Visualizzazione del posizionamento del Qubit basato su un reticolo quadrato</h3>
+<p>La distinta formazione a reticolo quadrato, in cui ogni qubit è meticolosamente posizionato ai vertici del reticolo, riflette la complessità del progetto del codice Bacon-Shor. Questa organizzazione spaziale aiuta a semplificare l'identificazione dei qubit. <b>sindromi da errore quantistico</b> allineando le posizioni dei qubit con la <b>gruppi di gauge</b>, dando luogo a un percorso diretto per la rettifica degli errori.</p>
+<h3>Importanza delle interazioni tra vicini nelle sindromi da errore</h3>
+<p>L'efficacia del codice Bacon-Shor si basa sul principio del <b>misure di prossimità.</b> Queste interazioni sono la chiave di volta per determinare in modo efficiente le sindromi di errore, facilitando in modo significativo il processo di isolamento e correzione degli errori quantistici. Sfruttando queste relazioni prossimali tra i qubit, il codice segna un progresso rivoluzionario nelle capacità di tolleranza agli errori dell'informatica quantistica.</p>
+<p></p>
+<table>
+<tr>
+<th>Posizione Qubit</th>
+<th>Associazione dei gruppi di misura</th>
+<th>Interazione con i vicini</th>
+<th>Ruolo nella deduzione degli errori</th>
+</tr>
+<tr>
+<td>Vertice A</td>
+<td>G₁</td>
+<td>Vertici adiacenti B e C</td>
+<td>Primario per errori dell'asse Z</td>
+</tr>
+<tr>
+<td>Vertice B</td>
+<td>G₂</td>
+<td>Vertici adiacenti A e D</td>
+<td>Secondario per errori dell'asse X</td>
+</tr>
+<tr>
+<td>Vertice C</td>
+<td>G₃</td>
+<td>Vertici adiacenti A ed E</td>
+<td>Primario per errori dell'asse X</td>
+</tr>
+<tr>
+<td>Vertice D</td>
+<td>G₄</td>
+<td>Vertici adiacenti B e F</td>
+<td>Secondario per errori dell'asse Z</td>
+</tr>
+</table>
+<h2>Spiegazione dettagliata dei generatori di stabilizzatori e dei gruppi di calibri</h2>
+<p>Esplorando gli aspetti fondamentali del codice Bacon-Shor, ci imbattiamo nel concetto di <b>generatori di stabilizzatori</b> e gruppi di gauge, elementi chiave che rendono più gestibile la correzione degli errori quantistici. Una chiara comprensione di questi termini non solo demistifica la natura intricata della correzione degli errori quantistici, ma sottolinea anche l'efficienza della metodologia del codice Bacon-Shor.</p>
+<h3>Ridurre la complessità della correzione degli errori</h3>
+<p>Applicando <b>generatori di stabilizzatori</b> Nel quadro del codice Bacon-Shor, riduciamo in modo significativo la complessità tradizionalmente coinvolta nella correzione quantistica degli errori. Tradizionalmente, sarebbe necessario un insieme di otto generatori; tuttavia, l'ingegnosa strutturazione del codice Bacon-Shor riduce questo numero a quattro. Questa semplificazione testimonia l'efficienza dell'approccio Bacon-Shor, che si allinea perfettamente con le esigenze pratiche dell'informatica quantistica, dove ogni riduzione della complessità può portare a miglioramenti sostanziali delle prestazioni computazionali.</p>
+<h3>Efficacia di due misure di Qubit</h3>
+<p>Nell'ambito di questi <b>generatori di stabilizzatori</b>apprezziamo la formazione di <b>gruppi di gauge</b>. <b>Gruppi di calibro</b> sono costruiti a partire dalle relazioni tra gli stabilizzatori, che ci garantiscono una maggiore flessibilità nel processo di correzione degli errori. Il potere di questa flessibilità si manifesta quando eseguiamo <b>misure di due qubit.</b> Le misurazioni ci permettono di individuare gli errori con notevole precisione, basandosi sul principio delle interazioni di prossimità, una caratteristica che rivela il sofisticato design del codice, studiato per garantire l'efficienza.</p>
+<blockquote><p>Queste misurazioni di prossimità sono la chiave di volta delle capacità di rilevamento e correzione degli errori del codice Bacon-Shor, che si allinea alle più recenti innovazioni dell'informatica quantistica.</p></blockquote>
+<table>
+<tr>
+<th>Caratteristica</th>
+<th>Vantaggio del codice Bacon-Shor</th>
+</tr>
+<tr>
+<td>Numero di generatori</td>
+<td>Riduzione da otto a quattro</td>
+</tr>
+<tr>
+<td>Correzione degli errori quantistici</td>
+<td>Semplifica la complessità</td>
+</tr>
+<tr>
+<td>Ruolo del gruppo di stabilizzazione</td>
+<td>Essenziale per un efficace rilevamento degli errori</td>
+</tr>
+<tr>
+<td>Gruppi di calibri</td>
+<td>Offrire flessibilità nel processo di correzione degli errori</td>
+</tr>
+<tr>
+<td>Due misure di Qubit</td>
+<td>Significativo nella diagnosi degli errori</td>
+</tr>
+</table>
+<p>In conclusione, l'interazione tra generatori di stabilizzatori e gruppi di gauge nella struttura del codice di Bacon-Shor dimostra un approccio elegante per ridurre la natura ardua della correzione degli errori quantistici. Quando integriamo le misurazioni di due qubit in questa struttura, potenziamo l'informatica quantistica con un livello di precisione e di efficienza che svela nuovi orizzonti per l'informatica quantistica. <b>l'era quantistica.</b></p>
+<h2>Il codice Bacon-Shor e i circuiti quantistici con tolleranza ai guasti</h2>
+<p>Nell'ambito dell'informatica quantistica, l'integrazione del codice Bacon-Shor in <b>circuiti quantistici tolleranti ai guasti</b> rappresenta un esempio lampante di come i progressi teorici catalizzino le innovazioni pratiche. La nostra esplorazione in questa sezione approfondisce le scoperte pionieristiche che il codice Bacon-Shor ha avviato, dimostrando l'efficacia di questo approccio per la creazione di circuiti quantistici che mantengono l'integrità contro l'alta probabilità di errori endemica dei sistemi quantistici.</p>
+<h3>Passi avanti nella dimostrazione di circuiti con tolleranza ai guasti</h3>
+<p>Abbiamo assistito a una transizione rivoluzionaria, in cui la teoria ha influenzato in modo sostanziale l'efficacia dei circuiti quantistici nel mondo reale. Il codice Bacon-Shor è all'avanguardia di questo sviluppo, migliorando drasticamente la resistenza agli errori e garantendo la resilienza dei circuiti. Grazie a un'ingegneria meticolosa e a un'incessante ricerca di semplificazione nella correzione degli errori quantistici, i ricercatori sono stati in grado di mostrare circuiti autonomi tolleranti agli errori, consolidando una pietra miliare nel campo della fisica quantistica. <b>scoperte nel campo dell'informatica quantistica.</b></p>
+<h3>Riduzione dell'overhead nella correzione degli errori quantistici</h3>
+<p>La riduzione dell'overhead è fondamentale per elevare i circuiti quantistici da curiosità sperimentali a tecnologie praticabili. Il design raffinato del codice Bacon-Shor minimizza efficacemente la complessità un tempo sinonimo di correzione degli errori quantistici. Implementando strategie che mirano <b>semplificazione della correzione degli errori</b>In questo modo, abbiamo sbloccato il vero potenziale dei circuiti quantistici, coltivando la robustezza contro la natura delicata delle operazioni quantistiche. Questo ha aperto strade in cui la tolleranza ai guasti non è solo un obiettivo ambizioso, ma una realtà tangibile, aprendo la strada a strutture computazionali quantistiche più avanzate e affidabili.</p>
+<p>In sostanza, l'adattamento reazionario dal codice seminale di Bacon-Shor in <b>circuiti quantistici tolleranti ai guasti</b> incarna l'ingegnosità della creatività umana nell'armonizzare concetti astratti e applicazioni empiriche, spingendoci in una nuova epoca in cui le scoperte dell'informatica quantistica non sono solo imminenti, ma si stanno già svolgendo.</p>
+<h2>Codice Bacon-Shor a confronto con altri codici a correzione di errore quantistici</h2>
+<p>In qualità di pionieri nel campo dell'informatica quantistica, ci sforziamo continuamente di perfezionare la nostra comprensione di <b>codici a correzione d'errore quantistici</b>. Tra questi, il codice Bacon-Shor è emerso come una soluzione unica con diversi vantaggi interessanti. Introduce una metodologia semplificata per correggere gli errori quantistici usando <b>Operatori di Pauli</b>che lo distingue da <b>codici a correzione d'errore quantistici</b> come il <b>Codice Shor</b> e il <b>codice di superficie.</b></p>
+<h3>Gli operatori di Pauli e il loro significato</h3>
+<p>Il ruolo di <b>Operatori di Pauli</b> nella correzione quantistica degli errori è fondamentale. Quando parliamo di <em>Confronto del codice Bacon-Shor</em>, <b>Operatori di Pauli</b> permettono di codificare gli errori quantistici comuni in modo più efficiente. Questo ci permette un livello di precisione nella correzione degli errori che in passato era più difficile da raggiungere.</p>
+<h3>Caratteristiche distintive dei codici Shor e Surface</h3>
+<p>Mentre il famoso <b>Codice Shor</b> è noto per la sua capacità di correggere errori arbitrari a singolo qubit, il codice Bacon-Shor semplifica il processo di correzione degli errori utilizzando un minor numero di qubit e richiedendo misure di sindrome più semplici. </p>
+<p>Il codice di superficie, famoso per il suo alto tasso di errore di soglia e per gli stabilizzatori locali, presenta un approccio diverso alla correzione degli errori quantistici rispetto al codice Bacon-Shor. Sebbene entrambi richiedano un posizionamento dei qubit basato su reticolo, i codici di superficie tendono a richiedere un numero maggiore di qubit a causa dell'uso estensivo delle interazioni nearest-neighbor.</p>
+<table>
+<tr>
+<th>Caratteristica</th>
+<th>Codice Bacon-Shor</th>
+<th>Codice Shor</th>
+<th>Codice di superficie</th>
+</tr>
+<tr>
+<td>Qubit richiesti</td>
+<td>Riduce l'overhead dei qubit</td>
+<td>9 qubit per qubit codificati</td>
+<td>Dipende dalle dimensioni del reticolo</td>
+</tr>
+<tr>
+<td>Metodo di correzione degli errori</td>
+<td>Approccio ai sottosistemi</td>
+<td>Approccio sottospaziale</td>
+<td>Approccio topologico</td>
+</tr>
+<tr>
+<td>Misure della sindrome</td>
+<td>Più semplice; meno misure</td>
+<td>Complesso; molte misure</td>
+<td>Locale; controlli di prossimità</td>
+</tr>
+<tr>
+<td>Applicazione pratica</td>
+<td>Processo più pratico e snello</td>
+<td>Primo codice dimostrato</td>
+<td>Alto tasso di errore di soglia</td>
+</tr>
+</table>
+<p>Osserviamo che in un <em>Confronto del codice Bacon-Shor</em> ad altri <em>codici a correzione d'errore quantistici</em>Il codice Bacon-Shor è caratterizzato da caratteristiche quali l'utilizzo degli operatori di Pauli e una minore richiesta di risorse per i qubit. Questi fattori contribuiscono a rendere il codice Bacon-Shor un'opzione estremamente pratica per l'informatica quantistica, aprendo la strada a operazioni più affidabili in questo campo rivoluzionario.</p>
+<h2>Implicazioni pratiche e implementazioni del Codice Bacon-Shor</h2>
+<p>La presentazione del <strong>Codice Bacon-Shor</strong> è stato un progresso monumentale nella sfera del <em>informatica quantistica pratica</em>. Questo innovativo approccio di correzione degli errori alza il livello di sicurezza dei delicati stati quantistici necessari per una computazione robusta. Abbiamo osservato la sua capacità di migliorare la stabilità e la longevità delle informazioni quantistiche, riducendo drasticamente il margine di errore che storicamente ha afflitto i sistemi quantistici.</p>
+<p>Uno degli aspetti più rilevanti <strong>implicazioni della correzione degli errori</strong> del codice Bacon-Shor è la sua capacità di integrarsi senza problemi nelle architetture di calcolo quantistico esistenti. Con un adattamento minimo ai progetti attuali, il codice rafforza il sistema contro il rumore ambientale e le interazioni involontarie, elementi critici per garantire la sicurezza del sistema. <em>operazioni quantistiche sicure</em>.</p>
+<p><img decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/Practical-Quantum-Computing-1024x585.jpg" alt="Informatica quantistica pratica" title="Informatica quantistica pratica" width="1024" height="585" class="aligncenter size-large wp-image-505508" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Practical-Quantum-Computing-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Practical-Quantum-Computing-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Practical-Quantum-Computing-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Practical-Quantum-Computing.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<p>Per dare un'immagine più chiara del significato del codice Bacon-Shor, consideriamo una tabella comparativa che evidenzia i vantaggi pratici di questo codice rispetto ai tradizionali modelli a correzione di errore:</p>
+<table>
+<tr>
+<th>Caratteristica</th>
+<th>Codice Bacon-Shor</th>
+<th>Correzione degli errori quantistici tradizionale</th>
+</tr>
+<tr>
+<td>Spese generali per la correzione degli errori</td>
+<td>Abbassato</td>
+<td>Tipicamente alto</td>
+</tr>
+<tr>
+<td>Stabilità dello stato quantistico</td>
+<td>Esteso</td>
+<td>Variabile</td>
+</tr>
+<tr>
+<td>Complessità di implementazione</td>
+<td>Semplificato</td>
+<td>Complesso</td>
+</tr>
+<tr>
+<td>Tolleranza ai guasti</td>
+<td>Potenziato</td>
+<td>Limitato</td>
+</tr>
+<tr>
+<td>Prontezza di applicazione pratica</td>
+<td>Alto</td>
+<td>Moderato</td>
+</tr>
+</table>
+<p>Facilitando la tolleranza ai guasti e la correzione degli errori utilizzando un insieme più gestibile di stabilizzatori e operatori di calibro, il codice Bacon-Shor favorisce <b>informatica quantistica pratica</b> allineandosi strettamente alle attuali capacità tecnologiche. Questo ruolo centrale nella progressione delle tecnologie quantistiche rende il codice Bacon-Shor non solo un costrutto teorico, ma una pietra miliare del futuro quantistico sempre più raggiungibile.</p>
+<p>In sostanza, i progressi in corso nell'informatica quantistica rimangono inestricabilmente legati ai codici di correzione degli errori che promuovono l'efficienza e la sicurezza. Il codice Bacon-Shor è uno di questi, pronto per essere impiegato in sistemi all'avanguardia, inaugurando una nuova alba di elaborazione sicura e affidabile delle informazioni quantistiche. La nostra continua esplorazione e l'espansione delle sue capacità annunciano l'eccitante potenziale dell'era dell'informatica quantistica.</p>
+<h2>Migliorare la sicurezza delle informazioni attraverso il codice Bacon-Shor</h2>
+<p>Nel panorama in continua evoluzione della sicurezza digitale, l'introduzione e l'integrazione del <em>Codice Bacon-Shor</em> si distingue come un progresso rivoluzionario per <strong>sicurezza delle informazioni</strong>. Le industrie sono alle prese con l'ardua sfida di proteggere i dati sensibili da minacce sempre più sofisticate, <b>crittografia resistente ai quanti</b> inaugura una nuova era di robusta <strong>protezione della privacy</strong>.</p>
+<p>Al centro di questa rivoluzione c'è la <strong>Codice Bacon-Shor</strong>che non si limita al suo scopo originario di correzione quantistica degli errori, ma è ora all'avanguardia nella progettazione di sistemi all'avanguardia. <strong>algoritmi di crittografia</strong>. Questo codice si dimostra eccezionalmente promettente per la sicurezza <strong>trasmissione dei dati</strong> contro le potenziali minacce future poste dalle capacità di calcolo quantistico, proteggendo i metodi di crittografia classica con uno scudo resistente ai quanti.</p>
+<h3>Vantaggi dell'algoritmo di crittografia per la trasmissione dei dati</h3>
+<p>Siamo consapevoli che i metodi di crittografia convenzionali sono vulnerabili alla notevole potenza di elaborazione dei computer quantistici. Questa suscettibilità mette a rischio la trasmissione confidenziale di informazioni in vari ambiti. Tuttavia, gli algoritmi di crittografia dotati del codice Bacon-Shor forniscono una soluzione proattiva a questo problema, garantendo che le comunicazioni rimangano insensibili alle intrusioni delle tecniche di decrittografia quantistica. Questo passo avanti in <strong>algoritmo di crittografia</strong> Il design indica un salto di qualità, fornendo livelli avanzati di sicurezza per ogni byte di dati trasmessi.</p>
+<h3>Crittografia resistente ai quanti e protezione della privacy</h3>
+<p>Il nostro impegno per <strong>protezione della privacy</strong> ci ha portato ad abbracciare il potenziale di <b>crittografia resistente ai quanti</b>. Il codice Bacon-Shor è fondamentale in questa strategia difensiva, offrendo una crittografia che rimane formidabile di fronte all'evoluzione dell'informatica quantistica. Con il codice Bacon-Shor, siamo pronti a mantenere l'integrità e la riservatezza delle informazioni critiche, inaugurando un nuovo capitolo della sicurezza digitale caratterizzato da una resilienza e una fiducia senza pari.</p>
+<h2>Il futuro della correzione degli errori quantistici e del codice Bacon-Shor</h2>
+<p>Mentre ci troviamo sull'orlo di progressi senza precedenti nella tecnologia quantistica, il ruolo della correzione degli errori quantistici acquista una profonda importanza. Al centro di questa frontiera c'è il codice Bacon-Shor, un faro che ci guida verso una nuova era dell'informatica quantistica. L'adattabilità e la sicurezza per il futuro di questi codici sono alla base della longevità e della funzionalità dei sistemi informatici quantistici. <b>hardware quantistico avanzato</b>.</p>
+<h3>Tenere il passo con i progressi dell'hardware quantistico</h3>
+<p>Per garantire che il codice Bacon-Shor rimanga rilevante nel panorama dinamico della computazione quantistica, è necessario riconoscere l'importanza della sua relazione simbiotica con i progressi dell'hardware. La scalabilità, un termine che riecheggia nelle stanze della futura correzione degli errori quantistici, rappresenta sia una sfida che un'opportunità per ridefinire i parametri di ciò che è possibile. Man mano che i sistemi quantistici diventano più complessi, il codice Bacon-Shor deve evolversi di pari passo, abbracciando le sfumature di un cosmo quantistico in continua espansione.</p>
+<h3>Il ruolo della collaborazione interdisciplinare nella correzione degli errori</h3>
+<p>Quando fisici, informatici e ingegneri convergono in nome dell'innovazione, emerge una notevole sinergia. La collaborazione interdisciplinare non è solo vantaggiosa, ma essenziale per realizzare la promessa del codice Bacon-Shor. Incorporando competenze diverse, apriamo la strada a sofisticati modelli di correzione degli errori progettati per l'hardware quantistico di domani. È grazie a questi sforzi congiunti che il <b>il futuro della correzione quantistica degli errori</b> non diventa un sogno lontano, ma una realtà raggiungibile, pronta a rivoluzionare le nostre capacità di calcolo.</p>
+<table>
+<tr>
+<th>Le sfide attuali dell'hardware quantistico</th>
+<th>Approcci interdisciplinari alla correzione degli errori</th>
+</tr>
+<tr>
+<td>Scalabilità dei bit quantistici (Qubit)</td>
+<td>Sviluppo di algoritmi di correzione degli errori che supportano sistemi su larga scala</td>
+</tr>
+<tr>
+<td>Isolamento dei Qubit dal rumore ambientale</td>
+<td>Ottimizzazione delle soluzioni di scienza e ingegneria dei materiali</td>
+</tr>
+<tr>
+<td>Calibrazione delle operazioni Qubit</td>
+<td>Applicazione di tecniche informatiche avanzate per i protocolli di calibrazione</td>
+</tr>
+<tr>
+<td>Correzione degli errori in tempo reale</td>
+<td>Sfruttare l'apprendimento automatico per i metodi di correzione predittiva</td>
+</tr>
+</table>
+<h2>Dalla teoria alla pratica: La strada da percorrere per il Codice Bacon-Shor</h2>
+<p>La traiettoria del <em>Codice Bacon-Shor</em> esemplifica una quintessenza dell'impegno scientifico: la transizione da solide basi teoriche a solide applicazioni pratiche. Il nostro viaggio in corso rispecchia il ritmo evolutivo della scienza. <strong>informatica quantistica di nuova generazione</strong>inaugurando un'era in cui <strong>architetture a tolleranza di errore</strong> non sono solo obiettivi aspirazionali, ma realtà imminenti. In questo momento, articoliamo i passi strategici che trasformeranno il modo in cui sfruttiamo la potenza dell'informatica quantistica.</p>
+<p><iframe title="AQIS &#039;20: Michael Newman, Funzionamento con tolleranza ai guasti di un Qubit codificato in Bacon-Shor" width="500" height="281" src="https://www.youtube.com/embed/jpygRc2zD08?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<p>In primo luogo, il passaggio dalla comprensione teorica all'utilità pratica implica un impegno costante sia nella ricerca che nello sviluppo. Nel nostro caso, ciò richiede una collaborazione sinergica tra fisici esperti nelle complessità matematiche della meccanica quantistica e ingegneri incaricati di materializzare sistemi hardware e software altamente complessi. Trovare un equilibrio tra questi due ambiti è fondamentale per l'implementazione del progetto. <em>Codice Bacon-Shor</em> nei sistemi quantistici del mondo reale. È questo equilibrio che ci spinge ad andare avanti, consentendo al codice Bacon-Shor di tradursi da <b>dalla teoria alla pratica</b>.</p>
+<ul>
+<li>Espansione delle strategie di correzione degli errori per adattarsi a un numero sempre maggiore di qubit.</li>
+<li>Promuovere la comprensione dell'ambiente <b>decoerenza</b> per rafforzare la tolleranza ai guasti dei circuiti quantistici.</li>
+<li>Progettare la fabbricazione e la calibrazione di dispositivi quantistici per aumentare l'affidabilità del sistema.</li>
+<li>Integrazione dei principi del codice Bacon-Shor nella progettazione hardware per una maggiore efficienza e scalabilità.</li>
+</ul>
+<p>Nel tentativo di raggiungere questi obiettivi, riconosciamo l'importanza della tenacia e dell'innovazione. Il codice Bacon-Shor, un tempo pioniere teorico, è ora in procinto di diventare una pietra miliare delle attuali piattaforme di calcolo quantistico. Siamo pronti a varcare la soglia in cui ogni intuizione teorica relativa al codice si trasforma in benefici tangibili. In sostanza, il <strong>dalla teoria alla pratica</strong> La traduzione è una vivida testimonianza dell'ingegno umano nel regno dei quanti.</p>
+<p>In definitiva, il futuro che immaginiamo è quello in cui i computer quantistici con tolleranza agli errori rimodellano le nostre capacità nella scienza e nella tecnologia. In questo futuro luminoso, il codice Bacon-Shor sarà stato fondamentale per superare gli ostacoli della correzione degli errori, fornendo una base sicura e resiliente. Non siamo semplici osservatori, ma architetti attivi di questo entusiasmante panorama dell'informatica quantistica. Andiamo avanti: dalle lavagne della teoria al silicio della pratica, forgiando la strada per il codice Bacon-Shor e per l'informatica quantistica in generale.</p>
+<h2>Sbloccare il potenziale del calcolo quantistico con il codice Bacon-Shor</h2>
+<p>Mentre ci addentriamo nella vasta <b>potenziale dell'informatica quantistica</b>L'innovazione apportata dal codice Bacon-Shor rappresenta una pietra miliare per i progressi futuri. La capacità del codice di integrarsi con l'avanzare della tecnologia ha avviato un percorso promettente per amplificare la scalabilità dei computer quantistici. Non si tratta solo di aumentare il numero, ma di preservare gli stati quantistici entangled che conferiscono a queste macchine una potenza senza precedenti. Questa capacità intrinseca del codice Bacon-Shor di mantenere la coerenza all'interno di una rete di qubit in espansione apre la strada a una nuova era di potenza di calcolo, in cui le macchine possono gestire compiti di una complessità sorprendente.</p>
+<h3>Prospettive di scalabilità dei computer quantistici</h3>
+<p>Nel regno dei quanti, le dimensioni contano. La nostra capacità di scalare i computer quantistici dipende dalla padronanza della correzione degli errori, abilità in cui il codice Bacon-Shor eccelle. Man mano che ci spingiamo oltre i confini dei sistemi quantistici, la meticolosa orchestrazione di innumerevoli qubit, ognuno dei quali è potenzialmente un nodo di calcolo e di entanglement, diventa sempre più fattibile. Sfruttando l'abilità del codice, guardiamo a un orizzonte in cui i computer quantistici su larga scala si evolvono dal concetto alla realtà, e in cui le reti di qubit si sviluppano con precisione e affidabilità.</p>
+<h3>Abilitazione di calcoli complessi e limite di velocità quantistico</h3>
+<p>Altrettanto allettante è la prospettiva di accelerare i calcoli fino a raggiungere livelli finora teorici. <b>limite di velocità quantistico.</b> Il codice Bacon-Shor non si limita a correggere minuscoli spostamenti quantistici; è un facilitatore di complessità, un facilitatore di velocità che potrebbero superare i nostri più agili computer classici. È in questo spazio rarefatto di manipolazione rapida dei dati e di fedeltà impeccabile che si colloca la vera <b>potenziale dell'informatica quantistica</b> saranno realizzati, guidati dai progressi innovativi del codice Bacon-Shor. Con questi sviluppi, stiamo attivamente ridisegnando i limiti della scoperta scientifica e dell'innovazione tecnologica, esplorando nuove frontiere che promettono di rimodellare il nostro mondo.</p>
+<section class="FAQPage">
+<h2>FAQ</h2>
+<div>
+<h3>Che cos'è il codice Bacon-Shor e in che modo è rilevante per l'informatica quantistica?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor è un <b>codice di correzione degli errori</b> progettato specificamente per i computer quantistici. È importante perché migliora l'affidabilità e la sicurezza della gestione dei dati nel regno quantistico, consentendo procedure di correzione degli errori più semplici.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Perché la correzione degli errori è un aspetto così importante dell'informatica quantistica?</h3>
+<div>
+<div>
+<p>La correzione degli errori è fondamentale nell'informatica quantistica perché i sistemi quantistici sono altamente sensibili a <b>disturbi ambientali</b> e decoerenza. Questi fattori possono portare a una perdita di informazioni, per cui metodi robusti di correzione degli errori sono essenziali per mantenere la sicurezza. <b>sicurezza dell'informazione quantistica.</b></p>
+</div>
+</div>
+</div>
+<div>
+<h3>In che modo il codice Bacon-Shor si differenzia da altri codici di correzione degli errori quantistici?</h3>
+<div>
+<div>
+<p>A differenza di altri codici di correzione degli errori quantistici che codificano le informazioni all'interno di un sottospazio di uno spazio di Hilbert, il codice Bacon-Shor utilizza un sottosistema. Ciò consente una più facile identificazione e correzione degli errori e semplifica l'intero processo di correzione degli errori.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quali sono i vantaggi dei codici di sottosistema rispetto ai codici di sottospazio?</h3>
+<div>
+<div>
+<p>I codici sottosistema, come il codice Bacon-Shor, hanno il vantaggio di facilitare le procedure di correzione degli errori. Ciò è dovuto alla suddivisione strategica dello spazio di Hilbert in sottosistemi, che porta a un processo di correzione degli errori più efficiente.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Chi ha sviluppato il codice Bacon-Shor e perché è significativo?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor è stato sviluppato da Dave Bacon e Peter Shor. È importante perché il loro lavoro ha gettato le basi per l'elaborazione quantistica tollerante ai guasti, segnando un passo fondamentale verso l'elaborazione sicura dei dati quantistici.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Come funziona il layout a griglia nel codice Bacon-Shor?</h3>
+<div>
+<div>
+<p>Nel codice Bacon-Shor, i qubit sono disposti in una griglia quadrata, con ogni qubit posizionato ai vertici. Questa configurazione si allinea con i gruppi di gauge sottostanti, rendendo più efficiente il processo di identificazione degli errori attraverso le interazioni nearest-neighbor.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Che ruolo hanno i generatori di stabilizzatori e i gruppi di gauge nel codice di Bacon-Shor?</h3>
+<div>
+<div>
+<p>I generatori di stabilizzazione e i gruppi di gauge sono elementi chiave che riducono la complessità della correzione degli errori all'interno del codice Bacon-Shor. Questi componenti aiutano a misurare efficacemente gli errori quantistici con un minor numero di risorse e consentono di effettuare misurazioni a due qubit nearest-neighbor per la diagnosi degli errori.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quali progressi ha permesso il codice Bacon-Shor nell'informatica quantistica?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor ha permesso la prima dimostrazione di un circuito quantistico con tolleranza agli errori. Consente ai computer quantistici di correggere gli errori con un minore overhead, promuovendo così la tolleranza ai guasti nonostante la natura intrinsecamente soggetta a errori delle operazioni quantistiche.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Come si colloca il codice Bacon-Shor rispetto ad altri codici quantistici a correzione di errore?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor utilizza gli operatori di Pauli per descrivere e correggere gli errori quantistici, aumentando l'efficienza rispetto ai metodi tradizionali. Questo rende il codice Bacon-Shor più pratico per la correzione degli errori all'interno dei sistemi quantistici rispetto ad altri codici come quello di Shor e quello di superficie.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quali sono le implicazioni pratiche del codice Bacon-Shor nel mondo reale dell'informatica quantistica?</h3>
+<div>
+<div>
+<p>Le implicazioni pratiche del codice Bacon-Shor sono vaste, in quanto consente la tolleranza ai guasti e la correzione semplificata degli errori nell'informatica quantistica. Queste caratteristiche contribuiscono in modo significativo alla praticità e alla sicurezza delle operazioni quantistiche nelle applicazioni reali.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>In che modo il codice Bacon-Shor contribuisce a migliorare la sicurezza delle informazioni?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor offre vantaggi in <b>sicurezza delle informazioni</b> e gli algoritmi di crittografia, in particolare per <b>trasmissione dei dati</b>. Contribuisce a <b>crittografia resistente ai quanti</b>garantendo la protezione dei dati contro le potenziali minacce poste dalle capacità dell'informatica quantistica.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Qual è il futuro della correzione quantistica degli errori con progressi come il codice Bacon-Shor?</h3>
+<div>
+<div>
+<p>Il <b>il futuro della correzione quantistica degli errori</b>con progressi come il codice Bacon-Shor, continuerà ad evolversi per tenere il passo con <b>hardware quantistico avanzato</b>. La collaborazione interdisciplinare svolgerà un ruolo significativo nello sviluppo di nuove strategie e tecnologie di correzione degli errori.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>In che modo la transizione dalla teoria alla pratica influirà sullo sviluppo del codice Bacon-Shor?</h3>
+<div>
+<div>
+<p>La transizione dalla teoria alla pratica per il codice Bacon-Shor sarà caratterizzata dalla capacità di bilanciare la ricerca innovativa con le esigenze pratiche di costruire architetture di calcolo quantistico efficienti e resistenti agli errori.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quale potenziale apre il codice Bacon-Shor nel campo dell'informatica quantistica?</h3>
+<div>
+<div>
+<p>Il codice Bacon-Shor sblocca un enorme potenziale nell'informatica quantistica, facilitando il ridimensionamento dei sistemi e preservando gli stati quantistici per un numero maggiore di anni. <b>calcoli complessi</b>, avvicinandoci al raggiungimento del limite di velocità quantistica nell'efficienza computazionale.</p>
+</div>
+</div>
+</div>
+</section>
+		</div>
+
+		</div>
+	</div>
+
+</article>
+
+
+
+	<nav class="navigation post-navigation" aria-label="Articoli" data-no-translation-aria-label="">
+		<h2 class="screen-reader-text" data-no-translation="" data-trp-gettext="">Navigazione articoli</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/" rel="prev"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Articolo precedente</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Post precedente:</span> <br><span>Comprendere il BQP nel calcolo quantistico</span></a></div>
+<div class="nav-next"><a href="https://quantumai.co/it/i-bug-delle-scoperte-quantum-ai-e-scommettere-in-grande/" rel="next"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Articolo successivo</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Post successivo:</span> <br><span>Le scoperte dell'Quantum AI, i bug e le grandi scommesse</span></a></div>
+</div>
+	</nav>
+<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Lascia un commento <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantumai.co/it/comprendere-il-codice-bacon-shor-nellinformatica-quantistica/#respond" style="display:none;" data-no-translation="" data-trp-gettext="">Annulla risposta</a></small>
+</h3>
+<form action="https://quantumai.co/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate data-trp-original-action="https://quantumai.co/wp-comments-post.php">
+<p class="comment-notes"><span id="email-notes" data-no-translation="" data-trp-gettext="">Il tuo indirizzo email non sarÃ  pubblicato.</span> <span class="required-field-message" data-no-translation="" data-trp-gettext="">I campi obbligatori sono contrassegnati <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Commento <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Nome <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url" data-no-translation="" data-trp-gettext="">Sito web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent" data-no-translation="" data-trp-gettext="">Salva il mio nome, email e sito web in questo browser per la prossima volta che commento.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Invia commento" data-no-translation-value=""> <input type="hidden" name="comment_post_ID" value="505504" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<input type="hidden" name="trp-form-language" value="it">
+</form>	</div>
+
+	
+</div>
+
+
+		</main>
+	</section>
+
+
+	</div>
+
+
+	
+<footer class="py-10 bg-gray-100 sm:pt-16 lg:pt-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12 text-sm">
+            <div class="max-md:col-span-2">
+            		            	<img class="w-auto h-8" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+				
+				<div class="pt-5 -mb-1">
+
+					<div class="flex items-center gap-x-2 text-sm md:text-base font-medium tracking-wide text-gray-800">
+						<svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
+						  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+						</svg>
+
+						<span>+442035970878</span>
+					</div>
+
+										
+				</div>
+
+				<ul id="menu-footer-main" class="mt-8 space-y-3">
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405"><a href="https://quantumai.co/it/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Homepage</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-406"><a href="https://quantumai.co/it/blog/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Blog</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://quantumai.co/it/chi-siamo/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Chi siamo</a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="https://quantumai.co/it/squadra/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Squadra</a></li>
+<li id="menu-item-505485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505485"><a href="https://quantumai.co/it/glossario/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Glossario</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="https://quantumai.co/it/contattateci/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Contattateci</a></li>
+</ul>            </div>
+            <div class="col-span-2 md:col-span-3 space-y-10">
+            	            		<div class="flex md:justify-end gap-x-2 md:mt-8">
+            			<i class="ph-fill ph-map-pin text-lg text-gray-500 mt-1"></i>
+											<div id="Headoffice" itemscope itemprop="parentOrganization" itemtype="http://schema.org/FinancialService">
+						   <h3 itemprop="name" class="text-lg font-medium leading-7 text-gray-900">Quantum AI - Ufficio nel Regno Unito</h3>
+						   
+						   <div class="mt-2.5 space-y-1 text-sm not-italic leading-6 text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						   		<div></div>
+						      <div itemprop="streetAddress">35 John Street</div>
+						      <div>
+						      	<span itemprop="postalCode">LU1 2JE</span>, <span itemprop="addressLocality">Luton, Regno Unito</span>
+						      </div>
+						   </div>
+						</div>
+										</div>
+				            	
+            	            </div>
+        </div>
+        <div class="py-8 md:py-10 2xl:py-12 my-8 md:my-12 2xl:my-16 prose prose-sm max-w-none text-gray-500 border-y border-gray-300">
+          <p>Il trading offre la possibilità di ottenere profitti consistenti, ma comporta anche il rischio di perdere parte o tutto il capitale. È importante notare che circa il 70% dei trader subisce perdite finanziarie.</p>
+<p>Si prega di notare che <a class="wpil_keyword_link" href="https://quantumai.co/it/" title="Quantum AI" data-wpil-keyword-link="linked">Quantum AI</a> e altri marchi citati sul nostro sito web sono utilizzati esclusivamente per scopi di marketing e non corrispondono a società o servizi specifici. Il video associato è destinato esclusivamente a un uso promozionale, con persone che recitano.</p>
+<p>Prima di investire, si consiglia di leggere attentamente i Termini e condizioni e la pagina di esclusione di responsabilità sulla piattaforma di investimento fornita da terzi. Inoltre, si consiglia di prestare attenzione agli obblighi fiscali sulle plusvalenze personali che possono essere applicati nel proprio Paese di residenza. Per i residenti negli Stati Uniti è illegale richiedere l'acquisto e la vendita di opzioni su materie prime, compresi i contratti di "previsione", a meno che non siano quotati su una borsa registrata dalla CFTC o siano legalmente esenti.</p>
+<p>Inoltre, la Financial Conduct Authority (FCA) del Regno Unito ha attuato la policy statement PS20/10, che vieta la vendita, la commercializzazione e la distribuzione di contratti per differenza (CFD) relativi a prodotti di trading. Questo regolamento limita anche la diffusione di contenuti promozionali riguardanti i CFD e altri prodotti finanziari ai consumatori del Regno Unito.</p>
+<p>Fornendoci i vostri dati personali, acconsentite alla condivisione di tali informazioni con fornitori terzi di servizi di trading, in conformità alla nostra Politica sulla privacy e ai nostri Termini e condizioni. Per quanto riguarda le strategie di trading, i trader possono scegliere tra diverse opzioni, come l'utilizzo di software di trading, l'impiego di broker umani o la conduzione autonoma delle operazioni. La scelta di questi metodi spetta esclusivamente al singolo trader.</p>
+        </div>
+        <div>
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
+                	<ul id="menu-footer-legal" class="flex flex-wrap items-center justify-start mt-5 gap-x-8 sm:mt-0 gap-y-3">
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://quantumai.co/it/informativa-sulla-privacy/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Informativa sulla privacy</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://quantumai.co/it/termini-e-condizioni/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Termini e condizioni</a></li>
+</ul>                </div>
+
+                <p class="mt-6 text-sm text-gray-600 lg:mt-0">© <script>document.write(/\d{4}/.exec(Date())[0])</script> Copyright Quantum AI Ltd. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<template id="tp-language" data-tp-language="it_IT"></template><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/it\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/immediate\/*","\/it\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script>
+        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
+            <div id="trp-floater-ls-current-language" class="trp-with-flags">
+
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
+					<img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian				</a>
+
+            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+
+                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="https://quantumai.co/understanding-the-bacon-shor-code-in-quantum-computing/" title="English">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English">English					          </a>
+                                    <a href="https://quantumai.co/de/verstandnis-des-bacon-shor-codes-im-quantencomputing/" title="German">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German">German					          </a>
+                                    <a href="https://quantumai.co/es/entender-el-codigo-bacon-shor-en-la-computacion-cuantica/" title="Spanish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish">Spanish					          </a>
+                                    <a href="https://quantumai.co/fr/comprendre-le-code-bacon-shor-en-informatique-quantique/" title="French">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French					          </a>
+                                    <a href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e3%83%99%e3%83%bc%e3%82%b3%e3%83%b3%e3%83%bb%e3%82%b7%e3%83%a7%e3%83%bc%e3%82%b3/" title="Japanese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese					          </a>
+                                    <a href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-%d0%ba%d0%be%d0%b4%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2/" title="Russian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian">Russian					          </a>
+                                    <a href="https://quantumai.co/pt/compreensao-do-codigo-bacon-shor-na-computacao-quantica/" title="Portuguese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese">Portuguese					          </a>
+                                    <a href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%be%d0%b4%d0%b0-%d0%bd%d0%b0-%d0%b1%d0%b5%d0%ba%d0%be%d0%bd-%d1%88%d0%be%d1%80-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be/" title="Bulgarian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian">Bulgarian					          </a>
+                                    <a href="https://quantumai.co/cs/pochopeni-kodu-bacon-shor-v-kvantove-vypocetni-technice/" title="Czech">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech					          </a>
+                                    <a href="https://quantumai.co/da/forsta-bacon-shor-koden-i-kvantecomputere/" title="Danish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish">Danish					          </a>
+                                    <a href="https://quantumai.co/nl/het-begrijpen-van-de-bacon-shor-code-in-quantum-computing/" title="Dutch">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch">Dutch					          </a>
+                                    <a href="https://quantumai.co/et/peekoni-shor-koodi-moistmine-kvantarvutites/" title="Estonian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian">Estonian					          </a>
+                                    <a href="https://quantumai.co/fi/kvanttilaskennassa-kaytettavan-pekoni-shor-koodin-ymmartaminen/" title="Finnish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish">Finnish					          </a>
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian</a>
+</div>            </div>
+        </div>
+
+    <div class="trp_model_container" id="trp_ald_modal_container" style="display: none" data-no-dynamic-translation data-no-translation>
+        <div class="trp_ald_modal" id="trp_ald_modal_popup">
+            <div id="trp_ald_popup_text"></div>
+
+        <div class="trp_ald_select_and_button">
+            <div class="trp_ald_ls_container">
+            <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_popup_select_container" data-no-translation>
+                
+                <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                    <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                </div>
+                <div class="trp-ls-shortcode-language">
+                    <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                    </div>
+                                                                    <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German                            </div>
+                                                                        <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French                            </div>
+                                                                        <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech                            </div>
+                                                                        <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch                            </div>
+                                                                        <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish                            </div>
+                                                            </div>
+            </div>
+            </div>
+
+
+            <div class="trp_ald_button">
+            <a href="https://quantumai.co/" id="trp_ald_popup_change_language"></a>
+            </div>
+         </div>
+        <a id="trp_ald_x_button_and_textarea" href="#"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
+    </div>
+</div>
+<template id="trp_ald_no_text_popup_template">
+    <div id="trp_no_text_popup_wrap">
+        <div id="trp_no_text_popup" class="trp_ald_no_text_popup" data-no-dynamic-translation data-no-translation>
+            
+            <div id="trp_ald_not_text_popup_ls_and_button">
+                <div id="trp_ald_no_text_popup_div">
+                    <span id="trp_ald_no_text_popup_text"></span>
+                </div>
+                <div class="trp_ald_ls_container">
+                    <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_no_text_select" data-no-translation>
+                        
+                        <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                            <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                        </div>
+                        <div class="trp-ls-shortcode-language" id="trp_ald_no_text_popup_select_container">
+                            <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                            </div>
+                                                                                            <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish
+                                    </div>
+                                                                                    </div>
+                    </div>
+                </div>
+                <div class="trp_ald_change_language_div">
+                    <a href="https://quantumai.co/" id="trp_ald_no_text_popup_change_language"></a>
+                </div>
+                <div id="trp_ald_no_text_popup_x_button_and_textarea"> <a id="trp_ald_no_text_popup_x_button"></a><span id="trp_ald_no_text_popup_x_button_textarea"></span>
+</div>
+            </div>
+            <div id="trp_ald_no_text_popup_x">
+                <button id="trp_close"></button>
+            </div>
+        </div>
+    </div>
+</template>        <span class="ssp-id" style="display:none">505504</span>
+		<script id="trp-dynamic-translator-js-extra">var trp_data = {"trp_custom_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-multilingual\/includes\/trp-ajax.php","trp_wp_ajax_url":"https:\/\/quantumai.co\/wp-admin\/admin-ajax.php","trp_language_to_query":"it_IT","trp_original_language":"en_GB","trp_current_language":"it_IT","trp_skip_selectors":["[data-no-translation]","[data-no-dynamic-translation]","[data-trp-translate-id-innertext]","script","style","head","trp-span","translate-press","[data-trp-translate-id]","[data-trpgettextoriginal]","[data-trp-post-slug]"],"trp_base_selectors":["data-trp-translate-id","data-trpgettextoriginal","data-trp-post-slug"],"trp_attributes_selectors":{"text":{"accessor":"outertext","attribute":false},"block":{"accessor":"innertext","attribute":false},"image_src":{"selector":"img[src]","accessor":"src","attribute":true},"submit":{"selector":"input[type='submit'],input[type='button'], input[type='reset']","accessor":"value","attribute":true},"placeholder":{"selector":"input[placeholder],textarea[placeholder]","accessor":"placeholder","attribute":true},"title":{"selector":"[title]","accessor":"title","attribute":true},"a_href":{"selector":"a[href]","accessor":"href","attribute":true},"button":{"accessor":"outertext","attribute":false},"option":{"accessor":"innertext","attribute":false},"aria_label":{"selector":"[aria-label]","accessor":"aria-label","attribute":true},"video_src":{"selector":"video[src]","accessor":"src","attribute":true},"video_poster":{"selector":"video[poster]","accessor":"poster","attribute":true},"video_source_src":{"selector":"video source[src]","accessor":"src","attribute":true},"audio_src":{"selector":"audio[src]","accessor":"src","attribute":true},"audio_source_src":{"selector":"audio source[src]","accessor":"src","attribute":true},"picture_image_src":{"selector":"picture image[src]","accessor":"src","attribute":true},"picture_source_srcset":{"selector":"picture source[srcset]","accessor":"srcset","attribute":true},"image_alt":{"selector":"img[alt]","accessor":"alt","attribute":true},"meta_desc":{"selector":"meta[name=\"description\"],meta[property=\"og:title\"],meta[property=\"og:description\"],meta[property=\"og:site_name\"],meta[property=\"og:image:alt\"],meta[name=\"twitter:title\"],meta[name=\"twitter:description\"],meta[name=\"twitter:image:alt\"],meta[name=\"DC.Title\"],meta[name=\"DC.Description\"],meta[property=\"article:section\"],meta[property=\"article:tag\"]","accessor":"content","attribute":true},"page_title":{"selector":"title","accessor":"innertext","attribute":false},"meta_desc_img":{"selector":"meta[property=\"og:image\"],meta[property=\"og:image:secure_url\"],meta[name=\"twitter:image\"]","accessor":"content","attribute":true}},"trp_attributes_accessors":["outertext","innertext","src","value","placeholder","title","href","aria-label","poster","srcset","alt","content"],"gettranslationsnonceregular":"0f65ef7370","showdynamiccontentbeforetranslation":"","skip_strings_from_dynamic_translation":[],"skip_strings_from_dynamic_translation_for_substrings":{"href":["amazon-adsystem","googleads","g.doubleclick"]},"duplicate_detections_allowed":"100","trp_translate_numerals_opt":"no","trp_no_auto_translation_selectors":["[data-no-auto-translation]"]};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/js/trp-translate-dom-changes.js" id="trp-dynamic-translator-js"></script>
+<script src="https://quantumai.co/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js" id="ssp-form-webhook-public-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-content/themes/immediate/js/script.min.js" id="immediate-script-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"></script>
+
+</header>
+</div>
+</body>
+</html>

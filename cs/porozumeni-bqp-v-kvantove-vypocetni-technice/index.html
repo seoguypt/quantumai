@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="cs-CZ" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7cc0ec6e28dd2386a2cdc6b6/script.js"></script>
+
+<title>Porozumění BQP v kvantové výpočetní technice</title>
+<meta name="description" content="Ponořte se do oblasti kvantových počítačů a prozkoumejte koncept BQP a jeho klíčovou roli v kvantových algoritmech a teorii složitosti.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Porozumění BQP v kvantové výpočetní technice">
+<meta property="og:description" content="Ponořte se do oblasti kvantových počítačů a prozkoumejte koncept BQP a jeho klíčovou roli v kvantových algoritmech a teorii složitosti.">
+<meta property="og:url" content="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<meta property="og:site_name" content="quantumai.co">
+<meta property="article:section" content="Co je to">
+<meta property="og:updated_time" content="2024-01-07T09:57:43+00:00">
+<meta property="og:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta property="og:image:secure_url" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta property="og:image:width" content="1344">
+<meta property="og:image:height" content="768">
+<meta property="og:image:alt" content="BQP (kvantový polynomiální čas s omezenou chybou)">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2024-01-07T09:57:39+00:00">
+<meta property="article:modified_time" content="2024-01-07T09:57:43+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Porozumění BQP v kvantové výpočetní technice">
+<meta name="twitter:description" content="Ponořte se do oblasti kvantových počítačů a prozkoumejte koncept BQP a jeho klíčovou roli v kvantových algoritmech a teorii složitosti.">
+<meta name="twitter:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta name="twitter:label1" content="Napsal/a:">
+<meta name="twitter:data1" content="Kristof George">
+<meta name="twitter:label2" content="Doba čtení">
+<meta name="twitter:data2" content="17 minut">
+<script type="application/ld+json" class="rank-math-schema-pro">{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https:\/\/quantumai.co\/cs\/#person",
+            "name": "quantumai.co",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/cs\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "cs",
+                "width": "789",
+                "height": "152"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/cs\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "cs",
+                "width": "789",
+                "height": "152"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https:\/\/quantumai.co\/cs\/#website",
+            "url": "https:\/\/quantumai.co\/cs\/",
+            "name": "quantumai.co",
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/cs\/#person"
+            },
+            "inLanguage": "cs"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg",
+            "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg",
+            "width": "1344",
+            "height": "768",
+            "caption": "BQP (Bounded-error Quantum Polynomial Time)",
+            "inLanguage": "cs"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": "1",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co",
+                        "name": "Home"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "2",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/cs\/kategorie\/co-je\/",
+                        "name": "Co je to"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "3",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/",
+                        "name": "Porozumění BQP v kvantové výpočetní technice"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#webpage",
+            "url": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/",
+            "name": "Porozumění BQP v kvantové výpočetní technice",
+            "datePublished": "2024-01-07T09:57:39+00:00",
+            "dateModified": "2024-01-07T09:57:43+00:00",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/cs\/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg"
+            },
+            "inLanguage": "cs",
+            "breadcrumb": {
+                "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#breadcrumb"
+            },
+            "headline": "Understanding BQP in Quantum Computing",
+            "lastReviewed": "7 ledna, 2024",
+            "relatedLink": [
+                "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing"
+            ],
+            "significantLink": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/\/elon-musk\/",
+            "mainEntityOfPage": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/",
+            "sameAs": [],
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "quantum",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_mechanics",
+                        "https:\/\/www.google.com\/search?q=quantum&kgmid=\/m\/02qvmkh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "obchodníci",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trader_(finance)",
+                        "https:\/\/www.google.com\/search?q=traders&kgmid=\/m\/0cncxk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "Bitcoin",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Bitcoin",
+                        "https:\/\/www.google.com\/search?q=bitcoin&kgmid=\/m\/0135y0by"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "aplikace",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Mobile_app",
+                        "https:\/\/www.google.com\/search?q=app&kgmid=\/m\/0h94y36"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kryptoměna",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrency&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "umělá inteligence",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=artificial+intelligence&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantová výpočetní technika",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computing&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "nástroj",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Tool",
+                        "https:\/\/www.google.com\/search?q=tool&kgmid=\/m\/07k1x"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "riziko",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Risk",
+                        "https:\/\/www.google.com\/search?q=risk&kgmid=\/m\/06d5f"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "software",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Software",
+                        "https:\/\/www.google.com\/search?q=software&kgmid=\/m\/01mf0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "seo",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Search_engine_optimization",
+                        "https:\/\/www.google.com\/search?q=seo&kgmid=\/m\/019qb_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "algoritmy",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Algorithm",
+                        "https:\/\/www.google.com\/search?q=algorithms&kgmid=\/m\/02qcyvp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "možnosti",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Option_(finance)",
+                        "https:\/\/www.google.com\/search?q=options&kgmid=\/m\/01lm23"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "obchodní platforma",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Electronic_trading_platform",
+                        "https:\/\/www.google.com\/search?q=trading+platform&kgmid=\/m\/09rjlk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "v reálném čase",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Real-time_computing",
+                        "https:\/\/www.google.com\/search?q=real-time&kgmid=\/m\/026y7m6"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "parametry",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Parameter",
+                        "https:\/\/www.google.com\/search?q=parameters&kgmid=\/m\/068f8"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investice",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investment",
+                        "https:\/\/www.google.com\/search?q=investment&kgmid=\/m\/0g_fl"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "elon musk",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Elon_Musk",
+                        "https:\/\/www.google.com\/search?q=elon+musk&kgmid=\/m\/03nzf1"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "krypto",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investoři",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investor",
+                        "https:\/\/www.google.com\/search?q=investors&kgmid=\/m\/03krjh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "makléři",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Broker",
+                        "https:\/\/www.google.com\/search?q=brokers&kgmid=\/m\/0cmc2y9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "obchodování",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trade",
+                        "https:\/\/www.google.com\/search?q=trading&kgmid=\/m\/07br0"
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "rozdílové smlouvy (cfds)",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=contracts+for+difference+(cfds)&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "cfd",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=cfd&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "automatizované obchodování",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                        "https:\/\/www.google.com\/search?q=automated+trading&kgmid=\/m\/02pqr_n"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kryptoměny",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrencies&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantová umělá inteligence",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+artificial+intelligence&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "cloudové služby",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cloud_computing",
+                        "https:\/\/www.google.com\/search?q=cloud-based&kgmid=\/m\/02y_9m3"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "strategie sociálních médií",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=social+media+strategy&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "prediktivní analýza",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Predictive_analytics",
+                        "https:\/\/www.google.com\/search?q=predictive+analytics&kgmid=\/m\/0bl93g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "techniky strojového učení",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Machine_learning",
+                        "https:\/\/www.google.com\/search?q=machine+learning+techniques&kgmid=\/m\/01hyh_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "uživatelsky přívětivé",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Usability",
+                        "https:\/\/www.google.com\/search?q=user-friendly&kgmid=\/m\/01qb0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kryptografická aktiva",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto+assets&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantové strojové učení",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+machine+learning&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "analytika",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Analytics",
+                        "https:\/\/www.google.com\/search?q=analytics&kgmid=\/m\/02gcn9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantové procesory",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+processors&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantové počítače",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computers&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "digitální marketing",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=digital+marketing&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "doklad o práci",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Proof_of_work",
+                        "https:\/\/www.google.com\/search?q=proof+of+work&kgmid=\/m\/05bdrw"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "kvantové informace",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_information",
+                        "https:\/\/www.google.com\/search?q=quantum+information&kgmid=\/m\/06b0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "vyvažování zátěže",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Load_balancing_(computing)",
+                        "https:\/\/www.google.com\/search?q=load+balancing&kgmid=\/m\/0gl7w"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ai boty",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai+bots&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "hluboké učení",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Deep_learning",
+                        "https:\/\/www.google.com\/search?q=deep+learning&kgmid=\/m\/0h1fn8h"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https:\/\/quantumai.co\/cs\/author\/gio\/",
+            "name": "Kristof George",
+            "url": "https:\/\/quantumai.co\/cs\/author\/gio\/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "url": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "caption": "Kristof George",
+                "inLanguage": "cs"
+            },
+            "sameAs": [
+                "https:\/\/wordpress-1142890-4220391.cloudwaysapps.com"
+            ]
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "Understanding BQP in Quantum Computing",
+            "keywords": "BQP (Bounded-error Quantum Polynomial Time)",
+            "datePublished": "2024-01-07T09:57:39+00:00",
+            "dateModified": "2024-01-07T09:57:43+00:00",
+            "articleSection": "What is",
+            "author": {
+                "@id": "https:\/\/quantumai.co\/cs\/author\/gio\/",
+                "name": "Kristof George"
+            },
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/cs\/#person"
+            },
+            "description": "Ponořte se do oblasti kvantových počítačů a prozkoumejte koncept BQP a jeho klíčovou roli v kvantových algoritmech a teorii složitosti.",
+            "name": "Porozumění BQP v kvantové výpočetní technice",
+            "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#richSnippet",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#webpage"
+            },
+            "image": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg"
+            },
+            "inLanguage": "cs",
+            "mainEntityOfPage": {
+                "@id": "https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://quantumai.b-cdn.net/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; RSS zdroj" href="https://quantumai.co/cs/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; RSS komentářů" href="https://quantumai.co/cs/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; RSS komentářů pro Understanding BQP in Quantum Computing" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/quantumai.b-cdn.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍🔥","🐦​🔥")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://quantumai.b-cdn.net/wp-includes/css/dist/block-library/style.min.css" media="all">
+<style id="rank-math-toc-block-style-inline-css">.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") " ";counter-increment:item}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="trp-floater-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-floater-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-popup-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/css/trp-popup.css" media="all">
+<link rel="stylesheet" id="immediate-style-css" href="https://quantumai.b-cdn.net/wp-content/themes/immediate/style.css" media="all">
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script id="trp-language-cookie-js-extra">var trp_language_cookie_data = {"abs_home":"https:\/\/quantumai.co","url_slugs":{"en_GB":"en_gb","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi"},"cookie_name":"trp_language","cookie_age":"30","cookie_path":"\/","default_language":"en_GB","publish_languages":["en_GB","de_DE","es_ES","fr_FR","it_IT","ja","ru_RU","pt_BR","bg_BG","cs_CZ","da_DK","nl_NL","et","fi"],"trp_ald_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-business\/add-ons-pro\/automatic-language-detection\/includes\/trp-ald-ajax.php","detection_method":"browser-ip","popup_option":"popup","popup_type":"normal_popup","popup_textarea":"We've detected you might be speaking a different language. Do you want to change to:","popup_textarea_change_button":"Change Language","popup_textarea_close_button":"Close and do not switch language","iso_codes":{"en_GB":"en","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi","en_US":"en"},"language_urls":{"en_GB":"https:\/\/quantumai.co\/understanding-bqp-in-quantum-computing\/?simply_static_page=12211","de_DE":"https:\/\/quantumai.co\/de\/bqp-in-der-quanteninformatik-verstehen\/?simply_static_page=12211","es_ES":"https:\/\/quantumai.co\/es\/entender-la-bqp-en-la-computacion-cuantica\/?simply_static_page=12211","fr_FR":"https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/?simply_static_page=12211","it_IT":"https:\/\/quantumai.co\/it\/comprensione-della-bqp-nellinformatica-quantistica\/?simply_static_page=12211","ja":"https:\/\/quantumai.co\/ja\/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3\/?simply_static_page=12211","ru_RU":"https:\/\/quantumai.co\/ru\/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85\/?simply_static_page=12211","pt_BR":"https:\/\/quantumai.co\/pt\/compreensao-do-bqp-na-computacao-quantica\/?simply_static_page=12211","bg_BG":"https:\/\/quantumai.co\/bg\/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f\/?simply_static_page=12211","cs_CZ":"https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/?simply_static_page=12211","da_DK":"https:\/\/quantumai.co\/da\/forstaelse-af-bqp-i-kvantecomputere\/?simply_static_page=12211","nl_NL":"https:\/\/quantumai.co\/nl\/bqp-in-kwantumcomputers-begrijpen\/?simply_static_page=12211","et":"https:\/\/quantumai.co\/et\/bqp-moistmine-kvantarvutuses\/?simply_static_page=12211","fi":"https:\/\/quantumai.co\/fi\/bqpn-ymmartaminen-kvanttilaskennassa\/?simply_static_page=12211"},"english_name":{"en_GB":"English","de_DE":"German","es_ES":"Spanish","fr_FR":"French","it_IT":"Italian","ja":"Japanese","ru_RU":"Russian","pt_BR":"Portuguese","bg_BG":"Bulgarian","cs_CZ":"Czech","da_DK":"Danish","nl_NL":"Dutch","et":"Estonian","fi":"Finnish"},"is_iphone_user_check":""};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/js/trp-language-cookie.js" id="trp-language-cookie-js"></script>
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TWTG3RS4" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["quantumai.co"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWTG3RS4");</script>
+
+
+<link rel="https://api.w.org/" href="https://quantumai.co/cs/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://quantumai.co/cs/wp-json/wp/v2/posts/505499">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantumai.co/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://quantumai.co/cs/?p=505499">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://quantumai.co/cs/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fcs%2Fporozumeni-bqp-v-kvantove-vypocetni-technice%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://quantumai.co/cs/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fcs%2Fporozumeni-bqp-v-kvantove-vypocetni-technice%2F#038;format=xml">
+		<script type="text/javascript">(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "l9090pzye1");</script>
+		<link rel="alternate" hreflang="en-GB" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+<link rel="alternate" hreflang="de-DE" href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/">
+<link rel="alternate" hreflang="es-ES" href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr-FR" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<link rel="alternate" hreflang="it-IT" href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ja" href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3/">
+<link rel="alternate" hreflang="ru-RU" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/">
+<link rel="alternate" hreflang="pt-BR" href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg-BG" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/">
+<link rel="alternate" hreflang="cs-CZ" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da-DK" href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl-NL" href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/">
+<link rel="alternate" hreflang="et" href="https://quantumai.co/et/bqp-moistmine-kvantarvutuses/">
+<link rel="alternate" hreflang="fi" href="https://quantumai.co/fi/bqpn-ymmartaminen-kvanttilaskennassa/">
+<link rel="alternate" hreflang="en" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+<link rel="alternate" hreflang="de" href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/">
+<link rel="alternate" hreflang="es" href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<link rel="alternate" hreflang="it" href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ru" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/">
+<link rel="alternate" hreflang="pt" href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/">
+<link rel="alternate" hreflang="cs" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da" href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl" href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/">
+<link rel="alternate" hreflang="x-default" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+			                <meta name="ssp-config-path" content="/wp-content/uploads/simply-static/configs/">
+			
+						
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-180x180.png">
+<meta name="msapplication-TileImage" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-270x270.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-505499 single-format-standard wp-embed-responsive wp-theme-immediate translatepress-cs_CZ">
+
+
+	<div id="top-bar-info" class="sticky top-0 z-[60] py-5 bg-gradient-to-tr from-indigo-600 to-blue-600 text-white text-xs lg:text-center pr-6">
+		<div class="max-w-7xl mx-auto px-6 relative">
+			<p>Neinvestujte, pokud nejste připraveni přijít o všechny investované peníze. Jedná se o vysoce rizikovou investici a neměli byste očekávat, že budete chráněni, pokud se něco pokazí.</p>
+			<button class="absolute right-0 top-0 opacity-25 hover:opacity-50 transition-opacity p-0.5" onclick="hideTopBar()" aria-label="Zavřít informační panel">
+				<svg class="w-3.5 h-3.5" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.99979 4.00028C6.74392 4.00028 6.48776 4.09775 6.29276 4.29325L4.29276 6.29325C3.90176 6.68425 3.90176 7.31731 4.29276 7.70731L11.5857 15.0003L4.29276 22.2932C3.90176 22.6842 3.90176 23.3173 4.29276 23.7073L6.29276 25.7073C6.68376 26.0983 7.31682 26.0983 7.70682 25.7073L14.9998 18.4143L22.2928 25.7073C22.6828 26.0983 23.3168 26.0983 23.7068 25.7073L25.7068 23.7073C26.0978 23.3163 26.0978 22.6832 25.7068 22.2932L18.4139 15.0003L25.7068 7.70731C26.0978 7.31731 26.0978 6.68325 25.7068 6.29325L23.7068 4.29325C23.3158 3.90225 22.6828 3.90225 22.2928 4.29325L14.9998 11.5862L7.70682 4.29325C7.51132 4.09775 7.25567 4.00028 6.99979 4.00028Z" fill="white"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>// Hide top bar when clicked
+	// Adds a cookie and hides element
+	function hideTopBar() {
+	    document.cookie = "top_bar_disclaimer=hidden;max-age=31536000; path=/";
+	    document.getElementById("top-bar-info").style.display = 'none';
+	}</script>
+
+	
+<div id="page" class="relative">
+	<a href="#content" class="sr-only" data-no-translation="" data-trp-gettext="">Přeskočit na obsah</a>
+
+	
+<header id="masthead" class="lg:overflow-y-visible absolute w-full z-50 top-2 md:top-4" x-data="{ menuOpen: false }">
+
+	<div class="mx-auto max-w-7xl px-2.5 sm:px-4">
+        <div class="relative flex max-lg:justify-between gap-6 sm:gap-8 px-3 shadow sm:px-6 lg:px-8 rounded-xl h-[70px] md:h-[88px]">
+          <div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-75 backdrop-blur-md rounded-xl z-0"></div>
+          <div class="flex flex-shrink-0 items-center relative z-10">
+          							<a href="https://quantumai.co/cs/">
+	            		<img class="block h-7 md:h-8 w-auto" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+	            	</a>
+				          </div>
+          
+          <div class="flex items-center gap-2 lg:hidden relative z-10">
+          					    <a href="https://quantumai.co/cs/zaregistrovat-se/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Zaregistrujte se</a>
+			              
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Otevřete nabídku" x-show="!menuOpen">
+                <i class="ph-fill ph-list"></i>
+              </button>
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Zavřít nabídku" x-show="menuOpen">
+                <i class="ph-fill ph-x"></i>
+              </button>
+          </div>
+          <nav class="hidden lg:flex lg:justify-between w-full z-10 menu-nav-desktop">
+
+          	<div class="flex gap-6">
+          		<div id="menu-nav-desktop">
+          		<ul id="menu-main" class="lg:flex flex-shrink-0 gap-6 text-base relative z-10 h-full">
+<li id="menu-item-505175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 h-full relative"><a href="https://quantumai.co/cs/produkty/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Produkty</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 h-full relative"><a href="https://quantumai.co/cs/o-nas/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">O nás</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 h-full relative"><a href="https://quantumai.co/cs/tym/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Tým</a></li>
+<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 h-full relative"><a href="https://quantumai.co/cs/blog/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 h-full relative"><a href="https://quantumai.co/cs/kontaktujte-nas/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Kontaktujte nás</a></li>
+</ul>          	</div>
+
+          	<div id="menu-nav-desktop-multi-page" class="relative" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		
+          		<div class="absolute left-0 top-full z-30 mt-2 py-1 w-auto origin-top focus:outline-none" x-show="dropdownOpen" x-transition x-cloak>
+          			<div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 rounded-lg z-0"></div>
+          			<ul id="menu-dropdown" class="min-w-[200px] menu-nav-desktop-multi-page-menu py-1">
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://quantumai.co/cs/o-nas/" class="flex justify-between items-center gap-x-4 px-6 py-2.5 text-base text-gray-700 hover:text-gray-900 relative z-10 leading-5">O nás</a></li>
+</ul>          		</div>
+          		
+          	</div>
+          	</div>
+          	
+          	
+          	<div class="flex gap-3 items-center flex-shrink-0">
+          					    <a href="https://quantumai.co/cs/prihlasit-se/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Přihlášení</a>
+									    <a href="https://quantumai.co/cs/zaregistrovat-se/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Zaregistrujte se</a>
+			            </div>
+          </nav>
+
+          <script>
+          	let menuElements = document.querySelectorAll('#menu-nav-desktop .menu-item-has-children');
+          	for (let i=0, il=menuElements.length; i < il; ++i) {
+		        let menuElementObj = menuElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:keydown.escape.stop', 'dropdownOpen = false');
+		        menuElement.setAttribute('x-on:click.away', 'dropdownOpen = false');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiElements = document.querySelectorAll('#menu-nav-desktop-multi-page .menu-item-has-children');
+          	
+		    for (let i=0, il=menuMultiElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:mouseover', 'dropdownOpen = true');
+		        menuElement.setAttribute('x-on:mouseleave', 'dropdownOpen = false');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-right transition"><\/i>'
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiSubmenuElements = document.querySelectorAll('.menu-nav-desktop-multi-page-menu .sub-menu');
+		    for (let i=0, il=menuMultiSubmenuElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiSubmenuElements[i];
+		        let div = document.createElement("div");
+		        div.classList.add('absolute', 'w-[calc(100%_-_8px)]', 'h-full', 'top-0', 'right-0', 'bg-white', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'ring-1', 'ring-black', 'ring-opacity-5', 'rounded-lg', 'z-0');
+				menuElementObj.prepend(div);
+		    }
+          </script>
+          
+          
+        </div>
+      </div>
+      
+      <nav class="lg:hidden mt-3 md:max-w-lg px-4 sm:px-6 lg:px-8 ml-auto relative z-10" aria-label="Globální" x-show="menuOpen" @keydown.escape.stop="menuOpen = false" @click.away="menuOpen = false" x-trap="menuOpen" x-transition x-cloak id="menu-nav-mobile">
+      	<div class="overflow-hidden bg-white bg-opacity-80 backdrop-blur-md shadow rounded-xl text-gray-700 py-2">
+      		<ul id="menu-main-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/produkty/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Produkty</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/o-nas/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">O nás</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/tym/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Tým</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/blog/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/kontaktujte-nas/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Kontaktujte nás</a></li>
+</ul>
+          	<div id="menu-nav-desktop-multi-page" class="relative flex flex-col items-center" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		<button class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent" x-on:click.prevent="dropdownOpen = !dropdownOpen">
+          			Zdroje          			<i class="ph-fill ph-caret-down transition" :class="{ 'rotate-180': dropdownOpen }"></i>
+          		</button>
+          		<div class="flex flex-col gap-y-1.5 items-center text-center px-6 w-full min-w-full">
+          			<div class="flex flex-col gap-y-1 p-4 rounded-lg bg-gray-900/5 w-full min-w-full" x-show="dropdownOpen" x-transition x-cloak>
+	          			<ul id="menu-dropdown-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/cs/o-nas/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">O nás</a></li>
+</ul>	          		</div>
+          		</div>
+          		
+          	</div>
+
+          	
+
+          	<div class="flex gap-3 items-center flex-shrink-0 px-6 pb-3 justify-center pt-3">
+              			    <a href="https://quantumai.co/cs/prihlasit-se/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Přihlášení</a>
+									    <a href="https://quantumai.co/cs/zaregistrovat-se/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">Zaregistrujte se</a>
+			            </div>
+      	</div>
+          	
+          </nav>
+          <script>
+          	let menuElementsMobile = document.querySelectorAll('#menu-nav-mobile .menu-item-has-children');
+          	for (let i=0, il=menuElementsMobile.length; i < il; ++i) {
+		        let menuElementObj = menuElementsMobile[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+          </script>
+	<div>
+
+
+
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+
+<article itemscope itemtype="https://schema.org/NewsArticle" id="post-505499" class="post-505499 post type-post status-publish format-standard has-post-thumbnail hentry category-what-is">
+	<div class="relative">
+	    	<img class="absolute z-0 w-full h-full object-cover pointer-events-none hero-angle" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/bg.svg" alt="">
+		<div class="relative pt-4 pb-16 sm:pb-24">
+		<main class="mt-16 sm:mt-16 pt-[60px] md:pt-[75px]">
+          <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 relative z-10">
+              <div class="text-center max-lg:mx-auto md:max-w-2xl lg:col-span-6 xl:col-span-7 lg:flex lg:items-center lg:text-left lg:pb-20 lg:pt-10">
+                <div>
+                	<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+	  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	    <a itemprop="item" href="https://quantumai.co/cs/">
+	        <span itemprop="name">Home</span></a>
+	    <meta itemprop="position" content="1">
+	  </li> / 
+  
+
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="https://quantumai.co/cs/blog/">
+		    <span itemprop="name">Blog</span></a>
+		<meta itemprop="position" content="2">
+		</li> / 
+	  
+	  <li class="hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		    <span itemprop="name">Porozumění BQP v kvantové výpočetní technice</span>
+		<meta itemprop="position" content="2">
+		</li>
+	  </ol>                							<h1 itemprop="headline" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[66px]">Porozumění BQP v kvantové výpočetní technice</h1>					
+					<meta itemprop="image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+                		                  
+	                <div class="mt-3 text-base sm:text-lg text-gray-600 sm:mt-5 lg:mt-7 flex items-center max-lg:justify-center flex-wrap gap-x-4 gap-y-2">
+	                	<div class="text-gray-700"><a href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/" rel="bookmark"><time datetime="2024-01-07T09:57:39+00:00" itemprop="datePublished" content="2024-01-07T09:57:39+00:00">Leden 7, 2024</time></a></div>
+<a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/cs/kategorie/co-je/">Co je to</a>	                </div>
+                </div>
+              </div>
+
+                           
+            </div>
+          </div>
+        </main>
+	</div>
+</div>
+
+	<div class="mt-20 sm:mt-24 pb-32 sm:pb-40 max-w-6xl px-6 sm:px-8 mx-auto">
+				
+		<div class="mt-16 sm:mt-24">
+				<div class="entry-content prose prose-neutral max-w-none prose-a:text-primary">
+			<p>V našem průzkumu neustále se vyvíjejícího prostředí <b>kvantová výpočetní technika</b>, pronikneme do složitostí <b>BQP</b> (Omezená chyba <b>Kvantový polynomiální čas</b>). Tento základní koncept je jádrem <b>kvantová teorie složitosti</b>, které vymezují třídy <b>rozhodovací problémy</b> které mohou kvantové stroje efektivně a přesně vyřešit. Skrze objektiv zaměřený na <b>kvantové algoritmy</b>, snažíme se dekódovat význam <b>BQP</b> a její klíčová role při prosazování <b>kvantová nadřazenost</b>.</p>
+<p>Vydejte se s námi na cestu do říše <b>kvantová mechanika</b> a výpočetní zázraky, které objasňují hluboké důsledky těchto pokročilých algoritmů pro budoucnost technologií. Pochopení <b>BQP</b> není jen o hranicích výpočetní techniky, ale o otevření dveří k novým možnostem, které nově definují způsob, jakým řešíme složité problémy v naší digitální éře.</p>
+<h2>Podstata BQP v teorii kvantové složitosti</h2>
+<p>Když se ponoříme do základních aspektů <b>kvantová výpočetní technika</b>, je nezbytné pochopit <b>Definice BQP</b>, jeho význam a důsledky. BQP neboli Bounded-error (omezená chyba) <b>Kvantový polynomiální čas</b>, je třída <b>rozhodovací problémy</b> řešitelné kvantovými počítači v rámci <b>polynomiální čas</b>, které <b>kvantová mechanika</b> podkladů. Tato třída nejen odráží základní principy kvantového zpracování informace, ale také zajišťuje hluboký vliv na operační schopnosti těchto pokročilých výpočetních modelů.</p>
+<h3>Definice BQP (kvantový polynomiální čas s omezenou chybou)</h3>
+<p>Na stránkách <b>Definice BQP</b> poskytuje specifickou optiku, skrze kterou můžeme nahlížet na efektivitu a potenciál <b>kvantové algoritmy</b>. Formálně spadá rozhodovací problém do kategorie BQP, pokud existuje kvantový algoritmus, který jej dokáže vyřešit s více než dvoutřetinovou pravděpodobností nalezení správné odpovědi. Tento práh pravděpodobnosti znamená, že se s chybami vypořádáváme efektivně, a to díky tomu. <b>kvantová korekce chyb</b> metody zakořeněné ve struktuře algoritmů BQP.</p>
+<h3>Klíčové vlastnosti rozhodovacích problémů v rámci BQP</h3>
+<p><b>Problémy s rozhodováním</b> které spadají do oblasti působnosti BQP, se vyznačují několika základními vlastnostmi. Ty nejenže definují jejich složitost, ale také připravují půdu pro kvantovou nadřazenost - bod, kde se nachází <b>kvantová výpočetní technika</b> nesporně překonává klasickou výpočetní techniku.</p>
+<ul>
+<li>**Rozhodnutelnost v polynomiálním čase**: Problémy v BQP lze efektivně rozhodnout pomocí algoritmu, který běží v <b>polynomiální čas</b>.</li>
+<li>**Věrnost kvantové brány**: Úspěch řešení těchto problémů závisí na věrnosti kvantových bran, které se používají k manipulaci s qubity a měly by fungovat s minimálními chybami.</li>
+<li>**Pravděpodobnost chyby**: Přestože dokonalost výpočtu zůstává nedosažitelná, BQP si zachovává omezenou pravděpodobnost chyby nepřesahující 1/3 pro jakoukoli instanci problému.</li>
+<li>**Kvantová provázanost a superpozice**: Problémy BQP využívají kvantové provázanosti a superpozice k dosažení bezprecedentní kapacity řešení problémů.</li>
+</ul>
+<h3>Jak BQP rozšiřuje klasickou teorii složitosti</h3>
+<p>Vznik BQP rozšířil obrysy klasického <b>teorie složitosti</b>. Zavedením kvantově mechanických principů do výpočetních rámců jsme se stali svědky dramatického rozšíření našeho arzenálu pro řešení problémů, čímž se naše schopnosti dostaly nad rámec tradičních algoritmů.</p>
+<table>
+<tr>
+<th>Klasická teorie složitosti</th>
+<th>BQP a kvantová mechanika</th>
+</tr>
+<tr>
+<td>Spoléhání se na klasické algoritmy</td>
+<td>Zaměstnává <b>kvantové algoritmy</b>
+</td>
+</tr>
+<tr>
+<td>Nezahrnuje kvantové jevy</td>
+<td>Využívá entanglement, superpozici</td>
+</tr>
+<tr>
+<td>Pracuje v deterministickém rámci</td>
+<td>Funkce pravděpodobnostního výpočtu</td>
+</tr>
+<tr>
+<td>Omezení klasickým zpracováním informací</td>
+<td>
+<b>Kvantová korekce chyb</b> nabízí nové cesty pro věrnost informací</td>
+</tr>
+</table>
+<p>Jak pokračujeme v naší cestě <b>kvantová teorie složitosti</b>, je třeba poznamenat, že pokroky, které zde učiníme, jsou více než jen teoretické úvahy. Jsou to zásadní kroky k využití skutečné síly, kterou kvantová výpočetní technika slibuje, k uvolnění řešení problémů, které byly dříve považovány za neřešitelné, a k průkopnickému objevování nových hranic v oblasti technologií a vědy.</p>
+<h2>Zkoumání modelu kvantového obvodu a BQP</h2>
+<p>Na naší cestě za odhalením složitostí kvantové výpočetní techniky je nezbytné, abychom se ponořili do problematiky kvantové výpočetní techniky. <b>model kvantového obvodu</b>, základní koncept, na němž je založen operační rámec BQP (Bounded-error <b>Kvantový polynomiální čas</b>). Tyto sítě kvantových bran slouží jako základ pro výrobu a provoz kvantových algoritmů a vedou nás stále blíže k vytouženému milníku. <b>kvantová nadřazenost</b>.</p>
+<p><img fetchpriority="high" decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/uniform-quantum-circuits-1024x585.jpg" alt="jednotné kvantové obvody" title="jednotné kvantové obvody" width="1024" height="585" class="aligncenter size-large wp-image-505501" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<h3>Úloha kvantových obvodů v algoritmech BQP</h3>
+<p>Kvantové obvody jsou samotnou podstatou výpočtů ve sféře. <b>kvantová mechanika</b>. Na rozdíl od klasických obvodů, které fungují na binárních posloupnostech, kvantové obvody disponují silou qubitů. Tyto qubity procházejí transformacemi prostřednictvím sekvence kvantových bran, které jsou důmyslně sestaveny tak, aby prováděly <em>kvantové algoritmy</em>.</p>
+<p>Právě tyto algoritmické symfonie nám umožňují provádět výpočty, které by s klasickými počítači byly neproveditelné. Když mluvíme o <em>kvantová nadřazenost</em>, máme na mysli přesně tento scénář - kvantový počítač řešící problémy, které jsou mimo dosah i těch nejpokročilejších klasických superpočítačů.</p>
+<h3>Porozumění jednotným rodinám kvantových obvodů</h3>
+<p>Abychom plně pochopili potenciál kvantové výpočetní techniky, je třeba si uvědomit vliv. <em>jednotné kvantové obvody</em>. Uniformita je zde uměleckým termínem, který znamená, že jediný algoritmus generuje rozložení kvantového obvodu pro libovolnou velikost, což zajišťuje škálovatelnost a metodickou přesnost.</p>
+<p>Tato jednotnost je velmi důležitá; bez ní by se účinnost a spolehlivost rozšiřování kvantových algoritmů pro řešení významnějších a složitějších problémů mohla zhoršit, což by mohlo ztížit cestu k dosažení. <b>kvantová nadřazenost</b>.</p>
+<p>Podívejme se na některé základní parametry těchto kvantových obvodů:</p>
+<table>
+<tr>
+<th>Aspekt</th>
+<th>Význam</th>
+<th>Dopad na kvantové algoritmy</th>
+</tr>
+<tr>
+<td>Počet qubitů</td>
+<td>Označuje rozsah výpočtů a složitost problému.</td>
+<td>Určuje proveditelnost řešení konkrétních kvantových problémů.</td>
+</tr>
+<tr>
+<td>Věrnost brány</td>
+<td>Odráží přesnost a chybovost v rámci kvantových operací.</td>
+<td>Klíčové pro zachování integrity algoritmu a dosažení přesných výsledků.</td>
+</tr>
+<tr>
+<td>Hloubka obvodu</td>
+<td>Měří počet sekvenčních operací, které lze provést.</td>
+<td>ovlivňuje rychlost a účinnost kvantových výpočetních procesů.</td>
+</tr>
+<tr>
+<td>Jednotnost</td>
+<td>Zajišťuje konzistenci při konstrukci obvodů pro jakoukoli velikost problému.</td>
+<td>Usnadňuje škálovatelné a replikovatelné postupy kvantového počítání.</td>
+</tr>
+</table>
+<p>Závěrem lze říci, že oblast kvantových výpočtů je rozsáhlá a plná potenciálu. <b>model kvantového obvodu</b> stojí vysoko jako její kritická infrastruktura. Zajištěním výstavby <em>jednotné kvantové obvody</em>, nadále připravujeme půdu pro převratné pokroky v této oblasti a posouváme se k dráždivému zenitu. <em>kvantová nadřazenost</em>.</p>
+<h2>Vysvětlení BQP (kvantového polynomiálního času s omezenou chybou)</h2>
+<p>V neustále se vyvíjejícím prostředí kvantové výpočetní techniky, <em>Kvantový polynomiální čas s omezenou chybou</em> (<strong>BQP</strong>) vystupuje jako klíčová třída složitosti. BQP ztělesňuje schopnost kvantového počítače řešit rozhodovací problémy přesně a efektivně. Zabýváme se tím, co tvoří <strong>BQP</strong>, jeho důsledky pro <strong>kvantový polynomiální čas</strong>a pokrok v oblasti <strong>kvantová korekce chyb</strong> techniky klíčové pro robustní <strong>kvantové algoritmy</strong>. Naše diskuse bere v úvahu složité spojení výpočetní rychlosti a zmírnění chyb, které charakterizuje BQP jako charakteristický znak potenciálu kvantových výpočtů.</p>
+<p>Ve své podstatě BQP definuje hranici problémů, které mohou kvantové počítače řešit v rámci. <b>polynomiální čas</b> při zachování omezené pravděpodobnosti chyby. To znamená, že pro každou instanci, která projde algoritmem BQP, nepřesáhne pravděpodobnost chybného závěru 1/3. Zásadní je, že provedením více běhů algoritmu a uplatněním principu většinového hlasování lze chyby výrazně omezit. Tento proces, ukotvený pomocí Chernoffovy hranice, je důkazem odolnosti a přizpůsobivosti systému <strong>kvantová korekce chyb</strong> metody, které zajišťují integritu a přesnost kvantových výpočtů.</p>
+<blockquote><p>Často zdůrazňujeme, že skutečnou zdatnost kvantových výpočtů podtrhuje jejich dvojí snaha o rychlé zpracování a pečlivost. <b>snížení chybovosti</b>, které nás společně uvedou do další éry výpočetních schopností.</p></blockquote>
+<p>Následující tabulka ukazuje, jak kvantové algoritmy využívají principy BQP k vylepšení výpočtů:</p>
+<table>
+<tr>
+<th>Princip</th>
+<th>Dopad na kvantové algoritmy</th>
+<th>Benefit</th>
+</tr>
+<tr>
+<td>Polynomiální čas</td>
+<td>Umožňuje rychlý výpočet složitých problémů</td>
+<td>Efektivní zpracování rozsáhlých problémů</td>
+</tr>
+<tr>
+<td>Pravděpodobnost omezené chyby</td>
+<td>Omezuje možnost nepřesností ve výpočtu.</td>
+<td>Spolehlivost výsledků</td>
+</tr>
+<tr>
+<td>Většinové hlasování (<b>Snížení chyb</b>)</td>
+<td>Minimalizuje chyby napříč iteračními běhy algoritmu.</td>
+<td>Zvýšená přesnost výsledků</td>
+</tr>
+<tr>
+<td>Aplikace Chernoff Bound</td>
+<td>Stabilizace chybovosti v kvantových systémech</td>
+<td>Konzistence i v přítomnosti kvantového šumu</td>
+</tr>
+</table>
+<p>Je nezbytné si uvědomit, jak BQP nejen odráží přirozenou vlastnost kvantových systémů, ale také řídí neustálý vývoj kvantových algoritmů. Zdokonalováním <b>kvantová korekce chyb</b> chráníme podstatu kvantového polynomiálního času a zajišťujeme, že s rozšiřováním kvantové technologie zůstane BQP základním kamenem našich kvantových výpočetních ambicí.</p>
+<h2>Vztah mezi kvantovými algoritmy a BQP</h2>
+<p>Naše cesta do kvantové sféry ukazuje, že možnosti kvantových algoritmů jsou neoddělitelně spjaty s výpočetními hranicemi definovanými BQP (Bounded-error Quantum Polynomial time). Tyto algoritmy, které se opírají o principy kvantové mechaniky, jsou uzpůsobeny k tomu, aby fungovaly v rámci kvantových Turingových strojů - samotné struktury kvantových výpočtů. Ponořme se do tohoto složitého vztahu a prozkoumejme, jak iterativní povaha kvantových algoritmů přispívá k <b>snížení chybovosti</b>, což v konečném důsledku posiluje jejich soulad s programem BQP.</p>
+<h3>Od kvantových Turingových strojů k algoritmům BQP</h3>
+<p>Je v rámci <b>Kvantové Turingovy stroje</b> že kvantové algoritmy naleznou svůj krok. Navzdory abstraktní povaze těchto teoretických konstrukcí slouží jako klíčový základ pro reálné kvantové výpočty. Zakódováním dat do qubitů a manipulací s těmito qubity prostřednictvím kvantových logických hradel se algoritmy vyvíjejí do řešení kompatibilních s BQP, která řeší problémy přesahující rámec klasických výpočtů.</p>
+<h3>Iterace a snižování chyb v algoritmech BQP</h3>
+<p>Ústředním prvkem zdatnosti kvantových algoritmů je robustní proces. <b>iterace</b>. Kvantové systémy mohou opakovanými cykly algoritmizace postupně zpřesňovat odpovědi a stále více se přibližovat ideálním řešením. Každá iterace slouží ke snižování pravděpodobnosti chyby, což je zásadní při snaze dosáhnout prakticky zanedbatelné pravděpodobnosti chyby - což je základní cíl, když vezmeme v úvahu požadavky na přesnost kvantových počítačů.</p>
+<table>
+<tr>
+<th>Kvantový koncept</th>
+<th>Úloha při snižování chyb</th>
+<th>Dopad na vztah s BQP</th>
+</tr>
+<tr>
+<td>Kvantové logické brány</td>
+<td>Provádění přesných operací s minimalizací počáteční chybovosti</td>
+<td>Usnadňuje složité výpočty v rámci parametrů BQP</td>
+</tr>
+<tr>
+<td>Kvantová superpozice</td>
+<td>Zkoumá více stavů současně a optimalizuje výpočetní cesty.</td>
+<td>rozšiřuje rozsah problémů řešitelných v BQP</td>
+</tr>
+<tr>
+<td>Zapletení</td>
+<td>Umožňuje korelované výpočty, které dále zpřesňují výstupy.</td>
+<td>Posiluje efektivitu řešení problémů v rámci BQP.</td>
+</tr>
+<tr>
+<td>Kódy pro opravu chyb</td>
+<td>Oprava chyb po iteraci, která zajistí konzistentní výsledky.</td>
+<td>Zajišťuje konzistenci a spolehlivost výsledků algoritmu BQP.</td>
+</tr>
+</table>
+<p>Když se zamyslíme nad významem těchto kvantových nástrojů, prohloubí se naše chápání toho, jak se <b>Vztah BQP</b> je posílena prostřednictvím <b>iterace</b> a použití složitých kvantových algoritmů. Tyto kvantové rysy nejsou jen aspektem akademického cvičení, ale jsou to právě ty mechanismy, které nás vedou k praktické kvantové nadvládě.</p>
+<h2>Rozlišení BQP od jiných pravděpodobnostních tříd</h2>
+<p>Při zkoumání krajiny <b>třídy složitosti</b> v kvantových výpočtech, je zásadní si uvědomit, jak se <strong>Kvantový polynomiální čas s omezenou chybou (BQP)</strong> se odlišuje od tradičních <b>pravděpodobnostní třídy</b> jako např. <strong>BPP</strong>, <strong>RP</strong>a <strong>ZPP</strong>. Tyto rozdíly jsou více než jen technickými detaily; představují potenciální skoky ve výpočetní vědě, které umožňuje kvantová mechanika a kvantová mechanika. <b>kvantová teorie informace</b>.</p>
+<h3>Porovnání BQP s BPP, RP, ZPP a dalšími třídami</h3>
+<p>V naší analýze jsme odhalili, že základem <em>kvantová teorie informace</em> je to, co převážně odlišuje <strong>BQP</strong> z jiných <b>třídy složitosti</b>. Zatímco <strong>BPP</strong> je často považován za klasický protějšek BQP, který umožňuje chybu v rozhodovacích problémech, jež lze řešit v polynomiálním čase, je omezen klasickými pravděpodobnostmi, které nezachycují celý rozsah kvantových pravděpodobností.</p>
+<p>Podobně, <strong>RP</strong> (Randomizovaný polynomiální čas) se omezuje na algoritmy, které jsou správné, když to tvrdí, ale mohou se mýlit na straně opatrnosti, zatímco <strong>ZPP</strong> (pravděpodobnostní polynomiální čas s nulovou chybou) dosahuje nulové chyby tím, že připouští možnost neukončení. Žádný z nich však neintegruje kvantové jevy tak jako BQP, takže je jedinečně vhodný pro kvantové výpočetní procesy.</p>
+<h3>Jedinečné vlastnosti BQP v teorii kvantové informace</h3>
+<p>V rámci <strong>kvantová teorie informace</strong>, BQP je založen na kvantových bitech (qubitech), které mohou existovat v superpozicích, což umožňuje simultánní výpočty, které klasické bity nemohou provádět. Už jen tato vlastnost umožňuje kvantovým algoritmům řešit složité rozhodovací problémy s vysokou pravděpodobností správnosti, které standardní pravděpodobnostní metody nedosahují.</p>
+<p>Důsledky těchto vlastností jsou hluboké, protože umožňují pokroky v oblastech, jako je faktorizace prvočísel, která má přímý vliv na kryptografii. Jedinečná povaha <strong>BQP</strong> v rámci kvantové výpočetní techniky slibuje něco, co dalece přesahuje rámec tradičních technologií. <strong>pravděpodobnostní třídy</strong>, což znamená novou éru v teoretických i aplikovaných počítačových vědách.</p>
+<h2>Promise-BQP a úplné problémy v kvantové výpočetní technice</h2>
+<p>
+Zkoumání krajiny <em>kvantová výpočetní technika</em>, jsme upozorněni na stěžejní koncept <em>Slib-BQP</em>. Patří do oblasti <strong>teorie složitosti</strong>a poskytuje fascinující podmnožinu, kde každý problém, tzv. <em>úplný problém</em>, je pro danou třídu stěžejní - umožňují, aby na ně byly efektivně redukovány další problémy v rámci téže třídy. Abychom do této oblasti pronikli hlouběji, prozkoumáme významné problémy v rámci <b>Slib-BQP</b> které podtrhují jeho potenciál pro posunutí našich výpočetních hranic.
+</p>
+<p><img decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-1024x585.jpg" alt="Úplné problémy v kvantové výpočetní technice" title="Úplné problémy v kvantové výpočetní technice" width="1024" height="585" class="aligncenter size-large wp-image-505502" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<p>
+Zejména, <em>kompletní problémy</em> jako je <em>APPROX-QCIRCUIT-PROB</em> se objevují jako hluboké příklady v rámci <b>Slib-BQP</b>, kde složitost těchto problémů vytváří pevný základ pro teoretický i praktický pokrok v oblasti výzkumu a vývoje. <strong>kvantová výpočetní technika</strong>. Jejich hrozivost vyplývá ze skutečnosti, že pokud se nám podaří navrhnout kvantové algoritmy pro řešení těchto <b>kompletní problémy</b>, odemykáme cesty k řešení řady dalších složitých problémů v polynomiálním čase.
+</p>
+<table>
+<tr>
+<th>Promise-BQP Charakteristika</th>
+<th>Dopad na kvantovou výpočetní techniku</th>
+</tr>
+<tr>
+<td>Snížení počtu problémů</td>
+<td>Usnadňuje zpracování složitých datových souborů.</td>
+</tr>
+<tr>
+<td>Hloubka výpočetních výzev</td>
+<td>Inovace v oblasti návrhu kvantových algoritmů</td>
+</tr>
+<tr>
+<td>Pokrok v oblasti <b>Teorie složitosti</b>
+</td>
+<td>Vytváří most mezi teoretickými a praktickými výpočty.</td>
+</tr>
+</table>
+<p>
+Jako zastánci <strong>kvantová výpočetní technika</strong>, jsme svědky vzrušující epochy, v níž se objevují pojmy jako např. <b>Slib-BQP</b> katalyzovat naše chápání <strong>kompletní problémy</strong> a jejich důsledky. Tyto objevy nejsou pouhým akademickým cvičením, ale základním kamenem kvantového pokroku, který slibuje, že zcela změní náš výpočetní prostor.
+</p>
+<h2>Zkoumání souvislostí: BQP a klasické třídy složitosti</h2>
+<p>Při pronikání do složitostí kvantové informatiky se setkáváme s BQP, třídou složitosti, která slouží jako základní kámen našeho chápání tohoto špičkového oboru. BQP, neboli kvantový polynomiální čas s omezenou chybou, je nedílnou součástí toho, jak si představujeme problémy vhodné pro kvantové výpočty a jejich vztah ke klasickému <b>třídy složitosti</b>.</p>
+<h3>Začlenění tříd P a BPP do programu BQP</h3>
+<p>Na naší cestě po třídách složitosti nás BQP zaujala svým pojetím třídy P, množiny problémů řešitelných v polynomiálním čase pomocí deterministického Turingova stroje, a <b>BPP</b>, což umožňuje omezené chyby v polynomiálním čase na pravděpodobnostním Turingově stroji. Půvab BQP spočívá v jeho rozsáhlé schopnosti zahrnout vlastnosti obou těchto klasických modelů a zároveň operovat v jedinečné oblasti kvantové mechaniky. Tato syntéza znamená podstatný skok oproti klasickým výpočetním kapacitám.</p>
+<h3>Posouzení významu BQP v rámci podskupin složitosti, jako je PSPACE</h3>
+<p>V bohaté tapiserii <b>teorie složitosti</b>, BQP je bezpečně umístěna v <b>PSPACE</b>. Tato širší třída problémů řešitelných polynomiálním prostorem sahá daleko za horizont P a zahrnuje také složitosti NP. Analýza BQP v rámci těchto hierarchií je neocenitelná, protože vrhá světlo na teoretické základy a potenciální aplikace kvantové výpočetní techniky. Kromě toho pohání vpřed výzkum, který zkoumá hranice toho, co považujeme za teoreticky možné, a potenciálně mění náš přístup ke složitým technologiím. <b>řešení problémů</b>.</p>
+<h2>Dopady kvantové nadřazenosti na krajinu BQP</h2>
+<p>Předzvěst kvantové nadřazenosti představuje přelomový okamžik pro roli BQP (Bounded-error Quantum Polynomial time) ve vyvíjející se tapiserii výpočetních teorií. Když se ponoříme do hlubokých posunů ovlivněných tímto převratným krokem v kvantové výpočetní technice, uvědomíme si dvojí transformaci - skok v oblasti <b>řešení problémů</b> a oživení metodiky kvantové korekce chyb.</p>
+<h3>Vliv kvantové nadřazenosti na řešení problémů</h3>
+<p>V epické sáze digitálních výpočtů se s příchodem kvantové nadřazenosti začala psát radikální kapitola. Tato nová éra kvantové převahy ztělesňuje paradigma, v němž se kvantové počítače potýkají s problémy třídy BQP a řeší je, což klasické počítače ponechává ve stavu nedostatku. Nejedná se pouze o kvantitativní skok, ale o kvalitativní evoluci v oblasti kvantity. <b>řešení problémů</b>, což kvantovým algoritmům umožňuje řešit složité problémy v dosud nevídaném měřítku a rychlosti.</p>
+<h3>Potenciální pokrok kvantové korekce chyb v BQP</h3>
+<p>Nedílnou součástí využití všech schopností kvantové výpočetní techniky je zvládnutí kvantové korekce chyb. Ta je ochranou proti přirozené dekoherenci a provozním chybám, ke kterým jsou qubity náchylné. Při snaze o dosažení kvantové nadřazenosti nelze přeceňovat podněty ke zdokonalování a vylepšování protokolů pro opravu chyb. Jsme svědky soustředěného úsilí o rozvoj kvantové odolnosti, což je mise, která je rozhodující pro pokrok BQP a zajištění přesnosti výsledků v kvantových systémech.</p>
+<h2>Velký obraz kvantové výpočetní techniky: Za hranice BQP</h2>
+<p>Když se ponoříme hlouběji do obrovského prostoru kvantové výpočetní techniky, uvědomíme si, že BQP (Bounded-error Quantum Polynomial Time) je jen roh plátna, který načrtává základní krajinu kvantových obtíží a triumfů. Zkoumání BQP pro nás vytvořilo pevný základ, který odhaluje složitosti a silné stránky kvantových algoritmů a jejich vzájemné působení v rámci <b>kvantová teorie složitosti</b>. Rozsah kvantových výpočtů však tuto základní třídu dalece přesahuje, protože neustálý pokrok nás láká k teoretickým oblastem. <b>post-BQP</b> třídy složitosti.</p>
+<h3>Představy o třídách složitosti po zavedení BQP</h3>
+<p>Pojem <b>post-BQP</b> třídy složitosti představují intelektuální hranici plnou výzev a důmyslných mechanismů, které ještě nebyly objeveny nebo plně pochopeny. Na cestě za kvantovou výpočetní technikou, <b>Pokroky v oblasti BQP</b> osvětlily cestu, která vede do oblastí plných zvýšeného výpočetního výkonu a záhadných kvantových jevů. Jako výzkumní pracovníci hledíme na obzor a víme, že důsledky překonání BQP by mohly nově definovat nejen způsob, jakým řešíme problémy, ale i to, jak vnímáme samotnou strukturu výpočetní reality.</p>
+<h3>Praktické aplikace vycházející z kvantových výpočtů založených na BQP</h3>
+<p>Přestože se díváme dopředu, co nás čeká v budoucnosti, úrodná půda BQP již přinesla ovoce v kvantové výpočetní technice. <b>Praktické aplikace</b> z úspěchů v oblasti BQP, které mají významný dopad na kryptografii, zabezpečení dat pomocí neprolomitelného šifrování, transformaci farmaceutického průmyslu díky urychlenému objevování léků a skokové zlepšení umělé inteligence díky kvantovému strojovému učení. Tyto pokroky v <b>praktické aplikace</b> potvrzují klíčovou roli programu BQP jako majáku, který nám ukazuje budoucnost plnou možností a bezkonkurenční výpočetní zdatnosti.</p>
+<section class="FAQPage">
+<h2>ČASTO KLADENÉ DOTAZY</h2>
+<div>
+<h3>Co je BQP v kvantové výpočetní technice?</h3>
+<div>
+<div>
+<p>BQP neboli kvantový polynomiální čas s omezenou chybou je třída složitosti pro rozhodovací problémy, které kvantové počítače mohou řešit s vysokou pravděpodobností úspěchu (alespoň 2/3) v polynomiálním čase. Je podobná klasické třídě složitosti <b>BPP</b> ale přizpůsobené pro kvantové výpočty.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jak BQP definuje rozhodovací problémy?</h3>
+<div>
+<div>
+<p>Rozhodovací problémy v rámci BQP jsou definovány svou řešitelností pomocí kvantových algoritmů, které pracují v polynomiálním čase a poskytují správné odpovědi s omezenou pravděpodobností chyby nepřesahující 1/3 pro každou instanci problému.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Může BQP rozšířit možnosti klasické teorie složitosti?</h3>
+<div>
+<div>
+<p>Ano, BQP vnáší principy kvantové mechaniky do oblasti teorie výpočetní složitosti a potenciálně umožňuje kvantovým počítačům řešit problémy, které jsou pro klasické počítače neřešitelné, a rozšiřuje tak klasické výpočetní limity.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jakou roli hrají kvantové obvody v algoritmech BQP?</h3>
+<div>
+<div>
+<p>Kvantové obvody mají pro algoritmy BQP zásadní význam, protože se skládají z kvantových hradel, která manipulují s qubity a umožňují efektivní implementaci těchto algoritmů, což přímo ovlivňuje schopnost kvantového počítače řešit problémy v rámci BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Co jsou "jednotné rodiny" kvantových obvodů?</h3>
+<div>
+<div>
+<p>Uniformní rodiny kvantových obvodů označují množinu obvodů, které lze efektivně generovat klasickým počítačem, s návrhy obvodů, jejichž velikost se polynomiálně škáluje jako funkce délky vstupu, což zajišťuje konzistenci a standardizaci nezbytnou pro algoritmy BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jak souvisí kvantové algoritmy s BQP?</h3>
+<div>
+<div>
+<p>Kvantové algoritmy poskytují metodiku pro řešení problémů třídy BQP a využívají kvantově mechanické vlastnosti a pokročilé výpočetní strategie k dosažení dostatečně nízkých pravděpodobností chyb, aby se vešly do kritérií BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jak se BQP liší od BPP, RP a ZPP?</h3>
+<div>
+<div>
+<p>BQP je speciálně navržen pro kvantové výpočty a jeho jedinečné schopnosti, jako je superpozice a provázanost, mu umožňují potenciálně řešit problémy mimo rámec klasických výpočtů. <b>pravděpodobnostní třídy</b> jako <b>BPP</b>, <b>RP</b>a <b>ZPP</b>.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jaké jsou jedinečné vlastnosti BQP v kvantové teorii informace?</h3>
+<div>
+<div>
+<p>V rámci <b>kvantová teorie informace</b>, BQP se vyznačuje použitím kvantových výpočetních modelů k řešení rozhodovacích problémů s vysokou přesností a rychlostí, přičemž využívá zvláštností kvantové mechaniky k překonání klasických modelů.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Co je Promise-BQP?</h3>
+<div>
+<div>
+<p>Promise-BQP je podtřída v rámci BQP, která zahrnuje problémy považované za zcela kvantové, což znamená, že všechny ostatní problémy v BQP lze na ně redukovat v polynomiálním čase, což zdůrazňuje strukturální jádro kvantové výpočetní složitosti.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jak BQP zahrnuje klasické třídy složitosti jako P a BPP?</h3>
+<div>
+<div>
+<p>BQP obsahuje jak P (problémy řešitelné v polynomiálním čase deterministickým Turingovým strojem), tak BPP (problémy řešitelné pravděpodobnostními algoritmy v polynomiálním čase), což naznačuje, že kvantové počítače mohou pracovat přinejmenším stejně dobře jako deterministické i randomizované klasické počítače.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Proč je umístění BQP v rámci PSPACE významné?</h3>
+<div>
+<div>
+<p>Vzhledem k tomu, že <b>PSPACE</b> zahrnuje všechny problémy řešitelné s polynomiálním množstvím paměťového prostoru, včetně P a NP, a BQP je obsažen v rámci polynomu. <b>PSPACE</b> naznačuje, že kvantové počítače by mohly efektivně řešit širokou škálu složitých problémů, aniž by vyžadovaly exponenciální prostor.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jak ovlivňuje kvantová nadřazenost prostředí BQP?</h3>
+<div>
+<div>
+<p>Kvantová nadřazenost ilustruje bod, kdy kvantové počítače mohou řešit určité problémy, které jsou pro klasické stroje nepraktické. Tento jev potvrzuje význam problémů BQP a je hnací silou pokroku, jako je kvantová korekce chyb, která je nezbytná pro stabilitu a přesnost kvantových počítačů.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jaké důsledky má kvantová korekce chyb na BQP?</h3>
+<div>
+<div>
+<p>Kvantová korekce chyb je nezbytná pro zachování koherence a přesnosti kvantových výpočtů. Její zdokonalení a použití je nezbytné pro spolehlivé kvantové výpočty, což je nezbytné pro efektivní řešení problémů v rámci BQP v reálných scénářích.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Co leží za BQP z hlediska kvantové výpočetní složitosti?</h3>
+<div>
+<div>
+<p><b>Po ukončení projektu</b> třídy složitosti mohou obsahovat problémy, které současné kvantové modely nedokážou vyřešit, a posunout tak hranice výpočetních možností a inspirovat nové kvantové algoritmy a technologie.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Jaké praktické aplikace se objevují v kvantových výpočtech založených na BQP?</h3>
+<div>
+<div>
+<p>Kvantové výpočty založené na BQP <b>praktické aplikace</b> v různých oblastech, jako je kryptografie pro bezpečnou komunikaci, objevování léčiv a věda o materiálech prostřednictvím simulací molekulárních struktur a strojové učení, které zlepšuje analýzu dat a algoritmy umělé inteligence.</p>
+</div>
+</div>
+</div>
+</section>
+		</div>
+
+		</div>
+	</div>
+
+</article>
+
+
+
+	<nav class="navigation post-navigation" aria-label="Příspěvky" data-no-translation-aria-label="">
+		<h2 class="screen-reader-text" data-no-translation="" data-trp-gettext="">Navigace pro příspěvek</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://quantumai.co/cs/pokroky-v-quantum-ai-2024/" rel="prev"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Předchozí příspěvek</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Předchozí příspěvek:</span> <br><span>Pokroky v Quantum AI 2024: Směřování k budoucnosti</span></a></div>
+<div class="nav-next"><a href="https://quantumai.co/cs/pochopeni-kodu-bacon-shor-v-kvantove-vypocetni-technice/" rel="next"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Následující příspěvek</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Následující příspěvek:</span> <br><span>Pochopení Bacon-Shorova kódu v kvantové výpočetní technice</span></a></div>
+</div>
+	</nav>
+<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Napsat komentář <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/#respond" style="display:none;" data-no-translation="" data-trp-gettext="">Zrušit odpověď na komentář</a></small>
+</h3>
+<form action="https://quantumai.co/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate data-trp-original-action="https://quantumai.co/wp-comments-post.php">
+<p class="comment-notes"><span id="email-notes" data-no-translation="" data-trp-gettext="">Vaše e-mailová adresa nebude zveřejněna.</span> <span class="required-field-message" data-no-translation="" data-trp-gettext="">Vyžadované informace jsou označeny <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Komentář <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Jméno <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url" data-no-translation="" data-trp-gettext="">Webová stránka</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent" data-no-translation="" data-trp-gettext="">Uložit do prohlížeče jméno, e-mail a webovou stránku pro budoucí komentáře.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Odeslat komentář" data-no-translation-value=""> <input type="hidden" name="comment_post_ID" value="505499" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<input type="hidden" name="trp-form-language" value="cs">
+</form>	</div>
+
+	
+</div>
+
+
+		</main>
+	</section>
+
+
+	</div>
+
+
+	
+<footer class="py-10 bg-gray-100 sm:pt-16 lg:pt-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12 text-sm">
+            <div class="max-md:col-span-2">
+            		            	<img class="w-auto h-8" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+				
+				<div class="pt-5 -mb-1">
+
+					<div class="flex items-center gap-x-2 text-sm md:text-base font-medium tracking-wide text-gray-800">
+						<svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
+						  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+						</svg>
+
+						<span>+442035970878</span>
+					</div>
+
+										
+				</div>
+
+				<ul id="menu-footer-main" class="mt-8 space-y-3">
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405"><a href="https://quantumai.co/cs/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Domovská stránka</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-406"><a href="https://quantumai.co/cs/blog/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Blog</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://quantumai.co/cs/o-nas/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">O nás</a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="https://quantumai.co/cs/tym/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Tým</a></li>
+<li id="menu-item-505485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505485"><a href="https://quantumai.co/cs/glosar/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Slovníček</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="https://quantumai.co/cs/kontaktujte-nas/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Kontaktujte nás</a></li>
+</ul>            </div>
+            <div class="col-span-2 md:col-span-3 space-y-10">
+            	            		<div class="flex md:justify-end gap-x-2 md:mt-8">
+            			<i class="ph-fill ph-map-pin text-lg text-gray-500 mt-1"></i>
+											<div id="Headoffice" itemscope itemprop="parentOrganization" itemtype="http://schema.org/FinancialService">
+						   <h3 itemprop="name" class="text-lg font-medium leading-7 text-gray-900">Quantum AI - Kancelář ve Spojeném království</h3>
+						   
+						   <div class="mt-2.5 space-y-1 text-sm not-italic leading-6 text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						   		<div></div>
+						      <div itemprop="streetAddress">John Street 35</div>
+						      <div>
+						      	<span itemprop="postalCode">LU1 2JE</span>, <span itemprop="addressLocality">Luton, Spojené království</span>
+						      </div>
+						   </div>
+						</div>
+										</div>
+				            	
+            	            </div>
+        </div>
+        <div class="py-8 md:py-10 2xl:py-12 my-8 md:my-12 2xl:my-16 prose prose-sm max-w-none text-gray-500 border-y border-gray-300">
+          <p>Obchodování nabízí možnost značných zisků, ale zároveň s sebou nese riziko ztráty části nebo celého kapitálu. Je důležité si uvědomit, že přibližně 70% obchodníků zažívá finanční ztráty.</p>
+<p>Upozorňujeme, že <a class="wpil_keyword_link" href="https://quantumai.co/cs/" title="Quantum AI" data-wpil-keyword-link="linked">Quantum AI</a> a další značky uvedené na našich webových stránkách slouží výhradně k marketingovým účelům a neodpovídají konkrétním společnostem nebo službám. Související video je určeno pouze pro propagační účely a vystupují v něm osoby v hereckých rolích.</p>
+<p>Před investováním doporučujeme pečlivě si přečíst smluvní podmínky a stránku s prohlášením o vyloučení odpovědnosti na investorské platformě poskytované třetí stranou. Kromě toho si prosím uvědomte případné povinnosti týkající se osobní daně z kapitálových výnosů, které mohou platit v zemi vašeho bydliště. Je nezákonné nabádat rezidenty USA k nákupu a prodeji komoditních opcí, včetně "predikčních" kontraktů, pokud nejsou kótovány na burze registrované CFTC nebo nejsou ze zákona osvobozeny.</p>
+<p>Kromě toho orgán Financial Conduct Authority (FCA) ve Spojeném království zavedl politické prohlášení PS20/10, které zakazuje prodej, uvádění na trh a distribuci kontraktů na vyrovnání rozdílu (CFD) souvisejících s obchodními produkty. Toto nařízení rovněž omezuje šíření propagačního obsahu týkajícího se CFD a dalších finančních produktů spotřebitelům ve Spojeném království.</p>
+<p>Tím, že nám poskytnete své osobní údaje, souhlasíte s jejich sdílením s poskytovateli obchodních služeb třetích stran v souladu s našimi zásadami ochrany osobních údajů a smluvními podmínkami. Co se týče obchodních strategií, obchodníci si mohou vybrat z různých možností, jako je použití obchodního softwaru, zapojení lidských makléřů nebo samostatné provádění obchodů. Výběr těchto metod je výhradně na konkrétním obchodníkovi.</p>
+        </div>
+        <div>
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
+                	<ul id="menu-footer-legal" class="flex flex-wrap items-center justify-start mt-5 gap-x-8 sm:mt-0 gap-y-3">
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://quantumai.co/cs/zasady-ochrany-osobnich-udaju/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Zásady ochrany osobních údajů</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://quantumai.co/cs/podminky/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Podmínky a pravidla</a></li>
+</ul>                </div>
+
+                <p class="mt-6 text-sm text-gray-600 lg:mt-0">© <script>document.write(/\d{4}/.exec(Date())[0])</script> Copyright Quantum AI Ltd. Všechna práva vyhrazena.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<template id="tp-language" data-tp-language="cs_CZ"></template><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/cs\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/immediate\/*","\/cs\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script>
+        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
+            <div id="trp-floater-ls-current-language" class="trp-with-flags">
+
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
+					<img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech				</a>
+
+            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+
+                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="https://quantumai.co/understanding-bqp-in-quantum-computing/" title="English">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English">English					          </a>
+                                    <a href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/" title="German">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German">German					          </a>
+                                    <a href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/" title="Spanish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish">Spanish					          </a>
+                                    <a href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/" title="French">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French					          </a>
+                                    <a href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/" title="Italian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian					          </a>
+                                    <a href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3/" title="Japanese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese					          </a>
+                                    <a href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/" title="Russian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian">Russian					          </a>
+                                    <a href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/" title="Portuguese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese">Portuguese					          </a>
+                                    <a href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/" title="Bulgarian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian">Bulgarian					          </a>
+                                    <a href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/" title="Danish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish">Danish					          </a>
+                                    <a href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/" title="Dutch">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch">Dutch					          </a>
+                                    <a href="https://quantumai.co/et/bqp-moistmine-kvantarvutuses/" title="Estonian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian">Estonian					          </a>
+                                    <a href="https://quantumai.co/fi/bqpn-ymmartaminen-kvanttilaskennassa/" title="Finnish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish">Finnish					          </a>
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech</a>
+</div>            </div>
+        </div>
+
+    <div class="trp_model_container" id="trp_ald_modal_container" style="display: none" data-no-dynamic-translation data-no-translation>
+        <div class="trp_ald_modal" id="trp_ald_modal_popup">
+            <div id="trp_ald_popup_text"></div>
+
+        <div class="trp_ald_select_and_button">
+            <div class="trp_ald_ls_container">
+            <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_popup_select_container" data-no-translation>
+                
+                <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                    <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                </div>
+                <div class="trp-ls-shortcode-language">
+                    <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                    </div>
+                                                                    <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German                            </div>
+                                                                        <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French                            </div>
+                                                                        <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech                            </div>
+                                                                        <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch                            </div>
+                                                                        <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish                            </div>
+                                                            </div>
+            </div>
+            </div>
+
+
+            <div class="trp_ald_button">
+            <a href="https://quantumai.co/" id="trp_ald_popup_change_language"></a>
+            </div>
+         </div>
+        <a id="trp_ald_x_button_and_textarea" href="#"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
+    </div>
+</div>
+<template id="trp_ald_no_text_popup_template">
+    <div id="trp_no_text_popup_wrap">
+        <div id="trp_no_text_popup" class="trp_ald_no_text_popup" data-no-dynamic-translation data-no-translation>
+            
+            <div id="trp_ald_not_text_popup_ls_and_button">
+                <div id="trp_ald_no_text_popup_div">
+                    <span id="trp_ald_no_text_popup_text"></span>
+                </div>
+                <div class="trp_ald_ls_container">
+                    <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_no_text_select" data-no-translation>
+                        
+                        <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                            <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                        </div>
+                        <div class="trp-ls-shortcode-language" id="trp_ald_no_text_popup_select_container">
+                            <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                            </div>
+                                                                                            <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish
+                                    </div>
+                                                                                    </div>
+                    </div>
+                </div>
+                <div class="trp_ald_change_language_div">
+                    <a href="https://quantumai.co/" id="trp_ald_no_text_popup_change_language"></a>
+                </div>
+                <div id="trp_ald_no_text_popup_x_button_and_textarea"> <a id="trp_ald_no_text_popup_x_button"></a><span id="trp_ald_no_text_popup_x_button_textarea"></span>
+</div>
+            </div>
+            <div id="trp_ald_no_text_popup_x">
+                <button id="trp_close"></button>
+            </div>
+        </div>
+    </div>
+</template>        <span class="ssp-id" style="display:none">505499</span>
+		<script id="trp-dynamic-translator-js-extra">var trp_data = {"trp_custom_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-multilingual\/includes\/trp-ajax.php","trp_wp_ajax_url":"https:\/\/quantumai.co\/wp-admin\/admin-ajax.php","trp_language_to_query":"cs_CZ","trp_original_language":"en_GB","trp_current_language":"cs_CZ","trp_skip_selectors":["[data-no-translation]","[data-no-dynamic-translation]","[data-trp-translate-id-innertext]","script","style","head","trp-span","translate-press","[data-trp-translate-id]","[data-trpgettextoriginal]","[data-trp-post-slug]"],"trp_base_selectors":["data-trp-translate-id","data-trpgettextoriginal","data-trp-post-slug"],"trp_attributes_selectors":{"text":{"accessor":"outertext","attribute":false},"block":{"accessor":"innertext","attribute":false},"image_src":{"selector":"img[src]","accessor":"src","attribute":true},"submit":{"selector":"input[type='submit'],input[type='button'], input[type='reset']","accessor":"value","attribute":true},"placeholder":{"selector":"input[placeholder],textarea[placeholder]","accessor":"placeholder","attribute":true},"title":{"selector":"[title]","accessor":"title","attribute":true},"a_href":{"selector":"a[href]","accessor":"href","attribute":true},"button":{"accessor":"outertext","attribute":false},"option":{"accessor":"innertext","attribute":false},"aria_label":{"selector":"[aria-label]","accessor":"aria-label","attribute":true},"video_src":{"selector":"video[src]","accessor":"src","attribute":true},"video_poster":{"selector":"video[poster]","accessor":"poster","attribute":true},"video_source_src":{"selector":"video source[src]","accessor":"src","attribute":true},"audio_src":{"selector":"audio[src]","accessor":"src","attribute":true},"audio_source_src":{"selector":"audio source[src]","accessor":"src","attribute":true},"picture_image_src":{"selector":"picture image[src]","accessor":"src","attribute":true},"picture_source_srcset":{"selector":"picture source[srcset]","accessor":"srcset","attribute":true},"image_alt":{"selector":"img[alt]","accessor":"alt","attribute":true},"meta_desc":{"selector":"meta[name=\"description\"],meta[property=\"og:title\"],meta[property=\"og:description\"],meta[property=\"og:site_name\"],meta[property=\"og:image:alt\"],meta[name=\"twitter:title\"],meta[name=\"twitter:description\"],meta[name=\"twitter:image:alt\"],meta[name=\"DC.Title\"],meta[name=\"DC.Description\"],meta[property=\"article:section\"],meta[property=\"article:tag\"]","accessor":"content","attribute":true},"page_title":{"selector":"title","accessor":"innertext","attribute":false},"meta_desc_img":{"selector":"meta[property=\"og:image\"],meta[property=\"og:image:secure_url\"],meta[name=\"twitter:image\"]","accessor":"content","attribute":true}},"trp_attributes_accessors":["outertext","innertext","src","value","placeholder","title","href","aria-label","poster","srcset","alt","content"],"gettranslationsnonceregular":"0f65ef7370","showdynamiccontentbeforetranslation":"","skip_strings_from_dynamic_translation":[],"skip_strings_from_dynamic_translation_for_substrings":{"href":["amazon-adsystem","googleads","g.doubleclick"]},"duplicate_detections_allowed":"100","trp_translate_numerals_opt":"no","trp_no_auto_translation_selectors":["[data-no-auto-translation]"]};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/js/trp-translate-dom-changes.js" id="trp-dynamic-translator-js"></script>
+<script src="https://quantumai.co/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js" id="ssp-form-webhook-public-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-content/themes/immediate/js/script.min.js" id="immediate-script-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"></script>
+
+</header>
+</div>
+</body>
+</html>

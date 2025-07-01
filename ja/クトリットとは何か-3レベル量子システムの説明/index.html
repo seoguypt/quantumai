@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7cc0ec6e28dd2386a2cdc6b6/script.js"></script>
+
+<title>クトリットとは何か？3レベルの量子システムの説明 - Quantum AI</title>
+<meta name="description" content="不可能が可能になり、想像もつかないようなことが現実になる量子の領域に足を踏み入れると、従来の二進法の理解が一変する。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://quantumai.co/ja/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e/">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="クトリットとは何か？3レベルの量子システムの説明 - Quantum AI">
+<meta property="og:description" content="不可能が可能になり、想像もつかないようなことが現実になる量子の領域に足を踏み入れると、従来の二進法の理解が一変する。">
+<meta property="og:url" content="https://quantumai.co/ja/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e/">
+<meta property="og:site_name" content="quantumai.co">
+<meta property="article:section" content="量子コンピューティング">
+<meta property="og:updated_time" content="2023-12-19T10:13:21+00:00">
+<meta property="og:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit.png">
+<meta property="og:image:secure_url" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit.png">
+<meta property="og:image:width" content="1792">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="クトリット・イラストレーション">
+<meta property="og:image:type" content="image/png">
+<meta property="article:published_time" content="2023-12-19T10:13:13+00:00">
+<meta property="article:modified_time" content="2023-12-19T10:13:21+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="クトリットとは何か？3レベルの量子システムの説明 - Quantum AI">
+<meta name="twitter:description" content="不可能が可能になり、想像もつかないようなことが現実になる量子の領域に足を踏み入れると、従来の二進法の理解が一変する。">
+<meta name="twitter:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit.png">
+<meta name="twitter:label1" content="によって書かれた">
+<meta name="twitter:data1" content="Kristof George">
+<meta name="twitter:label2" content="読む時間">
+<meta name="twitter:data2" content="10分">
+<script type="application/ld+json" class="rank-math-schema-pro">{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https:\/\/quantumai.co\/ja\/#person",
+            "name": "quantumai.co",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/ja\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "ja",
+                "width": "789",
+                "height": "152"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/ja\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "ja",
+                "width": "789",
+                "height": "152"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https:\/\/quantumai.co\/ja\/#website",
+            "url": "https:\/\/quantumai.co\/ja\/",
+            "name": "quantumai.co",
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/ja\/#person"
+            },
+            "inLanguage": "ja"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qutrit.png",
+            "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qutrit.png",
+            "width": "1792",
+            "height": "1024",
+            "caption": "Qutrit Illustration",
+            "inLanguage": "ja"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": "1",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co",
+                        "name": "ホーム"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "2",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/ja\/%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%83%bc\/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0\/",
+                        "name": "量子コンピューティング"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "3",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/",
+                        "name": "クトリットとは何か？三次元量子システムの説明"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#webpage",
+            "url": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/",
+            "name": "クトリットとは何か？3レベルの量子システムの説明 - Quantum AI",
+            "datePublished": "2023-12-19T10:13:13+00:00",
+            "dateModified": "2023-12-19T10:13:21+00:00",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/ja\/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qutrit.png"
+            },
+            "inLanguage": "ja",
+            "breadcrumb": {
+                "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#breadcrumb"
+            },
+            "headline": "What Is A Qutrit: The Three-Level Quantum System Explained - Quantum AI",
+            "lastReviewed": "12月 19, 2023",
+            "relatedLink": [
+                "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing"
+            ],
+            "significantLink": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/\/elon-musk\/",
+            "mainEntityOfPage": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/",
+            "sameAs": [],
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "アイ",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_mechanics",
+                        "https:\/\/www.google.com\/search?q=quantum&kgmid=\/m\/02qvmkh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "トレーダーズ",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trader_(finance)",
+                        "https:\/\/www.google.com\/search?q=traders&kgmid=\/m\/0cncxk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ビットコイン",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Bitcoin",
+                        "https:\/\/www.google.com\/search?q=bitcoin&kgmid=\/m\/0135y0by"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "アプリ",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Mobile_app",
+                        "https:\/\/www.google.com\/search?q=app&kgmid=\/m\/0h94y36"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "暗号通貨",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrency&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "人工知能",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=artificial+intelligence&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子コンピューティング",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computing&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "工具",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Tool",
+                        "https:\/\/www.google.com\/search?q=tool&kgmid=\/m\/07k1x"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "リスク",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Risk",
+                        "https:\/\/www.google.com\/search?q=risk&kgmid=\/m\/06d5f"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ソフトウェア",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Software",
+                        "https:\/\/www.google.com\/search?q=software&kgmid=\/m\/01mf0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ソ",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Search_engine_optimization",
+                        "https:\/\/www.google.com\/search?q=seo&kgmid=\/m\/019qb_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "アルゴリズム",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Algorithm",
+                        "https:\/\/www.google.com\/search?q=algorithms&kgmid=\/m\/02qcyvp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "オプション",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Option_(finance)",
+                        "https:\/\/www.google.com\/search?q=options&kgmid=\/m\/01lm23"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "取引プラットフォーム",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Electronic_trading_platform",
+                        "https:\/\/www.google.com\/search?q=trading+platform&kgmid=\/m\/09rjlk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "リアルタイム",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Real-time_computing",
+                        "https:\/\/www.google.com\/search?q=real-time&kgmid=\/m\/026y7m6"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "パラメーター",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Parameter",
+                        "https:\/\/www.google.com\/search?q=parameters&kgmid=\/m\/068f8"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "投資",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investment",
+                        "https:\/\/www.google.com\/search?q=investment&kgmid=\/m\/0g_fl"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "イーロン・マスク",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Elon_Musk",
+                        "https:\/\/www.google.com\/search?q=elon+musk&kgmid=\/m\/03nzf1"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "暗号",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "投資家",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investor",
+                        "https:\/\/www.google.com\/search?q=investors&kgmid=\/m\/03krjh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ブローカー",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Broker",
+                        "https:\/\/www.google.com\/search?q=brokers&kgmid=\/m\/0cmc2y9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "トレーディング",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trade",
+                        "https:\/\/www.google.com\/search?q=trading&kgmid=\/m\/07br0"
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "差金決済取引",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=contracts+for+difference+(cfds)&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "CFD",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=cfd&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "自動売買",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                        "https:\/\/www.google.com\/search?q=automated+trading&kgmid=\/m\/02pqr_n"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "暗号通貨",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrencies&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子人工知能",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+artificial+intelligence&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "クラウドベース",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cloud_computing",
+                        "https:\/\/www.google.com\/search?q=cloud-based&kgmid=\/m\/02y_9m3"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ソーシャルメディア戦略",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=social+media+strategy&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "予測分析",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Predictive_analytics",
+                        "https:\/\/www.google.com\/search?q=predictive+analytics&kgmid=\/m\/0bl93g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "機械学習技術",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Machine_learning",
+                        "https:\/\/www.google.com\/search?q=machine+learning+techniques&kgmid=\/m\/01hyh_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ユーザーフレンドリー",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Usability",
+                        "https:\/\/www.google.com\/search?q=user-friendly&kgmid=\/m\/01qb0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "暗号資産",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto+assets&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子機械学習",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+machine+learning&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "分析",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Analytics",
+                        "https:\/\/www.google.com\/search?q=analytics&kgmid=\/m\/02gcn9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子プロセッサー",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+processors&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子コンピュータ",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computers&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "デジタルマーケティング",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=digital+marketing&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "作品証明",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Proof_of_work",
+                        "https:\/\/www.google.com\/search?q=proof+of+work&kgmid=\/m\/05bdrw"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "量子情報",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_information",
+                        "https:\/\/www.google.com\/search?q=quantum+information&kgmid=\/m\/06b0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "負荷分散",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Load_balancing_(computing)",
+                        "https:\/\/www.google.com\/search?q=load+balancing&kgmid=\/m\/0gl7w"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "AIボット",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai+bots&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ディープラーニング",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Deep_learning",
+                        "https:\/\/www.google.com\/search?q=deep+learning&kgmid=\/m\/0h1fn8h"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https:\/\/quantumai.co\/ja\/author\/gio\/",
+            "name": "クリストフ・ジョージ",
+            "url": "https:\/\/quantumai.co\/ja\/author\/gio\/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "url": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "caption": "Kristof George",
+                "inLanguage": "ja"
+            },
+            "sameAs": [
+                "https:\/\/wordpress-1142890-4220391.cloudwaysapps.com"
+            ]
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "What Is A Qutrit: The Three-Level Quantum System Explained - Quantum AI",
+            "datePublished": "2023-12-19T10:13:13+00:00",
+            "dateModified": "2023-12-19T10:13:21+00:00",
+            "articleSection": "Quantum Computing, What is",
+            "author": {
+                "@id": "https:\/\/quantumai.co\/ja\/author\/gio\/",
+                "name": "クリストフ・ジョージ"
+            },
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/ja\/#person"
+            },
+            "description": "不可能が可能になり、想像もつかないようなことが現実になる量子の領域に足を踏み入れると、従来の二進法の理解が一変する。",
+            "name": "クトリットとは何か？3レベルの量子システムの説明 - Quantum AI",
+            "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#richSnippet",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#webpage"
+            },
+            "image": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qutrit.png"
+            },
+            "inLanguage": "ja",
+            "mainEntityOfPage": {
+                "@id": "https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://quantumai.b-cdn.net/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; フィード" href="https://quantumai.co/ja/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; コメントフィード" href="https://quantumai.co/ja/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; What Is A Qutrit: The Three-Level Quantum System Explained のコメントのフィード" href="https://quantumai.co/ja/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/quantumai.b-cdn.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍🔥","🐦​🔥")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://quantumai.b-cdn.net/wp-includes/css/dist/block-library/style.min.css" media="all">
+<style id="rank-math-toc-block-style-inline-css">.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") " ";counter-increment:item}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="trp-floater-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-floater-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-popup-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/css/trp-popup.css" media="all">
+<link rel="stylesheet" id="immediate-style-css" href="https://quantumai.b-cdn.net/wp-content/themes/immediate/style.css" media="all">
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script id="trp-language-cookie-js-extra">var trp_language_cookie_data = {"abs_home":"https:\/\/quantumai.co","url_slugs":{"en_GB":"en_gb","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi"},"cookie_name":"trp_language","cookie_age":"30","cookie_path":"\/","default_language":"en_GB","publish_languages":["en_GB","de_DE","es_ES","fr_FR","it_IT","ja","ru_RU","pt_BR","bg_BG","cs_CZ","da_DK","nl_NL","et","fi"],"trp_ald_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-business\/add-ons-pro\/automatic-language-detection\/includes\/trp-ald-ajax.php","detection_method":"browser-ip","popup_option":"popup","popup_type":"normal_popup","popup_textarea":"We've detected you might be speaking a different language. Do you want to change to:","popup_textarea_change_button":"Change Language","popup_textarea_close_button":"Close and do not switch language","iso_codes":{"en_GB":"en","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi","en_US":"en"},"language_urls":{"en_GB":"https:\/\/quantumai.co\/what-is-a-qutrit-the-three-level-quantum-system-explained\/?simply_static_page=12220","de_DE":"https:\/\/quantumai.co\/de\/was-ist-ein-qutrit-das-dreistufige-quantensystem-erklart\/?simply_static_page=12220","es_ES":"https:\/\/quantumai.co\/es\/que-es-un-qutrit-el-sistema-cuantico-de-tres-niveles-explicado\/?simply_static_page=12220","fr_FR":"https:\/\/quantumai.co\/fr\/quest-ce-quun-qutrit-le-systeme-quantique-a-trois-niveaux-explique\/?simply_static_page=12220","it_IT":"https:\/\/quantumai.co\/it\/cose-un-qutrit-il-sistema-quantistico-a-tre-livelli-spiegato\/?simply_static_page=12220","ja":"https:\/\/quantumai.co\/ja\/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e\/?simply_static_page=12220","ru_RU":"https:\/\/quantumai.co\/ru\/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d1%82%d1%80%d0%b5%d1%85%d1%83%d1%80%d0%be%d0%b2%d0%bd%d0%b5%d0%b2%d0%b0%d1%8f-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82\/?simply_static_page=12220","pt_BR":"https:\/\/quantumai.co\/pt\/o-que-e-um-qutrit-o-sistema-quantico-de-tres-niveis-explicado\/?simply_static_page=12220","bg_BG":"https:\/\/quantumai.co\/bg\/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d0%be%d0%b1%d1%8f%d1%81%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b0%d1%82\/?simply_static_page=12220","cs_CZ":"https:\/\/quantumai.co\/cs\/co-je-to-qutrit-vysvetleni-triurovnoveho-kvantoveho-systemu\/?simply_static_page=12220","da_DK":"https:\/\/quantumai.co\/da\/hvad-er-en-qutrit-det-tredelte-kvantesystem-forklaret\/?simply_static_page=12220","nl_NL":"https:\/\/quantumai.co\/nl\/wat-is-een-qutrit-het-drie-niveau-kwantumsysteem-uitgelegd\/?simply_static_page=12220","et":"https:\/\/quantumai.co\/et\/mis-on-qutrit-kolmetasandiline-kvantide-susteem-mis-on-selgitatud\/?simply_static_page=12220","fi":"https:\/\/quantumai.co\/fi\/mika-on-qutrit-kolmitasoinen-kvanttisysteemi-selitetaan\/?simply_static_page=12220"},"english_name":{"en_GB":"English","de_DE":"German","es_ES":"Spanish","fr_FR":"French","it_IT":"Italian","ja":"Japanese","ru_RU":"Russian","pt_BR":"Portuguese","bg_BG":"Bulgarian","cs_CZ":"Czech","da_DK":"Danish","nl_NL":"Dutch","et":"Estonian","fi":"Finnish"},"is_iphone_user_check":""};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/js/trp-language-cookie.js" id="trp-language-cookie-js"></script>
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TWTG3RS4" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["quantumai.co"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWTG3RS4");</script>
+
+
+<link rel="https://api.w.org/" href="https://quantumai.co/ja/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://quantumai.co/ja/wp-json/wp/v2/posts/505420">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantumai.co/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://quantumai.co/ja/?p=505420">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://quantumai.co/ja/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fja%2F%25e3%2582%25af%25e3%2583%2588%25e3%2583%25aa%25e3%2583%2583%25e3%2583%2588%25e3%2581%25a8%25e3%2581%25af%25e4%25bd%2595%25e3%2581%258b-3%25e3%2583%25ac%25e3%2583%2599%25e3%2583%25ab%25e9%2587%258f%25e5%25ad%2590%25e3%2582%25b7%25e3%2582%25b9%25e3%2583%2586%25e3%2583%25a0%25e3%2581%25ae%25e8%25aa%25ac%25e6%2598%258e%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://quantumai.co/ja/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Fja%2F%25e3%2582%25af%25e3%2583%2588%25e3%2583%25aa%25e3%2583%2583%25e3%2583%2588%25e3%2581%25a8%25e3%2581%25af%25e4%25bd%2595%25e3%2581%258b-3%25e3%2583%25ac%25e3%2583%2599%25e3%2583%25ab%25e9%2587%258f%25e5%25ad%2590%25e3%2582%25b7%25e3%2582%25b9%25e3%2583%2586%25e3%2583%25a0%25e3%2581%25ae%25e8%25aa%25ac%25e6%2598%258e%2F#038;format=xml">
+		<script type="text/javascript">(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "l9090pzye1");</script>
+		<link rel="alternate" hreflang="en-GB" href="https://quantumai.co/what-is-a-qutrit-the-three-level-quantum-system-explained/">
+<link rel="alternate" hreflang="de-DE" href="https://quantumai.co/de/was-ist-ein-qutrit-das-dreistufige-quantensystem-erklart/">
+<link rel="alternate" hreflang="es-ES" href="https://quantumai.co/es/que-es-un-qutrit-el-sistema-cuantico-de-tres-niveles-explicado/">
+<link rel="alternate" hreflang="fr-FR" href="https://quantumai.co/fr/quest-ce-quun-qutrit-le-systeme-quantique-a-trois-niveaux-explique/">
+<link rel="alternate" hreflang="it-IT" href="https://quantumai.co/it/cose-un-qutrit-il-sistema-quantistico-a-tre-livelli-spiegato/">
+<link rel="alternate" hreflang="ja" href="https://quantumai.co/ja/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e/">
+<link rel="alternate" hreflang="ru-RU" href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d1%82%d1%80%d0%b5%d1%85%d1%83%d1%80%d0%be%d0%b2%d0%bd%d0%b5%d0%b2%d0%b0%d1%8f-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82/">
+<link rel="alternate" hreflang="pt-BR" href="https://quantumai.co/pt/o-que-e-um-qutrit-o-sistema-quantico-de-tres-niveis-explicado/">
+<link rel="alternate" hreflang="bg-BG" href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d0%be%d0%b1%d1%8f%d1%81%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b0%d1%82/">
+<link rel="alternate" hreflang="cs-CZ" href="https://quantumai.co/cs/co-je-to-qutrit-vysvetleni-triurovnoveho-kvantoveho-systemu/">
+<link rel="alternate" hreflang="da-DK" href="https://quantumai.co/da/hvad-er-en-qutrit-det-tredelte-kvantesystem-forklaret/">
+<link rel="alternate" hreflang="nl-NL" href="https://quantumai.co/nl/wat-is-een-qutrit-het-drie-niveau-kwantumsysteem-uitgelegd/">
+<link rel="alternate" hreflang="et" href="https://quantumai.co/et/mis-on-qutrit-kolmetasandiline-kvantide-susteem-mis-on-selgitatud/">
+<link rel="alternate" hreflang="fi" href="https://quantumai.co/fi/mika-on-qutrit-kolmitasoinen-kvanttisysteemi-selitetaan/">
+<link rel="alternate" hreflang="en" href="https://quantumai.co/what-is-a-qutrit-the-three-level-quantum-system-explained/">
+<link rel="alternate" hreflang="de" href="https://quantumai.co/de/was-ist-ein-qutrit-das-dreistufige-quantensystem-erklart/">
+<link rel="alternate" hreflang="es" href="https://quantumai.co/es/que-es-un-qutrit-el-sistema-cuantico-de-tres-niveles-explicado/">
+<link rel="alternate" hreflang="fr" href="https://quantumai.co/fr/quest-ce-quun-qutrit-le-systeme-quantique-a-trois-niveaux-explique/">
+<link rel="alternate" hreflang="it" href="https://quantumai.co/it/cose-un-qutrit-il-sistema-quantistico-a-tre-livelli-spiegato/">
+<link rel="alternate" hreflang="ru" href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d1%82%d1%80%d0%b5%d1%85%d1%83%d1%80%d0%be%d0%b2%d0%bd%d0%b5%d0%b2%d0%b0%d1%8f-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82/">
+<link rel="alternate" hreflang="pt" href="https://quantumai.co/pt/o-que-e-um-qutrit-o-sistema-quantico-de-tres-niveis-explicado/">
+<link rel="alternate" hreflang="bg" href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d0%be%d0%b1%d1%8f%d1%81%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b0%d1%82/">
+<link rel="alternate" hreflang="cs" href="https://quantumai.co/cs/co-je-to-qutrit-vysvetleni-triurovnoveho-kvantoveho-systemu/">
+<link rel="alternate" hreflang="da" href="https://quantumai.co/da/hvad-er-en-qutrit-det-tredelte-kvantesystem-forklaret/">
+<link rel="alternate" hreflang="nl" href="https://quantumai.co/nl/wat-is-een-qutrit-het-drie-niveau-kwantumsysteem-uitgelegd/">
+<link rel="alternate" hreflang="x-default" href="https://quantumai.co/what-is-a-qutrit-the-three-level-quantum-system-explained/">
+			                <meta name="ssp-config-path" content="/wp-content/uploads/simply-static/configs/">
+			
+						
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-180x180.png">
+<meta name="msapplication-TileImage" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-270x270.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-505420 single-format-standard wp-embed-responsive wp-theme-immediate translatepress-ja">
+
+
+	<div id="top-bar-info" class="sticky top-0 z-[60] py-5 bg-gradient-to-tr from-indigo-600 to-blue-600 text-white text-xs lg:text-center pr-6">
+		<div class="max-w-7xl mx-auto px-6 relative">
+			<p>投資した資金をすべて失う覚悟がない限り、投資しないこと。これはリスクの高い投資であり、何か問題が起きても保護されるとは思わない方がよい。</p>
+			<button class="absolute right-0 top-0 opacity-25 hover:opacity-50 transition-opacity p-0.5" onclick="hideTopBar()" aria-label="インフォメーションバーを閉じる">
+				<svg class="w-3.5 h-3.5" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.99979 4.00028C6.74392 4.00028 6.48776 4.09775 6.29276 4.29325L4.29276 6.29325C3.90176 6.68425 3.90176 7.31731 4.29276 7.70731L11.5857 15.0003L4.29276 22.2932C3.90176 22.6842 3.90176 23.3173 4.29276 23.7073L6.29276 25.7073C6.68376 26.0983 7.31682 26.0983 7.70682 25.7073L14.9998 18.4143L22.2928 25.7073C22.6828 26.0983 23.3168 26.0983 23.7068 25.7073L25.7068 23.7073C26.0978 23.3163 26.0978 22.6832 25.7068 22.2932L18.4139 15.0003L25.7068 7.70731C26.0978 7.31731 26.0978 6.68325 25.7068 6.29325L23.7068 4.29325C23.3158 3.90225 22.6828 3.90225 22.2928 4.29325L14.9998 11.5862L7.70682 4.29325C7.51132 4.09775 7.25567 4.00028 6.99979 4.00028Z" fill="white"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>// Hide top bar when clicked
+	// Adds a cookie and hides element
+	function hideTopBar() {
+	    document.cookie = "top_bar_disclaimer=hidden;max-age=31536000; path=/";
+	    document.getElementById("top-bar-info").style.display = 'none';
+	}</script>
+
+	
+<div id="page" class="relative">
+	<a href="#content" class="sr-only" data-no-translation="" data-trp-gettext="">コンテンツへスキップ</a>
+
+	
+<header id="masthead" class="lg:overflow-y-visible absolute w-full z-50 top-2 md:top-4" x-data="{ menuOpen: false }">
+
+	<div class="mx-auto max-w-7xl px-2.5 sm:px-4">
+        <div class="relative flex max-lg:justify-between gap-6 sm:gap-8 px-3 shadow sm:px-6 lg:px-8 rounded-xl h-[70px] md:h-[88px]">
+          <div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-75 backdrop-blur-md rounded-xl z-0"></div>
+          <div class="flex flex-shrink-0 items-center relative z-10">
+          							<a href="https://quantumai.co/ja/">
+	            		<img class="block h-7 md:h-8 w-auto" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Quantum AIロゴ">
+	            	</a>
+				          </div>
+          
+          <div class="flex items-center gap-2 lg:hidden relative z-10">
+          					    <a href="https://quantumai.co/ja/%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">登録する</a>
+			              
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="メニューを開く" x-show="!menuOpen">
+                <i class="ph-fill ph-list"></i>
+              </button>
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="メニューを閉じる" x-show="menuOpen">
+                <i class="ph-fill ph-x"></i>
+              </button>
+          </div>
+          <nav class="hidden lg:flex lg:justify-between w-full z-10 menu-nav-desktop">
+
+          	<div class="flex gap-6">
+          		<div id="menu-nav-desktop">
+          		<ul id="menu-main" class="lg:flex flex-shrink-0 gap-6 text-base relative z-10 h-full">
+<li id="menu-item-505175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 h-full relative"><a href="https://quantumai.co/ja/%e8%a3%bd%e5%93%81/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">製品紹介</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 h-full relative"><a href="https://quantumai.co/ja/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">会社概要</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 h-full relative"><a href="https://quantumai.co/ja/%e3%83%81%e3%83%bc%e3%83%a0/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">チーム</a></li>
+<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 h-full relative"><a href="https://quantumai.co/ja/%e3%83%96%e3%83%ad%e3%82%b0/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">ブログ</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 h-full relative"><a href="https://quantumai.co/ja/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">お問い合わせ</a></li>
+</ul>          	</div>
+
+          	<div id="menu-nav-desktop-multi-page" class="relative" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		
+          		<div class="absolute left-0 top-full z-30 mt-2 py-1 w-auto origin-top focus:outline-none" x-show="dropdownOpen" x-transition x-cloak>
+          			<div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 rounded-lg z-0"></div>
+          			<ul id="menu-dropdown" class="min-w-[200px] menu-nav-desktop-multi-page-menu py-1">
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://quantumai.co/ja/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/" class="flex justify-between items-center gap-x-4 px-6 py-2.5 text-base text-gray-700 hover:text-gray-900 relative z-10 leading-5">会社概要</a></li>
+</ul>          		</div>
+          		
+          	</div>
+          	</div>
+          	
+          	
+          	<div class="flex gap-3 items-center flex-shrink-0">
+          					    <a href="https://quantumai.co/ja/%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">ログイン</a>
+									    <a href="https://quantumai.co/ja/%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">登録する</a>
+			            </div>
+          </nav>
+
+          <script>
+          	let menuElements = document.querySelectorAll('#menu-nav-desktop .menu-item-has-children');
+          	for (let i=0, il=menuElements.length; i < il; ++i) {
+		        let menuElementObj = menuElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:keydown.escape.stop', 'dropdownOpen = false');
+		        menuElement.setAttribute('x-on:click.away', 'dropdownOpen = false');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiElements = document.querySelectorAll('#menu-nav-desktop-multi-page .menu-item-has-children');
+          	
+		    for (let i=0, il=menuMultiElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:mouseover', 'dropdownOpen = true');
+		        menuElement.setAttribute('x-on:mouseleave', 'dropdownOpen = false');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-right transition"><\/i>'
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiSubmenuElements = document.querySelectorAll('.menu-nav-desktop-multi-page-menu .sub-menu');
+		    for (let i=0, il=menuMultiSubmenuElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiSubmenuElements[i];
+		        let div = document.createElement("div");
+		        div.classList.add('absolute', 'w-[calc(100%_-_8px)]', 'h-full', 'top-0', 'right-0', 'bg-white', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'ring-1', 'ring-black', 'ring-opacity-5', 'rounded-lg', 'z-0');
+				menuElementObj.prepend(div);
+		    }
+          </script>
+          
+          
+        </div>
+      </div>
+      
+      <nav class="lg:hidden mt-3 md:max-w-lg px-4 sm:px-6 lg:px-8 ml-auto relative z-10" aria-label="グローバル" x-show="menuOpen" @keydown.escape.stop="menuOpen = false" @click.away="menuOpen = false" x-trap="menuOpen" x-transition x-cloak id="menu-nav-mobile">
+      	<div class="overflow-hidden bg-white bg-opacity-80 backdrop-blur-md shadow rounded-xl text-gray-700 py-2">
+      		<ul id="menu-main-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e8%a3%bd%e5%93%81/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">製品紹介</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">会社概要</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e3%83%81%e3%83%bc%e3%83%a0/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">チーム</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e3%83%96%e3%83%ad%e3%82%b0/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">ブログ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">お問い合わせ</a></li>
+</ul>
+          	<div id="menu-nav-desktop-multi-page" class="relative flex flex-col items-center" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		<button class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent" x-on:click.prevent="dropdownOpen = !dropdownOpen">
+          			リソース          			<i class="ph-fill ph-caret-down transition" :class="{ 'rotate-180': dropdownOpen }"></i>
+          		</button>
+          		<div class="flex flex-col gap-y-1.5 items-center text-center px-6 w-full min-w-full">
+          			<div class="flex flex-col gap-y-1 p-4 rounded-lg bg-gray-900/5 w-full min-w-full" x-show="dropdownOpen" x-transition x-cloak>
+	          			<ul id="menu-dropdown-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/ja/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">会社概要</a></li>
+</ul>	          		</div>
+          		</div>
+          		
+          	</div>
+
+          	
+
+          	<div class="flex gap-3 items-center flex-shrink-0 px-6 pb-3 justify-center pt-3">
+              			    <a href="https://quantumai.co/ja/%e3%83%ad%e3%82%b0%e3%82%a4%e3%83%b3/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">ログイン</a>
+									    <a href="https://quantumai.co/ja/%e3%82%b5%e3%82%a4%e3%83%b3%e3%82%a2%e3%83%83%e3%83%97/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">登録する</a>
+			            </div>
+      	</div>
+          	
+          </nav>
+          <script>
+          	let menuElementsMobile = document.querySelectorAll('#menu-nav-mobile .menu-item-has-children');
+          	for (let i=0, il=menuElementsMobile.length; i < il; ++i) {
+		        let menuElementObj = menuElementsMobile[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+          </script>
+	<div>
+
+
+
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+
+<article itemscope itemtype="https://schema.org/NewsArticle" id="post-505420" class="post-505420 post type-post status-publish format-standard has-post-thumbnail hentry category-quantum-computing category-what-is">
+	<div class="relative">
+	    	<img class="absolute z-0 w-full h-full object-cover pointer-events-none hero-angle" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/bg.svg" alt="">
+		<div class="relative pt-4 pb-16 sm:pb-24">
+		<main class="mt-16 sm:mt-16 pt-[60px] md:pt-[75px]">
+          <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 relative z-10">
+              <div class="text-center max-lg:mx-auto md:max-w-2xl lg:col-span-6 xl:col-span-7 lg:flex lg:items-center lg:text-left lg:pb-20 lg:pt-10">
+                <div>
+                	<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+	  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	    <a itemprop="item" href="https://quantumai.co/ja/">
+	        <span itemprop="name">ホーム</span></a>
+	    <meta itemprop="position" content="1">
+	  </li> / 
+  
+
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="https://quantumai.co/ja/%e3%83%96%e3%83%ad%e3%82%b0/">
+		    <span itemprop="name">ブログ</span></a>
+		<meta itemprop="position" content="2">
+		</li> / 
+	  
+	  <li class="hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		    <span itemprop="name">クトリットとは何か？三次元量子システムの説明</span>
+		<meta itemprop="position" content="2">
+		</li>
+	  </ol>                							<h1 itemprop="headline" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[66px]">クトリットとは何か？三次元量子システムの説明</h1>					
+					<meta itemprop="image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit.png">
+                		                  
+	                <div class="mt-3 text-base sm:text-lg text-gray-600 sm:mt-5 lg:mt-7 flex items-center max-lg:justify-center flex-wrap gap-x-4 gap-y-2">
+	                	<div class="text-gray-700"><a href="https://quantumai.co/ja/%e3%82%af%e3%83%88%e3%83%aa%e3%83%83%e3%83%88%e3%81%a8%e3%81%af%e4%bd%95%e3%81%8b-3%e3%83%ac%e3%83%99%e3%83%ab%e9%87%8f%e5%ad%90%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%ae%e8%aa%ac%e6%98%8e/" rel="bookmark"><time datetime="2023-12-19T10:13:13+00:00" itemprop="datePublished" content="2023-12-19T10:13:13+00:00">12月 19, 2023</time></a></div>
+<a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/ja/%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%83%bc/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0/">量子コンピューティング</a><a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/ja/%e3%82%ab%e3%83%86%e3%82%b4%e3%83%aa%e3%83%bc/%e3%81%a8%e3%81%af/">何なのか？</a>	                </div>
+                </div>
+              </div>
+
+              														<div class="mt-8 sm:mt-12 lg:col-span-6 xl:col-span-5 lg:mt-0 max-w-2xl mx-auto flex items-center">
+							
+			<figure>
+				<img width="1024" height="585" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit-1024x585.png" class="aspect-[16/9] w-full rounded-xl bg-gray-100 object-cover wp-post-image" alt="クトリット・イラストレーション" decoding="async" fetchpriority="high" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit-1024x585.png 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit-300x171.png 300w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit-768x439.png 768w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit-1536x878.png 1536w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qutrit.png 1792w" sizes="(max-width: 1024px) 100vw, 1024px" title="クトリットとは何か？3レベルの量子システムの説明1">			</figure>
+
+									</div>
+						
+							             
+            </div>
+          </div>
+        </main>
+	</div>
+</div>
+
+	<div class="mt-20 sm:mt-24 pb-32 sm:pb-40 max-w-6xl px-6 sm:px-8 mx-auto">
+															
+		<div class="mt-16 sm:mt-24">
+				<div class="entry-content prose prose-neutral max-w-none prose-a:text-primary">
+			<p>不可能が可能になり、想像もつかないことが現実になる量子領域へ足を踏み入れると、従来のバイナリーコンピューティングの理解が、スリリングな新参者、クトリットによって覆される。この3レベル量子システムの秘密を解き明かす準備はできているだろうか？量子コンピューティングの次なる飛躍の可能性を秘めたQutritsの世界へ、私たちと一緒に飛び込みましょう。</p>
+<p><em>量子情報の単位で、古典的なトリットと同様に3レベルの量子システムを表す。クトリットは3つの異なる正規直交基底状態を持ち、複素確率振幅を用いて重ね合わせ状態に組み合わせることができる。クトリッツは3^n個の異なる状態を重ね合わせ状態ベクトルで表現でき、量子ビットよりも複雑である。量子ビットを直接操作するのは難しいが、量子ビットとのエンタングルメントによって、その操作を容易にすることができる。研究者たちは、他の量子ビットとともに、量子コンピューティングにおける様々な応用の可能性を探っている。</em></p>
+<h2>クトリットとは？</h2>
+<div data-body>
+<p>量子物理学と量子コンピューティングの領域において、量子ビットは3レベルの量子システムであり、情報処理の能力を拡張する上で重要な役割を果たしている。古典的なビットが0か1のどちらかであるのと同様に、量子ビットは両方の状態の重ね合わせにあることができる。同様に、量子ビットは3つの異なる状態で存在することができ、ディラック表記ではしばしば｜0｜、｜1｜、｜2｜と表される。これらの状態は、量子ビット内の情報を操作し、符号化するための基礎となる。</p>
+<p>この概念をより理解するために、電灯のスイッチを思い浮かべてほしい。古典的な世界では、スイッチにはオンかオフ（0か1）の2つの状態がある。しかし量子の世界では、量子ビットと量子トリットによって、さらに多くの可能性が導入される。スイッチがオンかオフかだけでなく、オンとオフの中間にある状態を想像してみてほしい。</p>
+<p>この追加状態は、量子システムにまったく新しいレベルの複雑さをもたらし、量子計算や量子情報処理にエキサイティングな機会をもたらす。</p>
+</div>
+<h3>クトリットの特性と機能</h3>
+<div data-body>
+<p>クトリットは、量子ビットとは異なるユニークな性質を持っている。操作可能な3つの状態を持つクトリットは、量子ビットと比較してより詳細な情報を伝達できる可能性がある。この複雑性の増大は、暗号化、通信プロトコル、エラー訂正技術の強化への扉を開く。</p>
+<p>たった2つの記号（0と1）で構成されたバイナリコードを使ってメッセージを送信していると想像してみてください。この限られた記号のセットでもある程度の意味を伝えることはできますが、代わりに3つの記号で拡張されたアルファベットがあれば、どれだけ多くの情報を表現できるかを考えてみてください。</p>
+<p>クトリットの機能は計算だけにとどまらず、光通信や安全なデータ転送などの分野にも影響を与える。科学者たちは、量子トリットを含むエンタングルメントに基づく通信システムを利用することで、高次元量子システムの可能性を安全な情報伝送に活用することを目指している。これは、光ファイバーセキュリティや安全な通信ネットワークなどの分野に大きな影響を与える可能性がある。</p>
+<p>さて、クトリットとは何か、その特性は何かを探ったところで、強力な量子コンピューティングの領域でクトリットがどのように利用されているかを見ていこう。</p>
+</div>
+<h2>量子コンピューティングにおける量子力学</h2>
+<div data-body>
+<p>量子力学の力を利用して情報を処理する最先端分野である量子コンピューティングは、その基本的な構成要素として量子ビットに依存している。しかし、最近の進歩は、量子ビットの導入により、その限界をさらに押し広げている。 <em>クトリッツ</em>三準位量子システム量子力学は、量子ビットの2値の性質を超える追加の状態を導入することで、量子コンピューティングの可能性を広げる。重ね合わせによって0と1の状態を同時に持つことができる量子ビットとは異なり、量子トリットは0、1、2の状態を同時に持つことができる。</p>
+<p>古典的なビットが、オンにもオフにもできる電気のスイッチのようなものだというシナリオを思い浮かべてほしい。ここで、2つのスイッチが1つに統合された状況を想像してほしい。このスイッチは、単にオンかオフかではなく、オフ、薄暗い、明るいという3つの状態にすることができる。これは、量子ビットと比較した場合のqutritsの機能に似ている。このような余分な状態によって、量子力学は新たなレベルの複雑さと可能性を量子コンピューティングにもたらす。</p>
+<p>量子トリットは、量子アルゴリズムの実装や量子プロセッサの設計において、ユニークな挑戦と機会を提供する。このような3レベルのシステムを扱い、操作するには、量子ビットに比べてより複雑な数学的操作を理解する必要があります。量子ゲートの実装では、3×3のユニタリー行列を使用するため、この高次元システム内での回転や位相シフトが可能になります。</p>
+<p>さて、量子コンピューターにおける量子力学の重要性を探ったところで、量子力学のさまざまな応用と潜在的な用途について掘り下げてみよう。</p>
+</div>
+<h3>アプリケーションと潜在的用途</h3>
+<div data-body>
+<p>Qutritsは、複数の分野にまたがる革新と進歩のための有望な道を提供する。州レベルの追加による複雑性の向上は、以下のような分野における新たな可能性への扉を開く。 <strong>量子通信</strong>, <strong>量子暗号</strong>そして <strong>量子シミュレーション</strong>.</p>
+<p>の領域では <strong>量子通信</strong>量子ビットに比べて高次元の量子状態を提供し、より詳細な情報伝達を可能にする。これは、量子ビットのような技術に革命を起こす可能性を秘めている。 <em>量子インターネット</em>そこでは、安全な通信と長距離エンタングルメントが、より高い効率で実現できるだろう。</p>
+<p>傍受されたり改ざんされたりすることなく、大容量のデータを瞬時に長距離に安全に送信できるシナリオを想像してみてほしい。Qutritベースの量子通信システムは、これを現実にする可能性を秘めている。</p>
+<p>さらに <strong>量子シミュレーション</strong>qutritsの拡張された状態空間は、物理現象のより複雑なモデリングを可能にする。研究者は、分子構造や材料科学についてより深い洞察を得ることができ、量子系そのものをより忠実かつ正確にシミュレーションすることもできる。</p>
+<p>クトリッツの使用 <strong>量子暗号</strong> また、セキュリティ対策の強化も期待できる。クトリットベースの暗号化アルゴリズムは、その寸法が大きくなることで、最新の暗号攻撃に対する耐性が向上する可能性がある。このことは、安全なデータ伝送やプライバシー保護などのアプリケーションに重要な意味を持つ。</p>
+<p>クトリットの潜在的な応用と用途のいくつかを探ってきたが、次にクトリットをベースにしたデバイスの現在進行中の開発と革新に目を向けてみよう。</p>
+</div>
+<ul>
+<li>Nisbet-Jonesらによる2013年の研究では、フォトニックキュートリットの正確な調製とオンデマンドでの供給が実証された。</li>
+<li>2020年、Yurtalanらが率いる研究は、超伝導量子トライトにウォルシュ・ハダマルド・ゲートを実装し、この量子技術の応用の可能性を前進させた。</li>
+<li>Fischerらによる2023年の最近の進歩は、量子トリットを含むトランスモンに対する普遍的な量子ゲート合成を提案し、量子コンピューティングにおける使用の可能性を押し進めた。</li>
+</ul>
+<ul>
+<li>量子ビットに比べて状態空間が拡張されたQutritsは、量子通信、量子暗号、量子シミュレーションの進歩にエキサイティングな可能性を提供する。量子通信の分野では、量子ビットはより詳細な情報伝達を可能にし、安全な通信や長距離エンタングルメントをより効率的に実現することで、量子インターネットのような技術に革命をもたらす可能性がある。クトリットベースの量子通信システムは、膨大な量のデータを瞬時に安全に長距離伝送できる可能性を秘めている。量子シミュレーションでは、量子力学は物理現象のより複雑なモデリングを可能にし、分子構造、材料科学、より忠実で精度の高い量子系のシミュレーションに深い洞察を提供する。また、量子暗号におけるセキュリティ対策の強化も期待されており、量子暗号の次元が大きくなることで、暗号攻撃に対する耐性が向上する可能性がある。全体として、現在進行中の量子力学ベースのデバイスの開発は、様々な分野での革新的な応用への道を開きつつある。</li>
+</ul>
+<h2>Qutritベースのデバイスの開発と革新</h2>
+<div data-body>
+<p>量子コンピューティングの世界は、従来のコンピューティングの限界を押し広げ続けている。キュートリットは、新しい量子デバイスの開発にエキサイティングな可能性を提供する3レベルの量子システムである。研究者や科学者たちは、その可能性を最大限に引き出すため、量子力学に基づくデバイスの革新に専心している。</p>
+<p>量子ビットベースのデバイスの開発で注目されている分野のひとつは、量子ビットの接続性とエラー訂正技術の改善である。量子ビット間の接続性を向上させることで、研究者は量子情報の効率的な交換を実現し、より複雑な計算やシミュレーションを可能にすることを目指している。そのためには、量子演算中に発生する可能性のあるノイズやエラーを低減する方法を見つける必要がある。</p>
+<p>さらに、量子技術の革新は、より大規模なアルゴリズムやより高度な計算をサポートすることを目指している。つのレベルではなく、3つのレベルのシステムで動作する能力は、複雑な問題を解決し、量子アルゴリズムを最適化するための新たな道を開く。例えば、量子力学は最適化、機械学習、化学などの分野の計算能力を向上させる可能性がある。</p>
+<p>しかし、クトリット・ベース・デバイスの開発には、それなりの課題も伴う。研究者がこれらのシステムを実装する際に直面するハードルのいくつかを探ってみよう。</p>
+</div>
+<h3>Qutrit導入における課題</h3>
+<div data-body>
+<p>重要な課題の一つは、量子状態を操作する際に高い精度と安定性を達成することにある。これまで広範に研究・開発されてきた2準位量子ビットに比べ、3準位システムを扱うことはさらなる複雑さをもたらします。複数のエネルギー準位間のコヒーレンスを制御・維持するには、高度な制御技術とエラー緩和戦略が必要です。</p>
+<p>2つのボールでジャグリングをするのに比べ、複数のボールでジャグリングをするようなものだ。より正確さ、協調性、バランスを必要とする。</p>
+<p>もうひとつの障害は、Qutritベースのデバイスのハードウェアの拡張である。どのような技術の進歩にも言えることだが、スケーリングにはしばしば困難が伴う。量子システムのレベル数を増やすと、ハードウェアの設計や製造プロセスが複雑になる。より多くの量子トリットで信頼性の高い一貫した性能を確保することは、困難な課題となる。</p>
+<p>さらに、qutritベースのデバイスを既存のアルゴリズムやプログラミング・モデルに統合することも課題である。qutritsの可能性をフルに活用するために現在のアルゴリズムを適応させるには、システム固有の特性と制約を注意深く考慮する必要がある。さらに、複雑さの増大によって生じるエラーを軽減するために、効率的なエラー修正技術を開発する必要がある。</p>
+<p>このような課題にもかかわらず、研究者や科学者たちは、これらのハードルを克服し、クトリットベースのデバイスが提供できるエキサイティングな可能性を解き放とうと決意し続けている。</p>
+</div>
+<h2>クトリッツの未来：チャンスとハードル</h2>
+<div data-body>
+<p>研究者やエンジニアが量子ビットの開発と可能性を深く掘り下げるにつれて、未来には信じられないようなチャンスと大きな課題の両方が待ち受けている。3レベルの量子システムを持つ量子トリットは、量子ビットと比較して、より幅広い情報保存と処理能力を提供する。このことは、量子コンピューティングやその他の技術応用を発展させるためのエキサイティングな展望を開くものである。</p>
+<p>量子コンピュータがもたらす主な可能性のひとつは、計算能力の向上である。量子ビットよりも多くの情報を保存・操作できる量子コンピュータは、処理速度と処理能力を飛躍的に向上させる可能性がある。複雑な計算が現在の数分の一の時間で実行され、暗号、最適化問題、創薬などの分野で革命的な進歩がもたらされることを想像してみてほしい。</p>
+<p>例えば、暗号学の分野を考えてみよう。量子力学は暗号化アルゴリズムのための拡張空間を提供する。これにより、量子コンピューター自身からの攻撃にも耐えられる、より強固なセキュリティ対策が可能になる。量子力学が提供する新たな情報レベルを利用することで、暗号化手法はより強力で安全なものになる。</p>
+<p>しかし、このようなチャンスと同時に、クトリットベースの技術を普及させるためには、いくつかのハードルも存在する。喫緊の課題の一つは、高精度で低エラー・レートでクトリット状態を操作できる、信頼性が高くスケーラブルなハードウェア実装の開発である。安定したクトリット・システムを構築するには、デコヒーレンス効果を最小化するために、環境の影響を注意深く制御する必要がある。</p>
+<p>もうひとつのハードルは、クトリット・システム特有のエラー訂正技術についての理解を深めることにある。 <strong>エラー訂正</strong> は、量子計算中に不可避的に発生するノイズやエラーに対するロバスト性を維持する上で極めて重要である。量子ビットのエラー訂正は広く研究されているが、量子ビットの状態空間は複雑であるため、これらの技術を量子ビットに適用することは新たな課題となる。</p>
+<p>さらに、量子力学に基づくシステムに適したプログラミング言語やアルゴリズムについても、継続的な研究が必要である。効率的で柔軟なプログラミングツールの設計は、3レベル量子システムの可能性を最大限に活用するために不可欠である。研究者や開発者が量子力学のユニークな特性を活用できるようにすることで、最適化から機械学習まで、数多くの応用に向けた革新的なアルゴリズムを考案することができる。</p>
+<p>こうした課題にもかかわらず、qutritsの将来は有望である。ハードウェア技術、エラー訂正方法、プログラミング・ツールの継続的な進歩により、これらのハードルは徐々に克服されつつある。世界中の研究者が協力して、クトリッツが提供する膨大な可能性を探求し、かつては不可能と考えられていた画期的なアプリケーションを開拓している。</p>
+<p>結論として、量子コンピュータやその他の技術分野に革命をもたらす可能性は計り知れない。ハードウェアの開発、エラー訂正技術、プログラミングの課題といったハードルを乗り越えれば、量子力学に基づくシステムは、計算能力と科学的発見の新時代へと我々を導いてくれるかもしれない。この3レベル量子システムの謎と能力を解き明かし続けることは、実にエキサイティングなことである。</p>
+</div>
+		</div>
+
+		</div>
+	</div>
+
+</article>
+
+
+		
+	<nav class="navigation post-navigation" aria-label="投稿" data-no-translation-aria-label="">
+		<h2 class="screen-reader-text" data-no-translation="" data-trp-gettext="">投稿ナビゲーション</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://quantumai.co/ja/%e8%b6%85%e4%bc%9d%e5%b0%8e%e3%81%a8%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%82%bf%e3%83%bc%e3%81%ae%e7%9b%b8%e4%b9%97%e5%8a%b9%e6%9e%9c%e3%81%a8%e9%80%b2%e6%ad%a9%e3%82%92/" rel="prev"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">前の記事</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">前の記事</span> <br><span>超伝導と量子コンピューティング：相乗効果と進歩を探る</span></a></div>
+<div class="nav-next"><a href="https://quantumai.co/ja/quantum-ai-2024%e5%b9%b4%e3%81%ae%e9%80%b2%e6%ad%a9/" rel="next"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">次の記事</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">次の記事</span> <br><span>Quantum AI 2024の進展：未来への舵取り</span></a></div>
+</div>
+	</nav>
+<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">コメントを残す <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantumai.co/ja/%E3%82%AF%E3%83%88%E3%83%AA%E3%83%83%E3%83%88%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%8B-3%E3%83%AC%E3%83%99%E3%83%AB%E9%87%8F%E5%AD%90%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E8%AA%AC%E6%98%8E/#respond" style="display:none;" data-no-translation="" data-trp-gettext="">コメントをキャンセル</a></small>
+</h3>
+<form action="https://quantumai.co/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate data-trp-original-action="https://quantumai.co/wp-comments-post.php">
+<p class="comment-notes"><span id="email-notes" data-no-translation="" data-trp-gettext="">メールアドレスが公開されることはありません。</span> <span class="required-field-message" data-no-translation="" data-trp-gettext=""><span class="required">※</span> が付いている欄は必須項目です</span></p>
+<p class="comment-form-comment"><label for="comment">コメント <span class="required">※</span></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">名前 <span class="required">※</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">メール <span class="required">※</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url" data-no-translation="" data-trp-gettext="">サイト</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent" data-no-translation="" data-trp-gettext="">次回のコメントで使用するためブラウザーに自分の名前、メールアドレス、サイトを保存する。</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="コメントを送信" data-no-translation-value=""> <input type="hidden" name="comment_post_ID" value="505420" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<input type="hidden" name="trp-form-language" value="ja">
+</form>	</div>
+
+	
+</div>
+
+
+		</main>
+	</section>
+
+
+	</div>
+
+
+	
+<footer class="py-10 bg-gray-100 sm:pt-16 lg:pt-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12 text-sm">
+            <div class="max-md:col-span-2">
+            		            	<img class="w-auto h-8" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Quantum AIロゴ">
+				
+				<div class="pt-5 -mb-1">
+
+					<div class="flex items-center gap-x-2 text-sm md:text-base font-medium tracking-wide text-gray-800">
+						<svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
+						  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+						</svg>
+
+						<span>+442035970878</span>
+					</div>
+
+										
+				</div>
+
+				<ul id="menu-footer-main" class="mt-8 space-y-3">
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405"><a href="https://quantumai.co/ja/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">ホームページ</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-406"><a href="https://quantumai.co/ja/%e3%83%96%e3%83%ad%e3%82%b0/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">ブログ</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://quantumai.co/ja/%e7%a7%81%e3%81%9f%e3%81%a1%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">会社概要</a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="https://quantumai.co/ja/%e3%83%81%e3%83%bc%e3%83%a0/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">チーム</a></li>
+<li id="menu-item-505485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505485"><a href="https://quantumai.co/ja/%e7%94%a8%e8%aa%9e%e9%9b%86/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">用語集</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="https://quantumai.co/ja/%e3%81%8a%e5%95%8f%e3%81%84%e5%90%88%e3%82%8f%e3%81%9b/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">お問い合わせ</a></li>
+</ul>            </div>
+            <div class="col-span-2 md:col-span-3 space-y-10">
+            	            		<div class="flex md:justify-end gap-x-2 md:mt-8">
+            			<i class="ph-fill ph-map-pin text-lg text-gray-500 mt-1"></i>
+											<div id="Headoffice" itemscope itemprop="parentOrganization" itemtype="http://schema.org/FinancialService">
+						   <h3 itemprop="name" class="text-lg font-medium leading-7 text-gray-900">Quantum AI - 英国オフィス</h3>
+						   
+						   <div class="mt-2.5 space-y-1 text-sm not-italic leading-6 text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						   		<div></div>
+						      <div itemprop="streetAddress">35ジョン・ストリート</div>
+						      <div>
+						      	<span itemprop="postalCode">LU1 2JE</span>, <span itemprop="addressLocality">イギリス、ルートン</span>
+						      </div>
+						   </div>
+						</div>
+										</div>
+				            	
+            	            </div>
+        </div>
+        <div class="py-8 md:py-10 2xl:py-12 my-8 md:my-12 2xl:my-16 prose prose-sm max-w-none text-gray-500 border-y border-gray-300">
+          <p>トレーディングは大きな利益をもたらす可能性がある一方で、資金の一部または全部を失うリスクも伴います。約70%のトレーダーが損失を経験していることは重要です。</p>
+<p>ご注意ください <a class="wpil_keyword_link" href="https://quantumai.co/ja/" title="Quantum AI" data-wpil-keyword-link="linked">Quantum AI</a> および当ウェブサイトで言及されているその他のブランドは、マーケティング目的でのみ使用されており、特定の企業やサービスに対応するものではありません。関連動画は、個人が俳優として出演しているプロモーション目的のみの使用です。</p>
+<p>投資を行う前に、第三者が提供する投資家プラットフォームの利用規約および免責事項ページを注意深くお読みになることをお勧めします。さらに、居住国で適用される可能性のある個人的なキャピタルゲイン課税義務にご注意ください。CFTCに登録された取引所に上場されているか、法的に免除されている場合を除き、米国居住者が「予測」契約を含む商品オプションの売買に従事するよう促すことは違法です。</p>
+<p>さらに、英国の金融行為監督機構（FCA）は、取引商品に関連する差金決済取引（CFD）の販売、マーケティング、流通を禁止する政策声明PS20/10を実施した。この規制は、CFDやその他の金融商品に関する宣伝内容を英国の消費者に広めることも制限している。</p>
+<p>お客様の個人情報を当社に提供することにより、お客様は、当社のプライバシーポリシーおよび取引条件に従い、当社がこの情報を第三者の取引サービスプロバイダーと共有することに同意したものとみなされます。取引戦略に関して、トレーダーは、取引ソフトウェアの使用、人間のブローカーとの関与、または独立して取引を行うなど、様々な選択肢から選択することができます。これらの方法の選択は、あくまでも個々のトレーダー次第です。</p>
+        </div>
+        <div>
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
+                	<ul id="menu-footer-legal" class="flex flex-wrap items-center justify-start mt-5 gap-x-8 sm:mt-0 gap-y-3">
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://quantumai.co/ja/%e3%83%97%e3%83%a9%e3%82%a4%e3%83%90%e3%82%b7%e3%83%bc%e3%83%9d%e3%83%aa%e3%82%b7%e3%83%bc/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">プライバシーポリシー</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://quantumai.co/ja/%e8%ab%b8%e6%9d%a1%e4%bb%b6/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">ご利用条件</a></li>
+</ul>                </div>
+
+                <p class="mt-6 text-sm text-gray-600 lg:mt-0">© <script>document.write(/\d{4}/.exec(Date())[0])</script> 著作権 Quantum AI Ltd.無断複写・転載を禁じます。</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<template id="tp-language" data-tp-language="ja"></template><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/ja\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/immediate\/*","\/ja\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script>
+        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
+            <div id="trp-floater-ls-current-language" class="trp-with-flags">
+
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
+					<img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese				</a>
+
+            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+
+                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="https://quantumai.co/what-is-a-qutrit-the-three-level-quantum-system-explained/" title="English">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English">English					          </a>
+                                    <a href="https://quantumai.co/de/was-ist-ein-qutrit-das-dreistufige-quantensystem-erklart/" title="German">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German">German					          </a>
+                                    <a href="https://quantumai.co/es/que-es-un-qutrit-el-sistema-cuantico-de-tres-niveles-explicado/" title="Spanish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish">Spanish					          </a>
+                                    <a href="https://quantumai.co/fr/quest-ce-quun-qutrit-le-systeme-quantique-a-trois-niveaux-explique/" title="French">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French					          </a>
+                                    <a href="https://quantumai.co/it/cose-un-qutrit-il-sistema-quantistico-a-tre-livelli-spiegato/" title="Italian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian					          </a>
+                                    <a href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d1%82%d1%80%d0%b5%d1%85%d1%83%d1%80%d0%be%d0%b2%d0%bd%d0%b5%d0%b2%d0%b0%d1%8f-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82/" title="Russian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian">Russian					          </a>
+                                    <a href="https://quantumai.co/pt/o-que-e-um-qutrit-o-sistema-quantico-de-tres-niveis-explicado/" title="Portuguese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese">Portuguese					          </a>
+                                    <a href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%b5-%d0%ba%d1%83%d1%82%d1%80%d0%b8%d1%82-%d0%be%d0%b1%d1%8f%d1%81%d0%bd%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bd%d0%b0-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b0%d1%82/" title="Bulgarian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian">Bulgarian					          </a>
+                                    <a href="https://quantumai.co/cs/co-je-to-qutrit-vysvetleni-triurovnoveho-kvantoveho-systemu/" title="Czech">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech					          </a>
+                                    <a href="https://quantumai.co/da/hvad-er-en-qutrit-det-tredelte-kvantesystem-forklaret/" title="Danish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish">Danish					          </a>
+                                    <a href="https://quantumai.co/nl/wat-is-een-qutrit-het-drie-niveau-kwantumsysteem-uitgelegd/" title="Dutch">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch">Dutch					          </a>
+                                    <a href="https://quantumai.co/et/mis-on-qutrit-kolmetasandiline-kvantide-susteem-mis-on-selgitatud/" title="Estonian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian">Estonian					          </a>
+                                    <a href="https://quantumai.co/fi/mika-on-qutrit-kolmitasoinen-kvanttisysteemi-selitetaan/" title="Finnish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish">Finnish					          </a>
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese</a>
+</div>            </div>
+        </div>
+
+    <div class="trp_model_container" id="trp_ald_modal_container" style="display: none" data-no-dynamic-translation data-no-translation>
+        <div class="trp_ald_modal" id="trp_ald_modal_popup">
+            <div id="trp_ald_popup_text"></div>
+
+        <div class="trp_ald_select_and_button">
+            <div class="trp_ald_ls_container">
+            <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_popup_select_container" data-no-translation>
+                
+                <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                    <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                </div>
+                <div class="trp-ls-shortcode-language">
+                    <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                    </div>
+                                                                    <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German                            </div>
+                                                                        <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French                            </div>
+                                                                        <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech                            </div>
+                                                                        <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch                            </div>
+                                                                        <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish                            </div>
+                                                            </div>
+            </div>
+            </div>
+
+
+            <div class="trp_ald_button">
+            <a href="https://quantumai.co/" id="trp_ald_popup_change_language"></a>
+            </div>
+         </div>
+        <a id="trp_ald_x_button_and_textarea" href="#"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
+    </div>
+</div>
+<template id="trp_ald_no_text_popup_template">
+    <div id="trp_no_text_popup_wrap">
+        <div id="trp_no_text_popup" class="trp_ald_no_text_popup" data-no-dynamic-translation data-no-translation>
+            
+            <div id="trp_ald_not_text_popup_ls_and_button">
+                <div id="trp_ald_no_text_popup_div">
+                    <span id="trp_ald_no_text_popup_text"></span>
+                </div>
+                <div class="trp_ald_ls_container">
+                    <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_no_text_select" data-no-translation>
+                        
+                        <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                            <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                        </div>
+                        <div class="trp-ls-shortcode-language" id="trp_ald_no_text_popup_select_container">
+                            <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                            </div>
+                                                                                            <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish
+                                    </div>
+                                                                                    </div>
+                    </div>
+                </div>
+                <div class="trp_ald_change_language_div">
+                    <a href="https://quantumai.co/" id="trp_ald_no_text_popup_change_language"></a>
+                </div>
+                <div id="trp_ald_no_text_popup_x_button_and_textarea"> <a id="trp_ald_no_text_popup_x_button"></a><span id="trp_ald_no_text_popup_x_button_textarea"></span>
+</div>
+            </div>
+            <div id="trp_ald_no_text_popup_x">
+                <button id="trp_close"></button>
+            </div>
+        </div>
+    </div>
+</template>        <span class="ssp-id" style="display:none">505420</span>
+		<script id="trp-dynamic-translator-js-extra">var trp_data = {"trp_custom_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-multilingual\/includes\/trp-ajax.php","trp_wp_ajax_url":"https:\/\/quantumai.co\/wp-admin\/admin-ajax.php","trp_language_to_query":"ja","trp_original_language":"en_GB","trp_current_language":"ja","trp_skip_selectors":["[data-no-translation]","[data-no-dynamic-translation]","[data-trp-translate-id-innertext]","script","style","head","trp-span","translate-press","[data-trp-translate-id]","[data-trpgettextoriginal]","[data-trp-post-slug]"],"trp_base_selectors":["data-trp-translate-id","data-trpgettextoriginal","data-trp-post-slug"],"trp_attributes_selectors":{"text":{"accessor":"outertext","attribute":false},"block":{"accessor":"innertext","attribute":false},"image_src":{"selector":"img[src]","accessor":"src","attribute":true},"submit":{"selector":"input[type='submit'],input[type='button'], input[type='reset']","accessor":"value","attribute":true},"placeholder":{"selector":"input[placeholder],textarea[placeholder]","accessor":"placeholder","attribute":true},"title":{"selector":"[title]","accessor":"title","attribute":true},"a_href":{"selector":"a[href]","accessor":"href","attribute":true},"button":{"accessor":"outertext","attribute":false},"option":{"accessor":"innertext","attribute":false},"aria_label":{"selector":"[aria-label]","accessor":"aria-label","attribute":true},"video_src":{"selector":"video[src]","accessor":"src","attribute":true},"video_poster":{"selector":"video[poster]","accessor":"poster","attribute":true},"video_source_src":{"selector":"video source[src]","accessor":"src","attribute":true},"audio_src":{"selector":"audio[src]","accessor":"src","attribute":true},"audio_source_src":{"selector":"audio source[src]","accessor":"src","attribute":true},"picture_image_src":{"selector":"picture image[src]","accessor":"src","attribute":true},"picture_source_srcset":{"selector":"picture source[srcset]","accessor":"srcset","attribute":true},"image_alt":{"selector":"img[alt]","accessor":"alt","attribute":true},"meta_desc":{"selector":"meta[name=\"description\"],meta[property=\"og:title\"],meta[property=\"og:description\"],meta[property=\"og:site_name\"],meta[property=\"og:image:alt\"],meta[name=\"twitter:title\"],meta[name=\"twitter:description\"],meta[name=\"twitter:image:alt\"],meta[name=\"DC.Title\"],meta[name=\"DC.Description\"],meta[property=\"article:section\"],meta[property=\"article:tag\"]","accessor":"content","attribute":true},"page_title":{"selector":"title","accessor":"innertext","attribute":false},"meta_desc_img":{"selector":"meta[property=\"og:image\"],meta[property=\"og:image:secure_url\"],meta[name=\"twitter:image\"]","accessor":"content","attribute":true}},"trp_attributes_accessors":["outertext","innertext","src","value","placeholder","title","href","aria-label","poster","srcset","alt","content"],"gettranslationsnonceregular":"0f65ef7370","showdynamiccontentbeforetranslation":"","skip_strings_from_dynamic_translation":[],"skip_strings_from_dynamic_translation_for_substrings":{"href":["amazon-adsystem","googleads","g.doubleclick"]},"duplicate_detections_allowed":"100","trp_translate_numerals_opt":"no","trp_no_auto_translation_selectors":["[data-no-auto-translation]"]};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/js/trp-translate-dom-changes.js" id="trp-dynamic-translator-js"></script>
+<script src="https://quantumai.co/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js" id="ssp-form-webhook-public-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-content/themes/immediate/js/script.min.js" id="immediate-script-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"></script>
+
+</header>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /*feed*
+Disallow: /*rss*
+Disallow: /*.json$
+Sitemap: https://quantumai.co/wp-sitemap.xml

@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7cc0ec6e28dd2386a2cdc6b6/script.js"></script>
+
+<title>Comprendre le BQP en informatique quantique</title>
+<meta name="description" content="Plongez dans le monde de l&#039;informatique quantique en explorant le concept de BQP et son rôle central dans les algorithmes quantiques et la théorie de la complexité.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Comprendre le BQP en informatique quantique">
+<meta property="og:description" content="Plongez dans le monde de l&#039;informatique quantique en explorant le concept de BQP et son rôle central dans les algorithmes quantiques et la théorie de la complexité.">
+<meta property="og:url" content="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<meta property="og:site_name" content="quantumai.co">
+<meta property="article:section" content="Qu&#039;est-ce que">
+<meta property="og:updated_time" content="2024-01-07T09:57:43+00:00">
+<meta property="og:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta property="og:image:secure_url" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta property="og:image:width" content="1344">
+<meta property="og:image:height" content="768">
+<meta property="og:image:alt" content="BQP (temps polynomial quantique à erreur limitée)">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="article:published_time" content="2024-01-07T09:57:39+00:00">
+<meta property="article:modified_time" content="2024-01-07T09:57:43+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Comprendre le BQP en informatique quantique">
+<meta name="twitter:description" content="Plongez dans le monde de l&#039;informatique quantique en explorant le concept de BQP et son rôle central dans les algorithmes quantiques et la théorie de la complexité.">
+<meta name="twitter:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+<meta name="twitter:label1" content="Écrit par">
+<meta name="twitter:data1" content="Kristof George">
+<meta name="twitter:label2" content="Temps de lecture">
+<meta name="twitter:data2" content="17 minutes">
+<script type="application/ld+json" class="rank-math-schema-pro">{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https:\/\/quantumai.co\/fr\/#person",
+            "name": "quantumai.co",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/fr\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "fr-FR",
+                "width": "789",
+                "height": "152"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/fr\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "fr-FR",
+                "width": "789",
+                "height": "152"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https:\/\/quantumai.co\/fr\/#website",
+            "url": "https:\/\/quantumai.co\/fr\/",
+            "name": "quantumai.co",
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/fr\/#person"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg",
+            "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg",
+            "width": "1344",
+            "height": "768",
+            "caption": "BQP (Bounded-error Quantum Polynomial Time)",
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": "1",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "2",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/fr\/categorie\/quest-ce-que\/",
+                        "name": "Qu'est-ce que"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "3",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/",
+                        "name": "Comprendre le BQP en informatique quantique"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#webpage",
+            "url": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/",
+            "name": "Comprendre le BQP en informatique quantique",
+            "datePublished": "2024-01-07T09:57:39+00:00",
+            "dateModified": "2024-01-07T09:57:43+00:00",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/fr\/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg"
+            },
+            "inLanguage": "fr-FR",
+            "breadcrumb": {
+                "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#breadcrumb"
+            },
+            "headline": "Understanding BQP in Quantum Computing",
+            "lastReviewed": "janvier 7, 2024",
+            "relatedLink": [
+                "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing"
+            ],
+            "significantLink": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/\/elon-musk\/",
+            "mainEntityOfPage": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/",
+            "sameAs": [],
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_mechanics",
+                        "https:\/\/www.google.com\/search?q=quantum&kgmid=\/m\/02qvmkh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commerçants",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trader_(finance)",
+                        "https:\/\/www.google.com\/search?q=traders&kgmid=\/m\/0cncxk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bitcoin",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Bitcoin",
+                        "https:\/\/www.google.com\/search?q=bitcoin&kgmid=\/m\/0135y0by"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "application",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Mobile_app",
+                        "https:\/\/www.google.com\/search?q=app&kgmid=\/m\/0h94y36"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto-monnaie",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrency&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligence artificielle",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=artificial+intelligence&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "informatique quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computing&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "outil",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Tool",
+                        "https:\/\/www.google.com\/search?q=tool&kgmid=\/m\/07k1x"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "risque",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Risk",
+                        "https:\/\/www.google.com\/search?q=risk&kgmid=\/m\/06d5f"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "logiciel",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Software",
+                        "https:\/\/www.google.com\/search?q=software&kgmid=\/m\/01mf0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "seo",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Search_engine_optimization",
+                        "https:\/\/www.google.com\/search?q=seo&kgmid=\/m\/019qb_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "algorithmes",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Algorithm",
+                        "https:\/\/www.google.com\/search?q=algorithms&kgmid=\/m\/02qcyvp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "options",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Option_(finance)",
+                        "https:\/\/www.google.com\/search?q=options&kgmid=\/m\/01lm23"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "plate-forme de négociation",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Electronic_trading_platform",
+                        "https:\/\/www.google.com\/search?q=trading+platform&kgmid=\/m\/09rjlk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "en temps réel",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Real-time_computing",
+                        "https:\/\/www.google.com\/search?q=real-time&kgmid=\/m\/026y7m6"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "paramètres",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Parameter",
+                        "https:\/\/www.google.com\/search?q=parameters&kgmid=\/m\/068f8"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investissement",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investment",
+                        "https:\/\/www.google.com\/search?q=investment&kgmid=\/m\/0g_fl"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "elon musk",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Elon_Musk",
+                        "https:\/\/www.google.com\/search?q=elon+musk&kgmid=\/m\/03nzf1"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investisseurs",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investor",
+                        "https:\/\/www.google.com\/search?q=investors&kgmid=\/m\/03krjh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "courtiers",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Broker",
+                        "https:\/\/www.google.com\/search?q=brokers&kgmid=\/m\/0cmc2y9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commerce",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trade",
+                        "https:\/\/www.google.com\/search?q=trading&kgmid=\/m\/07br0"
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "contrats de différence (cfds)",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=contracts+for+difference+(cfds)&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "cfd",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=cfd&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "négociation automatisée",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                        "https:\/\/www.google.com\/search?q=automated+trading&kgmid=\/m\/02pqr_n"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto-monnaies",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrencies&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligence artificielle quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+artificial+intelligence&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "basé sur le nuage",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cloud_computing",
+                        "https:\/\/www.google.com\/search?q=cloud-based&kgmid=\/m\/02y_9m3"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "stratégie en matière de médias sociaux",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=social+media+strategy&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "analyse prédictive",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Predictive_analytics",
+                        "https:\/\/www.google.com\/search?q=predictive+analytics&kgmid=\/m\/0bl93g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "techniques d'apprentissage automatique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Machine_learning",
+                        "https:\/\/www.google.com\/search?q=machine+learning+techniques&kgmid=\/m\/01hyh_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "conviviale",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Usability",
+                        "https:\/\/www.google.com\/search?q=user-friendly&kgmid=\/m\/01qb0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "actifs cryptographiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto+assets&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprentissage automatique quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+machine+learning&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "l'analyse",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Analytics",
+                        "https:\/\/www.google.com\/search?q=analytics&kgmid=\/m\/02gcn9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "processeurs quantiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+processors&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ordinateurs quantiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computers&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "marketing numérique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=digital+marketing&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "preuve de travail",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Proof_of_work",
+                        "https:\/\/www.google.com\/search?q=proof+of+work&kgmid=\/m\/05bdrw"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "information quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_information",
+                        "https:\/\/www.google.com\/search?q=quantum+information&kgmid=\/m\/06b0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "équilibrage de la charge",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Load_balancing_(computing)",
+                        "https:\/\/www.google.com\/search?q=load+balancing&kgmid=\/m\/0gl7w"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bots ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai+bots&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprentissage profond",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Deep_learning",
+                        "https:\/\/www.google.com\/search?q=deep+learning&kgmid=\/m\/0h1fn8h"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+            "name": "Kristof George",
+            "url": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "url": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "caption": "Kristof George",
+                "inLanguage": "fr-FR"
+            },
+            "sameAs": [
+                "https:\/\/wordpress-1142890-4220391.cloudwaysapps.com"
+            ]
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "Understanding BQP in Quantum Computing",
+            "keywords": "BQP (Bounded-error Quantum Polynomial Time)",
+            "datePublished": "2024-01-07T09:57:39+00:00",
+            "dateModified": "2024-01-07T09:57:43+00:00",
+            "articleSection": "What is",
+            "author": {
+                "@id": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+                "name": "Kristof George"
+            },
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/fr\/#person"
+            },
+            "description": "Plongez dans le monde de l'informatique quantique en explorant le concept de BQP et son rôle central dans les algorithmes quantiques et la théorie de la complexité.",
+            "name": "Comprendre le BQP en informatique quantique",
+            "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#richSnippet",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#webpage"
+            },
+            "image": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2024\/01\/BQP-Bounded-error-Quantum-Polynomial-Time.jpg"
+            },
+            "inLanguage": "fr-FR",
+            "mainEntityOfPage": {
+                "@id": "https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://quantumai.b-cdn.net/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Flux" href="https://quantumai.co/fr/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Flux des commentaires" href="https://quantumai.co/fr/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Understanding BQP in Quantum Computing Flux des commentaires" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/quantumai.b-cdn.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍🔥","🐦​🔥")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://quantumai.b-cdn.net/wp-includes/css/dist/block-library/style.min.css" media="all">
+<style id="rank-math-toc-block-style-inline-css">.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") " ";counter-increment:item}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="trp-floater-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-floater-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-popup-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/css/trp-popup.css" media="all">
+<link rel="stylesheet" id="immediate-style-css" href="https://quantumai.b-cdn.net/wp-content/themes/immediate/style.css" media="all">
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script id="trp-language-cookie-js-extra">var trp_language_cookie_data = {"abs_home":"https:\/\/quantumai.co","url_slugs":{"en_GB":"en_gb","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi"},"cookie_name":"trp_language","cookie_age":"30","cookie_path":"\/","default_language":"en_GB","publish_languages":["en_GB","de_DE","es_ES","fr_FR","it_IT","ja","ru_RU","pt_BR","bg_BG","cs_CZ","da_DK","nl_NL","et","fi"],"trp_ald_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-business\/add-ons-pro\/automatic-language-detection\/includes\/trp-ald-ajax.php","detection_method":"browser-ip","popup_option":"popup","popup_type":"normal_popup","popup_textarea":"We've detected you might be speaking a different language. Do you want to change to:","popup_textarea_change_button":"Change Language","popup_textarea_close_button":"Close and do not switch language","iso_codes":{"en_GB":"en","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi","en_US":"en"},"language_urls":{"en_GB":"https:\/\/quantumai.co\/understanding-bqp-in-quantum-computing\/?simply_static_page=12205","de_DE":"https:\/\/quantumai.co\/de\/bqp-in-der-quanteninformatik-verstehen\/?simply_static_page=12205","es_ES":"https:\/\/quantumai.co\/es\/entender-la-bqp-en-la-computacion-cuantica\/?simply_static_page=12205","fr_FR":"https:\/\/quantumai.co\/fr\/comprendre-le-bqp-dans-linformatique-quantique\/?simply_static_page=12205","it_IT":"https:\/\/quantumai.co\/it\/comprensione-della-bqp-nellinformatica-quantistica\/?simply_static_page=12205","ja":"https:\/\/quantumai.co\/ja\/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3\/?simply_static_page=12205","ru_RU":"https:\/\/quantumai.co\/ru\/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85\/?simply_static_page=12205","pt_BR":"https:\/\/quantumai.co\/pt\/compreensao-do-bqp-na-computacao-quantica\/?simply_static_page=12205","bg_BG":"https:\/\/quantumai.co\/bg\/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f\/?simply_static_page=12205","cs_CZ":"https:\/\/quantumai.co\/cs\/porozumeni-bqp-v-kvantove-vypocetni-technice\/?simply_static_page=12205","da_DK":"https:\/\/quantumai.co\/da\/forstaelse-af-bqp-i-kvantecomputere\/?simply_static_page=12205","nl_NL":"https:\/\/quantumai.co\/nl\/bqp-in-kwantumcomputers-begrijpen\/?simply_static_page=12205","et":"https:\/\/quantumai.co\/et\/bqp-moistmine-kvantarvutuses\/?simply_static_page=12205","fi":"https:\/\/quantumai.co\/fi\/bqpn-ymmartaminen-kvanttilaskennassa\/?simply_static_page=12205"},"english_name":{"en_GB":"English","de_DE":"German","es_ES":"Spanish","fr_FR":"French","it_IT":"Italian","ja":"Japanese","ru_RU":"Russian","pt_BR":"Portuguese","bg_BG":"Bulgarian","cs_CZ":"Czech","da_DK":"Danish","nl_NL":"Dutch","et":"Estonian","fi":"Finnish"},"is_iphone_user_check":""};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/js/trp-language-cookie.js" id="trp-language-cookie-js"></script>
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TWTG3RS4" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["quantumai.co"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWTG3RS4");</script>
+
+
+<link rel="https://api.w.org/" href="https://quantumai.co/fr/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://quantumai.co/fr/wp-json/wp/v2/posts/505499">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantumai.co/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://quantumai.co/fr/?p=505499">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://quantumai.co/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Ffr%2Fcomprendre-le-bqp-dans-linformatique-quantique%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://quantumai.co/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Ffr%2Fcomprendre-le-bqp-dans-linformatique-quantique%2F#038;format=xml">
+		<script type="text/javascript">(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "l9090pzye1");</script>
+		<link rel="alternate" hreflang="en-GB" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+<link rel="alternate" hreflang="de-DE" href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/">
+<link rel="alternate" hreflang="es-ES" href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr-FR" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<link rel="alternate" hreflang="it-IT" href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ja" href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3/">
+<link rel="alternate" hreflang="ru-RU" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/">
+<link rel="alternate" hreflang="pt-BR" href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg-BG" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/">
+<link rel="alternate" hreflang="cs-CZ" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da-DK" href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl-NL" href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/">
+<link rel="alternate" hreflang="et" href="https://quantumai.co/et/bqp-moistmine-kvantarvutuses/">
+<link rel="alternate" hreflang="fi" href="https://quantumai.co/fi/bqpn-ymmartaminen-kvanttilaskennassa/">
+<link rel="alternate" hreflang="en" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+<link rel="alternate" hreflang="de" href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/">
+<link rel="alternate" hreflang="es" href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/">
+<link rel="alternate" hreflang="fr" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/">
+<link rel="alternate" hreflang="it" href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/">
+<link rel="alternate" hreflang="ru" href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/">
+<link rel="alternate" hreflang="pt" href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/">
+<link rel="alternate" hreflang="bg" href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/">
+<link rel="alternate" hreflang="cs" href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/">
+<link rel="alternate" hreflang="da" href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/">
+<link rel="alternate" hreflang="nl" href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/">
+<link rel="alternate" hreflang="x-default" href="https://quantumai.co/understanding-bqp-in-quantum-computing/">
+			                <meta name="ssp-config-path" content="/wp-content/uploads/simply-static/configs/">
+			
+						
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-180x180.png">
+<meta name="msapplication-TileImage" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-270x270.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-505499 single-format-standard wp-embed-responsive wp-theme-immediate translatepress-fr_FR">
+
+
+	<div id="top-bar-info" class="sticky top-0 z-[60] py-5 bg-gradient-to-tr from-indigo-600 to-blue-600 text-white text-xs lg:text-center pr-6">
+		<div class="max-w-7xl mx-auto px-6 relative">
+			<p>N'investissez pas si vous n'êtes pas prêt à perdre tout l'argent investi. Il s'agit d'un investissement à haut risque et vous ne devez pas vous attendre à être protégé en cas de problème.</p>
+			<button class="absolute right-0 top-0 opacity-25 hover:opacity-50 transition-opacity p-0.5" onclick="hideTopBar()" aria-label="Fermer la barre d&#039;information">
+				<svg class="w-3.5 h-3.5" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.99979 4.00028C6.74392 4.00028 6.48776 4.09775 6.29276 4.29325L4.29276 6.29325C3.90176 6.68425 3.90176 7.31731 4.29276 7.70731L11.5857 15.0003L4.29276 22.2932C3.90176 22.6842 3.90176 23.3173 4.29276 23.7073L6.29276 25.7073C6.68376 26.0983 7.31682 26.0983 7.70682 25.7073L14.9998 18.4143L22.2928 25.7073C22.6828 26.0983 23.3168 26.0983 23.7068 25.7073L25.7068 23.7073C26.0978 23.3163 26.0978 22.6832 25.7068 22.2932L18.4139 15.0003L25.7068 7.70731C26.0978 7.31731 26.0978 6.68325 25.7068 6.29325L23.7068 4.29325C23.3158 3.90225 22.6828 3.90225 22.2928 4.29325L14.9998 11.5862L7.70682 4.29325C7.51132 4.09775 7.25567 4.00028 6.99979 4.00028Z" fill="white"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>// Hide top bar when clicked
+	// Adds a cookie and hides element
+	function hideTopBar() {
+	    document.cookie = "top_bar_disclaimer=hidden;max-age=31536000; path=/";
+	    document.getElementById("top-bar-info").style.display = 'none';
+	}</script>
+
+	
+<div id="page" class="relative">
+	<a href="#content" class="sr-only" data-no-translation="" data-trp-gettext="">Skip to content</a>
+
+	
+<header id="masthead" class="lg:overflow-y-visible absolute w-full z-50 top-2 md:top-4" x-data="{ menuOpen: false }">
+
+	<div class="mx-auto max-w-7xl px-2.5 sm:px-4">
+        <div class="relative flex max-lg:justify-between gap-6 sm:gap-8 px-3 shadow sm:px-6 lg:px-8 rounded-xl h-[70px] md:h-[88px]">
+          <div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-75 backdrop-blur-md rounded-xl z-0"></div>
+          <div class="flex flex-shrink-0 items-center relative z-10">
+          							<a href="https://quantumai.co/fr/">
+	            		<img class="block h-7 md:h-8 w-auto" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+	            	</a>
+				          </div>
+          
+          <div class="flex items-center gap-2 lg:hidden relative z-10">
+          					    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			              
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Ouvrir le menu" x-show="!menuOpen">
+                <i class="ph-fill ph-list"></i>
+              </button>
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Fermer le menu" x-show="menuOpen">
+                <i class="ph-fill ph-x"></i>
+              </button>
+          </div>
+          <nav class="hidden lg:flex lg:justify-between w-full z-10 menu-nav-desktop">
+
+          	<div class="flex gap-6">
+          		<div id="menu-nav-desktop">
+          		<ul id="menu-main" class="lg:flex flex-shrink-0 gap-6 text-base relative z-10 h-full">
+<li id="menu-item-505175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 h-full relative"><a href="https://quantumai.co/fr/produits/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Produits</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 h-full relative"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">A propos de nous</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 h-full relative"><a href="https://quantumai.co/fr/equipe/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">L'équipe</a></li>
+<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 h-full relative"><a href="https://quantumai.co/fr/blog/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 h-full relative"><a href="https://quantumai.co/fr/nous-contacter/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Contactez nous</a></li>
+</ul>          	</div>
+
+          	<div id="menu-nav-desktop-multi-page" class="relative" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		
+          		<div class="absolute left-0 top-full z-30 mt-2 py-1 w-auto origin-top focus:outline-none" x-show="dropdownOpen" x-transition x-cloak>
+          			<div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 rounded-lg z-0"></div>
+          			<ul id="menu-dropdown" class="min-w-[200px] menu-nav-desktop-multi-page-menu py-1">
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex justify-between items-center gap-x-4 px-6 py-2.5 text-base text-gray-700 hover:text-gray-900 relative z-10 leading-5">A propos de nous</a></li>
+</ul>          		</div>
+          		
+          	</div>
+          	</div>
+          	
+          	
+          	<div class="flex gap-3 items-center flex-shrink-0">
+          					    <a href="https://quantumai.co/fr/se-connecter/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Se connecter</a>
+									    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			            </div>
+          </nav>
+
+          <script>
+          	let menuElements = document.querySelectorAll('#menu-nav-desktop .menu-item-has-children');
+          	for (let i=0, il=menuElements.length; i < il; ++i) {
+		        let menuElementObj = menuElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:keydown.escape.stop', 'dropdownOpen = false');
+		        menuElement.setAttribute('x-on:click.away', 'dropdownOpen = false');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiElements = document.querySelectorAll('#menu-nav-desktop-multi-page .menu-item-has-children');
+          	
+		    for (let i=0, il=menuMultiElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:mouseover', 'dropdownOpen = true');
+		        menuElement.setAttribute('x-on:mouseleave', 'dropdownOpen = false');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-right transition"><\/i>'
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiSubmenuElements = document.querySelectorAll('.menu-nav-desktop-multi-page-menu .sub-menu');
+		    for (let i=0, il=menuMultiSubmenuElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiSubmenuElements[i];
+		        let div = document.createElement("div");
+		        div.classList.add('absolute', 'w-[calc(100%_-_8px)]', 'h-full', 'top-0', 'right-0', 'bg-white', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'ring-1', 'ring-black', 'ring-opacity-5', 'rounded-lg', 'z-0');
+				menuElementObj.prepend(div);
+		    }
+          </script>
+          
+          
+        </div>
+      </div>
+      
+      <nav class="lg:hidden mt-3 md:max-w-lg px-4 sm:px-6 lg:px-8 ml-auto relative z-10" aria-label="Mondial" x-show="menuOpen" @keydown.escape.stop="menuOpen = false" @click.away="menuOpen = false" x-trap="menuOpen" x-transition x-cloak id="menu-nav-mobile">
+      	<div class="overflow-hidden bg-white bg-opacity-80 backdrop-blur-md shadow rounded-xl text-gray-700 py-2">
+      		<ul id="menu-main-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/produits/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Produits</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">A propos de nous</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/equipe/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">L'équipe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/blog/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/nous-contacter/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Contactez nous</a></li>
+</ul>
+          	<div id="menu-nav-desktop-multi-page" class="relative flex flex-col items-center" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		<button class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent" x-on:click.prevent="dropdownOpen = !dropdownOpen">
+          			Ressources          			<i class="ph-fill ph-caret-down transition" :class="{ 'rotate-180': dropdownOpen }"></i>
+          		</button>
+          		<div class="flex flex-col gap-y-1.5 items-center text-center px-6 w-full min-w-full">
+          			<div class="flex flex-col gap-y-1 p-4 rounded-lg bg-gray-900/5 w-full min-w-full" x-show="dropdownOpen" x-transition x-cloak>
+	          			<ul id="menu-dropdown-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">A propos de nous</a></li>
+</ul>	          		</div>
+          		</div>
+          		
+          	</div>
+
+          	
+
+          	<div class="flex gap-3 items-center flex-shrink-0 px-6 pb-3 justify-center pt-3">
+              			    <a href="https://quantumai.co/fr/se-connecter/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Se connecter</a>
+									    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			            </div>
+      	</div>
+          	
+          </nav>
+          <script>
+          	let menuElementsMobile = document.querySelectorAll('#menu-nav-mobile .menu-item-has-children');
+          	for (let i=0, il=menuElementsMobile.length; i < il; ++i) {
+		        let menuElementObj = menuElementsMobile[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+          </script>
+	<div>
+
+
+
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+
+<article itemscope itemtype="https://schema.org/NewsArticle" id="post-505499" class="post-505499 post type-post status-publish format-standard has-post-thumbnail hentry category-what-is">
+	<div class="relative">
+	    	<img class="absolute z-0 w-full h-full object-cover pointer-events-none hero-angle" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/bg.svg" alt="">
+		<div class="relative pt-4 pb-16 sm:pb-24">
+		<main class="mt-16 sm:mt-16 pt-[60px] md:pt-[75px]">
+          <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 relative z-10">
+              <div class="text-center max-lg:mx-auto md:max-w-2xl lg:col-span-6 xl:col-span-7 lg:flex lg:items-center lg:text-left lg:pb-20 lg:pt-10">
+                <div>
+                	<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+	  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	    <a itemprop="item" href="https://quantumai.co/fr/">
+	        <span itemprop="name">Accueil</span></a>
+	    <meta itemprop="position" content="1">
+	  </li> / 
+  
+
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="https://quantumai.co/fr/blog/">
+		    <span itemprop="name">Blog</span></a>
+		<meta itemprop="position" content="2">
+		</li> / 
+	  
+	  <li class="hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		    <span itemprop="name">Comprendre le BQP en informatique quantique</span>
+		<meta itemprop="position" content="2">
+		</li>
+	  </ol>                							<h1 itemprop="headline" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[66px]">Comprendre le BQP en informatique quantique</h1>					
+					<meta itemprop="image" content="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/BQP-Bounded-error-Quantum-Polynomial-Time.jpg">
+                		                  
+	                <div class="mt-3 text-base sm:text-lg text-gray-600 sm:mt-5 lg:mt-7 flex items-center max-lg:justify-center flex-wrap gap-x-4 gap-y-2">
+	                	<div class="text-gray-700"><a href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/" rel="bookmark"><time datetime="2024-01-07T09:57:39+00:00" itemprop="datePublished" content="2024-01-07T09:57:39+00:00">7 janvier 2024</time></a></div>
+<a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/fr/categorie/quest-ce-que/">Qu'est-ce que</a>	                </div>
+                </div>
+              </div>
+
+                           
+            </div>
+          </div>
+        </main>
+	</div>
+</div>
+
+	<div class="mt-20 sm:mt-24 pb-32 sm:pb-40 max-w-6xl px-6 sm:px-8 mx-auto">
+				
+		<div class="mt-16 sm:mt-24">
+				<div class="entry-content prose prose-neutral max-w-none prose-a:text-primary">
+			<p>Dans notre exploration du paysage en constante évolution des <b>informatique quantique</b>Nous nous pencherons sur les subtilités de la <b>BQP</b> (Erreur limitée <b>Temps polynomial quantique</b>). Ce concept fondamental est au cœur de la politique de l'Union européenne en matière d'environnement. <b>la théorie de la complexité quantique</b>, délimitant les classes de <b>les problèmes de décision</b> que les machines quantiques peuvent résoudre avec efficacité et précision. À travers un objectif axé sur <b>algorithmes quantiques</b>Nous cherchons à décoder la signification de <b>BQP</b> et son rôle central dans la poursuite de l'objectif de l'Union européenne. <b>suprématie quantique</b>.</p>
+<p>Rejoignez-nous et embarquez pour un voyage à travers les royaumes du <b>mécanique quantique</b> et des merveilles informatiques, en élucidant les implications profondes de ces algorithmes avancés pour l'avenir de la technologie. Comprendre <b>BQP</b> ne se limite pas aux frontières de l'informatique ; il s'agit d'ouvrir les portes à de nouvelles possibilités qui redéfinissent la manière dont nous abordons les problèmes complexes à l'ère numérique.</p>
+<h2>L'essence de la PQB dans la théorie de la complexité quantique</h2>
+<p>Alors que nous nous penchons sur les aspects fondamentaux de la <b>informatique quantique</b>Il est donc impératif de comprendre la <b>Définition de la PQB</b>Il s'agit d'une méthode de résolution des problèmes, de sa signification et de ses implications. BQP, ou Bounded-error (erreur limitée) <b>Temps polynomial quantique</b>est une classe de <b>les problèmes de décision</b> résolvables par des ordinateurs quantiques dans un délai de <b>temps polynomial</b>qui <b>mécanique quantique</b> sous-tend. Cette classe ne reflète pas seulement les principes fondamentaux du traitement quantique de l'information, mais assure également une influence profonde sur les capacités opérationnelles de ces modèles de calcul avancés.</p>
+<h3>Définition du BQP (Bounded-error Quantum Polynomial Time)</h3>
+<p>Le <b>Définition de la PQB</b> fournit une perspective spécifique à travers laquelle nous pouvons voir l'efficacité et le potentiel de la <b>algorithmes quantiques</b>. Formellement, un problème de décision entre dans la catégorie des BQP s'il existe un algorithme quantique capable de le résoudre avec plus de deux tiers de chances de trouver la bonne réponse. Ce seuil de probabilité signifie que nous traitons efficacement les erreurs, grâce à l'algorithme quantique. <b>correction quantique des erreurs</b> qui font partie intégrante de la structure des algorithmes BQP.</p>
+<h3>Propriétés clés des problèmes de décision dans le cadre du BQP</h3>
+<p><b>Problèmes de décision</b> qui entrent dans le cadre de la PQB sont caractérisées par plusieurs propriétés essentielles. Celles-ci définissent non seulement leur complexité, mais préparent également le terrain pour la suprématie quantique, c'est-à-dire le point de jonction où la <b>informatique quantique</b> dépasse incontestablement l'informatique classique.</p>
+<ul>
+<li>**Décidabilité en temps polynomial** : Les problèmes de BQP peuvent être résolus efficacement, avec un algorithme qui s'exécute en <b>temps polynomial</b>.</li>
+<li>**Fidélité des portes quantiques** : Le succès de la résolution de ces problèmes dépend de la fidélité des portes quantiques, qui sont utilisées pour manipuler les qubits et doivent fonctionner avec un minimum d'erreurs.</li>
+<li>**Probabilité d'erreur** : Bien que la perfection en matière de calcul reste difficile à atteindre, le BQP maintient une probabilité d'erreur limitée ne dépassant pas 1/3 pour toute instance du problème.</li>
+<li>**Enchevêtrement quantique et superposition** : En exploitant l'intrication et la superposition quantiques, les problèmes BQP exploitent ces propriétés mécaniques quantiques pour atteindre une capacité de résolution de problèmes sans précédent.</li>
+</ul>
+<h3>Comment la PQB étend la théorie classique de la complexité</h3>
+<p>L'émergence de la PQB a élargi les contours de l'approche classique de l'évaluation des risques. <b>théorie de la complexité</b>. En introduisant les principes de la mécanique quantique dans les cadres informatiques, nous avons assisté à une expansion spectaculaire de notre arsenal de résolution de problèmes, élevant nos capacités au-delà des algorithmes traditionnels.</p>
+<table>
+<tr>
+<th>Théorie classique de la complexité</th>
+<th>PQB et mécanique quantique</th>
+</tr>
+<tr>
+<td>Dépendance à l'égard des algorithmes classiques</td>
+<td>Emploie <b>algorithmes quantiques</b>
+</td>
+</tr>
+<tr>
+<td>Ne tient pas compte des phénomènes quantiques</td>
+<td>Tirer parti de l'intrication et de la superposition</td>
+</tr>
+<tr>
+<td>Fonctionne dans un cadre déterministe</td>
+<td>Caractéristiques calcul probabiliste</td>
+</tr>
+<tr>
+<td>Limité par le traitement classique de l'information</td>
+<td>
+<b>Correction quantique des erreurs</b> offre de nouvelles voies pour la fidélité de l'information</td>
+</tr>
+</table>
+<p>Alors que nous poursuivons notre voyage à travers <b>la théorie de la complexité quantique</b>Il convient de noter que les progrès que nous réalisons ici sont plus que des réflexions théoriques. Elles constituent des étapes essentielles vers l'exploitation de la véritable puissance que promet l'informatique quantique, en débloquant des solutions à des problèmes que l'on croyait insolubles et en ouvrant de nouvelles frontières dans les domaines de la technologie et de la science.</p>
+<h2>Explorer le modèle du circuit quantique et la PQB</h2>
+<p>Dans notre quête pour révéler les subtilités de l'informatique quantique, il est impératif que nous nous penchions sur la question de savoir si l'informatique quantique est une science ou une technologie à part entière. <b>modèle de circuit quantique</b>un concept fondamental qui sous-tend le cadre opérationnel du BQP (Bounded-error <b>Temps polynomial quantique</b>). Ces réseaux de portes quantiques servent d'épine dorsale à la fabrication et à l'exécution d'algorithmes quantiques, nous rapprochant de plus en plus de l'étape tant convoitée des <b>suprématie quantique</b>.</p>
+<p><img fetchpriority="high" decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/uniform-quantum-circuits-1024x585.jpg" alt="circuits quantiques uniformes" title="circuits quantiques uniformes" width="1024" height="585" class="aligncenter size-large wp-image-505501" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/uniform-quantum-circuits.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<h3>Rôle des circuits quantiques dans les algorithmes BQP</h3>
+<p>Les circuits quantiques sont l'essence même de l'informatique dans le domaine de la science et de la technologie. <b>mécanique quantique</b>. Contrairement aux circuits classiques, qui fonctionnent sur des séquences binaires, les circuits quantiques utilisent la puissance des qubits. Ces qubits subissent des transformations par le biais d'une séquence de portes quantiques, minutieusement chorégraphiées pour exécuter les tâches suivantes <em>algorithmes quantiques</em>.</p>
+<p>Ce sont ces symphonies algorithmiques qui nous permettent d'effectuer des calculs qui, avec des ordinateurs classiques, seraient irréalisables. Lorsque l'on parle de <em>suprématie quantique</em>nous faisons référence à ce scénario précis : un ordinateur quantique qui résout des problèmes hors de portée des superordinateurs classiques les plus avancés.</p>
+<h3>Comprendre les familles uniformes de circuits quantiques</h3>
+<p>Pour saisir tout le potentiel de l'informatique quantique, il est nécessaire d'apprécier l'influence des éléments suivants <em>circuits quantiques uniformes</em>. L'uniformité est ici un terme d'art, signifiant qu'un algorithme unique génère la disposition d'un circuit quantique pour toute taille spécifiée, garantissant l'évolutivité et la précision méthodique.</p>
+<p>Cette uniformité est essentielle ; sans elle, l'efficacité et la fiabilité de la mise à l'échelle des algorithmes quantiques pour résoudre des problèmes plus importants et plus complexes risquent d'être compromises, ce qui pourrait entraver la marche vers le développement durable. <b>suprématie quantique</b>.</p>
+<p>Examinons quelques-uns des paramètres fondamentaux de ces circuits quantiques :</p>
+<table>
+<tr>
+<th>Aspect</th>
+<th>Importance</th>
+<th>Impact sur les algorithmes quantiques</th>
+</tr>
+<tr>
+<td>Nombre de Qubits</td>
+<td>Indique l'échelle de calcul et la complexité du problème</td>
+<td>Détermine la faisabilité de la résolution de problèmes quantiques particuliers</td>
+</tr>
+<tr>
+<td>Fidélité de la porte</td>
+<td>Reflète la précision et les taux d'erreur des opérations quantiques</td>
+<td>Crucial pour le maintien de l'intégrité algorithmique et l'obtention de résultats exacts</td>
+</tr>
+<tr>
+<td>Profondeur du circuit</td>
+<td>Mesure le nombre d'opérations séquentielles pouvant être effectuées</td>
+<td>Impact sur la vitesse et l'efficacité des processus de calcul quantique</td>
+</tr>
+<tr>
+<td>Uniformité</td>
+<td>Assure la cohérence de la construction du circuit quelle que soit la taille du problème.</td>
+<td>Facilite les procédures de calcul quantique évolutives et reproductibles</td>
+</tr>
+</table>
+<p>En conclusion, le domaine de l'informatique quantique est vaste et regorge de potentiel, avec les possibilités suivantes <b>modèle de circuit quantique</b> qui constitue son infrastructure essentielle. En garantissant la construction de <em>circuits quantiques uniformes</em>Nous continuons d'ouvrir la voie à des avancées révolutionnaires dans ce domaine, ce qui nous propulse vers le zénith de l'innovation. <em>suprématie quantique</em>.</p>
+<h2>BQP (Bounded-error Quantum Polynomial Time) expliqué</h2>
+<p>Dans le paysage en constante évolution de l'informatique quantique, <em>Temps polynomial quantique à erreur limitée</em> (<strong>BQP</strong>) se distingue comme une classe de complexité essentielle. Le BQP incarne la capacité d'un ordinateur quantique à résoudre des problèmes de décision de manière précise et efficace. Nous nous penchons sur ce qui constitue la <strong>BQP</strong>et ses implications pour les <strong>temps polynomial quantique</strong>et l'avancement de la <strong>correction quantique des erreurs</strong> des techniques essentielles pour une <strong>algorithmes quantiques</strong>. Notre discussion tient compte de la combinaison complexe de la vitesse de calcul et de l'atténuation des erreurs qui fait de la BQP une caractéristique du potentiel de l'informatique quantique.</p>
+<p>Le BQP définit le seuil des problèmes que les ordinateurs quantiques peuvent résoudre dans les limites de leur capacité. <b>temps polynomial</b> tout en maintenant une probabilité d'erreur limitée. Cela signifie que pour toute instance soumise à un algorithme BQP, la probabilité de parvenir à une conclusion incorrecte ne dépasse pas 1/3. Surtout, en exécutant plusieurs fois un algorithme et en appliquant le principe du vote majoritaire, les erreurs peuvent être réduites de manière significative. Ce processus, ancré par la limite de Chernoff, témoigne de la résilience et de l'adaptabilité des algorithmes BQP. <strong>correction quantique des erreurs</strong> des méthodes qui préservent l'intégrité et la précision de l'informatique quantique.</p>
+<blockquote><p>Nous soulignons souvent que la véritable prouesse de l'informatique quantique est soulignée par son double engagement en faveur d'un traitement rapide et d'un traitement méticuleux. <b>réduction des erreurs</b>qui, collectivement, nous font entrer dans la prochaine ère de l'aptitude au calcul.</p></blockquote>
+<p>Le tableau ci-dessous montre comment les algorithmes quantiques s'appuient sur les principes du BQP pour améliorer les calculs :</p>
+<table>
+<tr>
+<th>Principe</th>
+<th>Impact sur les algorithmes quantiques</th>
+<th>Bénéfice</th>
+</tr>
+<tr>
+<td>Temps polynomial</td>
+<td>Permet de calculer rapidement des problèmes complexes</td>
+<td>Traitement efficace des problèmes à grande échelle</td>
+</tr>
+<tr>
+<td>Probabilité d'erreur limitée</td>
+<td>Limite le risque d'inexactitudes dans les calculs</td>
+<td>Fiabilité des résultats</td>
+</tr>
+<tr>
+<td>Vote à la majorité (<b>Réduction des erreurs</b>)</td>
+<td>Minimise les erreurs lors de l'exécution des algorithmes itératifs</td>
+<td>Précision accrue des résultats</td>
+</tr>
+<tr>
+<td>Application de la liaison de Chernoff</td>
+<td>Stabilise les taux d'erreur dans les systèmes quantiques</td>
+<td>Cohérence même en présence de bruit quantique</td>
+</tr>
+</table>
+<p>Il est essentiel de reconnaître que le BQP ne reflète pas seulement une propriété inhérente aux systèmes quantiques, mais qu'il guide également l'évolution continue des algorithmes quantiques. En perfectionnant la <b>correction quantique des erreurs</b> nous préservons l'essence du temps polynomial quantique, en veillant à ce que la BQP reste la pierre angulaire de nos ambitions en matière d'informatique quantique au fur et à mesure que la technologie quantique évolue.</p>
+<h2>La relation entre les algorithmes quantiques et les BQP</h2>
+<p>Notre voyage dans le domaine quantique révèle que les capacités des algorithmes quantiques sont inextricablement liées aux limites de calcul définies par BQP (Bounded-error Quantum Polynomial time). Ces algorithmes, qui reposent sur les principes de la mécanique quantique, sont conçus pour fonctionner au sein de machines de Turing quantiques, le tissu même de l'informatique quantique. Pénétrons dans cette relation complexe et explorons comment la nature itérative des algorithmes quantiques contribue à l'amélioration de la qualité de la vie. <b>réduction des erreurs</b>Les entreprises ont également été invitées à participer à l'élaboration de la charte, ce qui a permis de renforcer leur alignement sur la BQP.</p>
+<h3>Des machines de Turing quantiques aux algorithmes BQP</h3>
+<p>Il se trouve à l'intérieur <b>Machines de Turing quantiques</b> que les algorithmes quantiques trouvent leur rythme de croisière. Malgré la nature abstraite de ces constructions théoriques, elles constituent une base essentielle pour l'informatique quantique dans le monde réel. En encodant les données dans des qubits et en manipulant ces qubits à l'aide de portes logiques quantiques, les algorithmes évoluent vers des solutions compatibles avec le BQP qui s'attaquent à des problèmes dépassant la portée de l'informatique classique.</p>
+<h3>Itérations et réduction des erreurs dans les algorithmes BQP</h3>
+<p>L'efficacité des algorithmes quantiques repose sur la robustesse du processus d'évaluation de la performance. <b>itérations</b>. Grâce à des cycles répétés d'exécution algorithmique, les systèmes quantiques peuvent affiner les réponses de manière incrémentale, en se rapprochant de plus en plus des solutions idéales. Chaque itération sert à diminuer la probabilité d'erreur, ce qui est essentiel pour atteindre des probabilités d'erreur pratiquement négligeables, un objectif fondamental si l'on considère les exigences de précision de l'informatique quantique.</p>
+<table>
+<tr>
+<th>Concept quantique</th>
+<th>Rôle dans la réduction des erreurs</th>
+<th>Impact sur la relation BQP</th>
+</tr>
+<tr>
+<td>Portes logiques quantiques</td>
+<td>Exécuter des opérations précises, en minimisant les taux d'erreur initiaux</td>
+<td>Facilite les calculs complexes dans le cadre des paramètres BQP</td>
+</tr>
+<tr>
+<td>Superposition quantique</td>
+<td>Exploration simultanée de plusieurs états, optimisant les voies de calcul</td>
+<td>Améliore l'étendue des problèmes pouvant être résolus dans le cadre du BQP</td>
+</tr>
+<tr>
+<td>Enchevêtrement</td>
+<td>Permet des calculs corrélés, affinant davantage les résultats.</td>
+<td>Renforcement de l'efficacité de la résolution des problèmes au sein du BQP</td>
+</tr>
+<tr>
+<td>Codes de correction d'erreur</td>
+<td>Rectifier les erreurs après l'itération, afin de garantir des résultats cohérents</td>
+<td>Assurer la cohérence et la fiabilité des résultats de l'algorithme de la PQB</td>
+</tr>
+</table>
+<p>En contemplant l'importance de ces outils quantiques, nous comprenons mieux comment le système de l'information a été mis en place. <b>Relation BQP</b> est renforcée par <b>itérations</b> et l'application d'algorithmes quantiques complexes. Ces caractéristiques quantiques ne sont pas seulement des facettes d'un exercice académique, mais les mécanismes mêmes qui nous conduisent vers une suprématie quantique pratique.</p>
+<h2>Distinction entre le BQP et d'autres classes probabilistes</h2>
+<p>En explorant le paysage de la <b>classes de complexité</b> dans l'informatique quantique, il est crucial de reconnaître comment les <strong>Temps polynomial quantique à erreur limitée (BQP)</strong> se démarque des systèmes traditionnels d'information et de communication de l'Union européenne. <b>classes probabilistes</b> tels que <strong>BPP</strong>, <strong>RP</strong>et <strong>ZPP</strong>. Ces distinctions sont plus que des détails techniques ; elles représentent les sauts potentiels dans la science informatique que permettent la mécanique quantique et les technologies de l'information et de la communication (TIC). <b>théorie de l'information quantique</b>.</p>
+<h3>Comparaison de la BQP avec la BPP, la RP, la ZPP et d'autres classes</h3>
+<p>Dans notre analyse, nous révélons que le fondement de la <em>théorie de l'information quantique</em> est ce qui différencie le plus les <strong>BQP</strong> d'autres <b>classes de complexité</b>. Tout en <strong>BPP</strong> est souvent considéré comme le pendant classique du BQP, autorisant l'erreur dans les problèmes de décision qui peuvent être résolus en temps polynomial, il est limité par des probabilités classiques qui ne rendent pas compte de toute la gamme des probabilités quantiques.</p>
+<p>De même, <strong>RP</strong> (Randomized Polynomial time) est limité aux algorithmes qui sont corrects lorsqu'ils prétendent l'être, mais qui peuvent pécher par excès de prudence, tandis que <strong>ZPP</strong> (Zero-error Probabilistic Polynomial time) ne commet pas d'erreur en autorisant la possibilité d'une non-terminaison. Cependant, aucun n'intègre les phénomènes quantiques comme le fait le BQP, ce qui le rend particulièrement adapté aux processus de calcul quantique.</p>
+<h3>Caractéristiques uniques de la PQB dans la théorie de l'information quantique</h3>
+<p>Dans le cadre de la <strong>théorie de l'information quantique</strong>Le BQP est fondé sur les bits quantiques (qubits), qui peuvent exister en superposition, ce qui permet des calculs simultanés que les bits classiques ne peuvent pas effectuer. Cette seule propriété permet aux algorithmes quantiques de s'attaquer à des problèmes de décision complexes avec une probabilité élevée d'exactitude, inaccessible aux méthodes probabilistes standard.</p>
+<p>Les implications de ces caractéristiques sont profondes, car elles permettent des avancées dans des domaines tels que la factorisation des nombres premiers, qui a un impact direct sur la cryptographie. Ainsi, la nature unique des <strong>BQP</strong> dans le domaine de l'informatique quantique est porteuse de promesses qui dépassent de loin le champ d'application de l'informatique traditionnelle. <strong>classes probabilistes</strong>marquant une nouvelle ère dans les sciences informatiques théoriques et appliquées.</p>
+<h2>Promesse-BQP et problèmes complets en informatique quantique</h2>
+<p>
+Explorer le paysage de la <em>informatique quantique</em>Nous sommes attirés par le concept central de <em>Promesse-BQP</em>. Il se situe dans le domaine de la <strong>théorie de la complexité</strong>Il s'agit d'un sous-ensemble fascinant dans lequel chaque problème, connu sous le nom de "problème", peut être résolu. <em>problème complet</em>Le problème de l'utilisation d'une méthode d'analyse des données est au cœur de la classe : il permet de réduire efficacement d'autres problèmes de la même classe en fonction de cette méthode. Pour approfondir ce domaine, nous examinons les défis importants qui se posent dans le cadre de la <b>Promesse-BQP</b> qui soulignent son potentiel pour faire avancer nos frontières informatiques.
+</p>
+<p><img decoding="async" src="https://notclean2.quantumai.co/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-1024x585.jpg" alt="Problèmes complets en informatique quantique" title="Problèmes complets en informatique quantique" width="1024" height="585" class="aligncenter size-large wp-image-505502" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-1024x585.jpg 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-300x171.jpg 300w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing-768x439.jpg 768w, https://quantumai.b-cdn.net/wp-content/uploads/2024/01/Complete-Problems-in-Quantum-Computing.jpg 1344w" sizes="(max-width: 1024px) 100vw, 1024px"></p>
+<p>
+En particulier, <em>problèmes complets</em> comme le <em>APPROX-QCIRCUIT-PROB</em> se révèlent être des exemples significatifs au sein de l'Union européenne et de l'Union européenne. <b>Promesse-BQP</b>où les subtilités de ces problèmes constituent une base solide pour les avancées théoriques et pratiques dans le domaine de l'éducation et de la formation professionnelle. <strong>informatique quantique</strong>. Leur nature redoutable provient du fait que si nous pouvons concevoir des algorithmes quantiques pour résoudre ces problèmes, nous ne pourrons pas les résoudre. <b>problèmes complets</b>nous ouvrons la voie à la résolution d'une série d'autres problèmes complexes en temps polynomial.
+</p>
+<table>
+<tr>
+<th>Caractéristique de la promesse-BQP</th>
+<th>Impact sur l'informatique quantique</th>
+</tr>
+<tr>
+<td>Réduction des problèmes</td>
+<td>Facilite le traitement d'ensembles de données complexes</td>
+</tr>
+<tr>
+<td>Ampleur des défis informatiques</td>
+<td>L'innovation au service de la conception d'algorithmes quantiques</td>
+</tr>
+<tr>
+<td>Progrès de la <b>Théorie de la complexité</b>
+</td>
+<td>Construit un pont entre le calcul théorique et le calcul pratique</td>
+</tr>
+</table>
+<p>
+En tant que partisans de la <strong>informatique quantique</strong>Nous vivons une époque exaltante où des concepts tels que le <b>Promesse-BQP</b> catalyser notre compréhension des <strong>problèmes complets</strong> et leurs implications. Ces découvertes ne sont pas de simples exercices académiques ; elles sont la clé de voûte des progrès quantiques qui promettent de redéfinir entièrement notre paysage informatique.
+</p>
+<h2>Étudier le lien : BQP et classes de complexité classiques</h2>
+<p>Lorsque nous nous plongeons dans les subtilités de l'informatique quantique, nous rencontrons le BQP, une classe de complexité qui sert de pierre angulaire à notre compréhension de ce domaine de pointe. Le BQP, ou Bounded-error Quantum Polynomial time, fait partie intégrante de la façon dont nous conceptualisons les problèmes adaptés à l'informatique quantique et leurs relations avec l'informatique classique. <b>classes de complexité</b>.</p>
+<h3>Incorporation des classes P et BPP dans la BQP</h3>
+<p>Dans notre voyage à travers les classes de complexité, nous trouvons le BQP intriguant pour sa compréhension de la classe P, l'ensemble des problèmes résolvables en temps polynomial à l'aide d'une machine de Turing déterministe, et de l'ensemble des problèmes qui peuvent être résolus en temps polynomial à l'aide d'une machine de Turing déterministe. <b>BPP</b>qui permet une erreur limitée en temps polynomial sur une machine de Turing probabiliste. L'attrait du BQP réside dans sa capacité à intégrer les qualités de ces deux modèles classiques tout en opérant dans le domaine unique de la mécanique quantique. Cette synthèse représente un saut substantiel par rapport aux capacités de calcul classiques.</p>
+<h3>Évaluation de l'importance de la PQB dans les sous-ensembles de complexité comme PSPACE</h3>
+<p>Dans la riche tapisserie de <b>théorie de la complexité</b>Le BQP est solidement positionné au sein de l'Union européenne. <b>PSPACE</b>. Cette classe plus large de problèmes solubles dans un espace polynomial s'étend bien au-delà des horizons de P et englobe également les complexités de NP. L'analyse des BQP au sein de ces hiérarchies est inestimable car elle éclaire les fondements théoriques et les applications potentielles de l'informatique quantique. En outre, elle fait avancer la recherche qui sonde les limites de ce que nous considérons comme théoriquement possible, ce qui pourrait révolutionner notre approche des problèmes complexes de l'informatique quantique. <b>résolution de problèmes</b>.</p>
+<h2>Implications de la suprématie quantique sur le paysage du BQP</h2>
+<p>L'annonce de la suprématie quantique marque un tournant pour le rôle du BQP (Bounded-error Quantum Polynomial time) dans la tapisserie évolutive des théories informatiques. En nous penchant sur les changements profonds influencés par cette avancée révolutionnaire de l'informatique quantique, nous constatons une double transformation : un bond en avant dans le domaine de l'informatique quantique, et une augmentation de l'efficacité de l'informatique quantique dans le domaine de l'informatique. <b>résolution de problèmes</b> et un renforcement des méthodologies de correction des erreurs quantiques.</p>
+<h3>L'impact de la suprématie quantique sur la résolution de problèmes</h3>
+<p>Dans la saga épique de l'informatique numérique, l'avènement de la suprématie quantique a commencé à écrire un chapitre radical. Cette nouvelle ère de l'avantage quantique incarne un paradigme dans lequel les ordinateurs quantiques s'attaquent et résolvent des problèmes de classe BQP qui laissent les ordinateurs classiques dans un état de déficience. Il ne s'agit pas simplement d'un saut quantitatif, mais d'une évolution qualitative dans les domaines suivants <b>résolution de problèmes</b>Les algorithmes quantiques disposent ainsi de la dextérité nécessaire pour s'attaquer à des problèmes complexes à une échelle et à une vitesse sans précédent.</p>
+<h3>Les progrès potentiels de la correction quantique des erreurs dans le cadre de la PQB</h3>
+<p>La maîtrise de la correction quantique des erreurs fait partie intégrante de l'exploitation de toutes les prouesses de l'informatique quantique. Elle constitue le rempart contre la décohérence naturelle et les défauts de fonctionnement auxquels les qubits sont sujets. Dans la quête de la suprématie quantique, on ne saurait trop insister sur la nécessité d'affiner et d'améliorer les protocoles de correction des erreurs. Nous sommes témoins d'un effort concerté pour développer la résilience quantique, une mission essentielle pour la progression de la PQB et l'assurance de l'exactitude des résultats dans les systèmes quantiques.</p>
+<h2>L'informatique quantique dans son ensemble : Au-delà du BQP</h2>
+<p>À mesure que nous nous enfonçons dans la vaste étendue de l'informatique quantique, nous reconnaissons que le BQP (Bounded-error Quantum Polynomial Time) n'est qu'un coin de la toile, décrivant le paysage de base des difficultés et des triomphes de l'informatique quantique. L'exploration du BQP a jeté des bases solides, révélant les complexités et les forces des algorithmes quantiques et leur interaction au sein de l'informatique quantique. <b>la théorie de la complexité quantique</b>. Cependant, le champ d'application de l'informatique quantique dépasse largement cette classe fondamentale, car les progrès continus nous attirent vers les domaines théoriques de l'informatique quantique. <b>post-BQP</b> les classes de complexité.</p>
+<h3>Envisager les classes de complexité post-BQP</h3>
+<p>La notion de <b>post-BQP</b> Les classes de complexité représentent une frontière intellectuelle, regorgeant de défis et de mécanismes sophistiqués qui n'ont pas encore été découverts ou entièrement compris. Dans l'aventure de l'informatique quantique, <b>Progrès de la PQB</b> ont ouvert une voie qui s'aventure dans des territoires riches en puissance de calcul et en phénomènes quantiques énigmatiques. En tant que chercheurs, nous regardons l'horizon, sachant que les implications du dépassement de la PQB pourraient redéfinir non seulement la façon dont nous résolvons les problèmes, mais aussi la façon dont nous percevons le tissu de la réalité informatique elle-même.</p>
+<h3>Applications pratiques découlant de l'informatique quantique basée sur les BQP</h3>
+<p>Pourtant, même si nous nous tournons vers l'avenir, les terres fertiles de la PQB ont déjà porté leurs fruits dans le domaine de l'informatique quantique. <b>Applications pratiques</b> Les résultats obtenus dans le cadre de la PQB ont un impact significatif sur la cryptographie, la sécurisation des données grâce à un cryptage inviolable, la transformation des produits pharmaceutiques grâce à l'accélération de la découverte de médicaments et l'amélioration de l'intelligence artificielle grâce à l'apprentissage quantique des machines. Ces avancées dans le domaine de la <b>applications pratiques</b> réaffirment le rôle central de BQP en tant que phare, nous orientant vers un avenir riche en possibilités et en prouesses informatiques inégalées.</p>
+<section class="FAQPage">
+<h2>FAQ</h2>
+<div>
+<h3>Qu'est-ce que le BQP en informatique quantique ?</h3>
+<div>
+<div>
+<p>BQP, ou Bounded-error Quantum Polynomial Time, est une classe de complexité pour les problèmes de décision que les ordinateurs quantiques peuvent résoudre avec une forte probabilité de succès (au moins 2/3) en un temps polynomial. Elle s'apparente à la classe de complexité classique <b>BPP</b> mais adaptée à l'informatique quantique.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Comment la PQB définit-elle les problèmes de décision ?</h3>
+<div>
+<div>
+<p>Les problèmes de décision dans le cadre des BQP sont définis par leur solvabilité à l'aide d'algorithmes quantiques qui fonctionnent en temps polynomial et fournissent des réponses correctes avec une probabilité d'erreur limitée ne dépassant pas 1/3 pour chaque instance du problème.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Le BQP peut-il étendre les capacités de la théorie classique de la complexité ?</h3>
+<div>
+<div>
+<p>Oui, la PQB fait entrer les principes de la mécanique quantique dans le domaine de la théorie de la complexité informatique, permettant potentiellement aux ordinateurs quantiques de résoudre des problèmes insolubles pour les ordinateurs classiques, repoussant ainsi les limites de l'informatique classique.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quel rôle jouent les circuits quantiques dans les algorithmes BQP ?</h3>
+<div>
+<div>
+<p>Les circuits quantiques sont fondamentaux pour les algorithmes BQP car ils sont constitués de portes quantiques qui manipulent les qubits pour mettre en œuvre ces algorithmes de manière efficace, ce qui influence directement la capacité d'un ordinateur quantique à résoudre des problèmes dans le cadre du BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Que sont les "familles uniformes" de circuits quantiques ?</h3>
+<div>
+<div>
+<p>Les familles uniformes de circuits quantiques font référence à un ensemble de circuits qui peuvent être générés efficacement par un ordinateur classique, avec des circuits dont la taille augmente de façon polynomiale en fonction de la longueur de l'entrée, ce qui garantit la cohérence et la normalisation nécessaires aux algorithmes BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quel est le lien entre les algorithmes quantiques et les BQP ?</h3>
+<div>
+<div>
+<p>Les algorithmes quantiques fournissent la méthodologie pour traiter les problèmes de la classe BQP, en utilisant les propriétés de la mécanique quantique et des stratégies de calcul avancées pour atteindre des probabilités d'erreur suffisamment faibles pour entrer dans les critères du BQP.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>En quoi la PQB diffère-t-elle de la BPP, de la RP et de la ZPP ?</h3>
+<div>
+<div>
+<p>La BQP est spécialement conçue pour l'informatique quantique et ses capacités uniques, telles que la superposition et l'enchevêtrement, lui permettent de résoudre des problèmes qui sortent du cadre de l'informatique classique. <b>classes probabilistes</b> comme <b>BPP</b>, <b>RP</b>et <b>ZPP</b>.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quelles sont les caractéristiques uniques du BQP dans la théorie de l'information quantique ?</h3>
+<div>
+<div>
+<p>A l'intérieur <b>théorie de l'information quantique</b>Le BQP se caractérise par l'utilisation de modèles informatiques quantiques pour résoudre des problèmes de décision avec une précision et une rapidité élevées, en exploitant les particularités de la mécanique quantique pour surpasser les modèles classiques.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Qu'est-ce que Promise-BQP ?</h3>
+<div>
+<div>
+<p>Promise-BQP est une sous-classe de BQP qui comprend des problèmes considérés comme totalement quantiques, ce qui signifie que tous les autres problèmes de BQP peuvent être réduits à ces problèmes en temps polynomial, mettant en évidence le noyau structurel de la complexité informatique quantique.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Comment la BQP intègre-t-elle les classes de complexité classiques telles que P et BPP ?</h3>
+<div>
+<div>
+<p>BQP contient à la fois P (problèmes résolus en temps polynomial par une machine de Turing déterministe) et BPP (problèmes résolus avec des algorithmes probabilistes en temps polynomial), ce qui indique que les ordinateurs quantiques peuvent être au moins aussi performants que les ordinateurs classiques déterministes et aléatoires.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Pourquoi le placement de BQP au sein de PSPACE est-il important ?</h3>
+<div>
+<div>
+<p>Depuis <b>PSPACE</b> englobe tous les problèmes pouvant être résolus avec une quantité polynomiale d'espace mémoire, y compris P et NP. <b>PSPACE</b> suggère que les ordinateurs quantiques pourraient traiter efficacement un large éventail de problèmes complexes sans nécessiter un espace exponentiel.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Comment la suprématie quantique affecte-t-elle le paysage de la PQB ?</h3>
+<div>
+<div>
+<p>La suprématie quantique illustre le point où les ordinateurs quantiques peuvent résoudre certains problèmes que les machines classiques ne peuvent pas résoudre. Ce phénomène valide l'importance des problèmes de BQP et favorise des avancées telles que la correction quantique des erreurs, qui sont essentielles pour la stabilité et la précision de l'informatique quantique.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quelles sont les implications de la correction quantique des erreurs sur la PQB ?</h3>
+<div>
+<div>
+<p>La correction des erreurs quantiques est essentielle pour maintenir la cohérence et la précision des calculs quantiques. Son perfectionnement et son application sont essentiels pour un calcul quantique fiable, ce qui est nécessaire pour que les problèmes de la PQB soient traités efficacement dans des scénarios du monde réel.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Qu'est-ce qui se trouve au-delà du BQP en termes de complexité informatique quantique ?</h3>
+<div>
+<div>
+<p><b>Post-BQP</b> Les classes de complexité peuvent contenir des problèmes que les modèles quantiques actuels ne peuvent pas résoudre, repoussant ainsi les limites de ce qui est possible en termes de calcul et inspirant de nouveaux algorithmes et technologies quantiques.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Quelles sont les applications pratiques qui émergent de l'informatique quantique basée sur les BQP ?</h3>
+<div>
+<div>
+<p>L'informatique quantique basée sur les BQP est en train de trouver <b>applications pratiques</b> dans divers domaines tels que la cryptographie, pour des communications sécurisées ; la découverte de médicaments et la science des matériaux, grâce à des simulations de structures moléculaires ; et l'apprentissage automatique, pour améliorer l'analyse des données et les algorithmes d'intelligence artificielle.</p>
+</div>
+</div>
+</div>
+</section>
+		</div>
+
+		</div>
+	</div>
+
+</article>
+
+
+
+	<nav class="navigation post-navigation" aria-label="Publications" data-no-translation-aria-label="">
+		<h2 class="screen-reader-text" data-no-translation="" data-trp-gettext="">Navigation de l’article</h2>
+		<div class="nav-links">
+<div class="nav-previous"><a href="https://quantumai.co/fr/progres-en-quantum-ai-2024/" rel="prev"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Article précédent</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Poste précédent :</span> <br><span>Avancées dans le cadre de Quantum AI 2024 : Vers l'avenir</span></a></div>
+<div class="nav-next"><a href="https://quantumai.co/fr/comprendre-le-code-bacon-shor-en-informatique-quantique/" rel="next"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Article suivant</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Prochain article :</span> <br><span>Comprendre le code Bacon-Shor en informatique quantique</span></a></div>
+</div>
+	</nav>
+<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantumai.co/fr/comprendre-le-bqp-dans-linformatique-quantique/#respond" style="display:none;" data-no-translation="" data-trp-gettext="">Annuler la réponse</a></small>
+</h3>
+<form action="https://quantumai.co/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate data-trp-original-action="https://quantumai.co/wp-comments-post.php">
+<p class="comment-notes"><span id="email-notes" data-no-translation="" data-trp-gettext="">Votre adresse e-mail ne sera pas publiée.</span> <span class="required-field-message" data-no-translation="" data-trp-gettext="">Les champs obligatoires sont indiqués avec <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Commentaire <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Nom <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url" data-no-translation="" data-trp-gettext="">Site web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent" data-no-translation="" data-trp-gettext="">Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Laisser un commentaire" data-no-translation-value=""> <input type="hidden" name="comment_post_ID" value="505499" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<input type="hidden" name="trp-form-language" value="fr">
+</form>	</div>
+
+	
+</div>
+
+
+		</main>
+	</section>
+
+
+	</div>
+
+
+	
+<footer class="py-10 bg-gray-100 sm:pt-16 lg:pt-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12 text-sm">
+            <div class="max-md:col-span-2">
+            		            	<img class="w-auto h-8" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+				
+				<div class="pt-5 -mb-1">
+
+					<div class="flex items-center gap-x-2 text-sm md:text-base font-medium tracking-wide text-gray-800">
+						<svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
+						  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+						</svg>
+
+						<span>+442035970878</span>
+					</div>
+
+										
+				</div>
+
+				<ul id="menu-footer-main" class="mt-8 space-y-3">
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405"><a href="https://quantumai.co/fr/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Page d'accueil</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-406"><a href="https://quantumai.co/fr/blog/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Blog</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">A propos de nous</a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="https://quantumai.co/fr/equipe/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">L'équipe</a></li>
+<li id="menu-item-505485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505485"><a href="https://quantumai.co/fr/glossaire/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Glossaire</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="https://quantumai.co/fr/nous-contacter/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Contactez nous</a></li>
+</ul>            </div>
+            <div class="col-span-2 md:col-span-3 space-y-10">
+            	            		<div class="flex md:justify-end gap-x-2 md:mt-8">
+            			<i class="ph-fill ph-map-pin text-lg text-gray-500 mt-1"></i>
+											<div id="Headoffice" itemscope itemprop="parentOrganization" itemtype="http://schema.org/FinancialService">
+						   <h3 itemprop="name" class="text-lg font-medium leading-7 text-gray-900">Quantum AI - Bureau du Royaume-Uni</h3>
+						   
+						   <div class="mt-2.5 space-y-1 text-sm not-italic leading-6 text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						   		<div></div>
+						      <div itemprop="streetAddress">35 rue John</div>
+						      <div>
+						      	<span itemprop="postalCode">LU1 2JE</span>, <span itemprop="addressLocality">Luton, Royaume-Uni</span>
+						      </div>
+						   </div>
+						</div>
+										</div>
+				            	
+            	            </div>
+        </div>
+        <div class="py-8 md:py-10 2xl:py-12 my-8 md:my-12 2xl:my-16 prose prose-sm max-w-none text-gray-500 border-y border-gray-300">
+          <p>Le trading offre la possibilité de réaliser des profits substantiels, mais il comporte aussi le risque de perdre une partie ou la totalité de son capital. Il est important de noter qu'environ 70% des traders subissent des pertes financières.</p>
+<p>Veuillez noter que <a class="wpil_keyword_link" href="https://quantumai.co/fr/" title="Quantum AI" data-wpil-keyword-link="linked">Quantum AI</a> et les autres marques mentionnées sur notre site web sont utilisées uniquement à des fins de marketing et ne correspondent pas à des entreprises ou à des services spécifiques. La vidéo associée est destinée à un usage promotionnel uniquement et met en scène des personnes dans des rôles d'acteurs.</p>
+<p>Avant d'investir, il est conseillé de lire attentivement les conditions générales et la page d'avertissement de la plateforme d'investissement fournie par un tiers. En outre, veuillez tenir compte des obligations fiscales sur les plus-values personnelles qui peuvent s'appliquer dans votre pays de résidence. Il est illégal d'inciter les résidents américains à s'engager dans l'achat et la vente d'options sur matières premières, y compris les contrats "prédictifs", à moins qu'ils ne soient cotés sur une bourse enregistrée auprès de la CFTC ou qu'ils ne soient légalement exemptés.</p>
+<p>En outre, la Financial Conduct Authority (FCA) du Royaume-Uni a mis en œuvre la déclaration de politique générale PS20/10, qui interdit la vente, le marketing et la distribution de contrats sur la différence (CFD) liés à des produits de négociation. Cette réglementation limite également la diffusion de contenus promotionnels concernant les CFD et d'autres produits financiers auprès des consommateurs britanniques.</p>
+<p>En nous fournissant vos données personnelles, vous acceptez que nous partagions ces informations avec des fournisseurs de services de trading tiers, conformément à notre politique de confidentialité et à nos conditions générales. En ce qui concerne les stratégies de trading, les traders peuvent choisir entre différentes options telles que l'utilisation d'un logiciel de trading, l'engagement avec des courtiers humains ou la réalisation de leurs transactions de manière indépendante. La sélection de ces méthodes est du ressort exclusif de chaque trader.</p>
+        </div>
+        <div>
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
+                	<ul id="menu-footer-legal" class="flex flex-wrap items-center justify-start mt-5 gap-x-8 sm:mt-0 gap-y-3">
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://quantumai.co/fr/politique-de-confidentialite/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Politique de confidentialité</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://quantumai.co/fr/conditions-generales/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Conditions générales d'utilisation</a></li>
+</ul>                </div>
+
+                <p class="mt-6 text-sm text-gray-600 lg:mt-0">© <script>document.write(/\d{4}/.exec(Date())[0])</script> Copyright Quantum AI Ltd. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<template id="tp-language" data-tp-language="fr_FR"></template><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/fr\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/immediate\/*","\/fr\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script>
+        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
+            <div id="trp-floater-ls-current-language" class="trp-with-flags">
+
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
+					<img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French				</a>
+
+            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+
+                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="https://quantumai.co/understanding-bqp-in-quantum-computing/" title="English">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English">English					          </a>
+                                    <a href="https://quantumai.co/de/bqp-in-der-quanteninformatik-verstehen/" title="German">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German">German					          </a>
+                                    <a href="https://quantumai.co/es/entender-la-bqp-en-la-computacion-cuantica/" title="Spanish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish">Spanish					          </a>
+                                    <a href="https://quantumai.co/it/comprensione-della-bqp-nellinformatica-quantistica/" title="Italian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian					          </a>
+                                    <a href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8bbqp%e3%81%ae%e7%90%86%e8%a7%a3/" title="Japanese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese					          </a>
+                                    <a href="https://quantumai.co/ru/%d0%bf%d0%be%d0%bd%d0%b8%d0%bc%d0%b0%d0%bd%d0%b8%d0%b5-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d1%8b%d1%85-%d0%b2%d1%8b%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f%d1%85/" title="Russian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian">Russian					          </a>
+                                    <a href="https://quantumai.co/pt/compreensao-do-bqp-na-computacao-quantica/" title="Portuguese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese">Portuguese					          </a>
+                                    <a href="https://quantumai.co/bg/%d1%80%d0%b0%d0%b7%d0%b1%d0%b8%d1%80%d0%b0%d0%bd%d0%b5-%d0%bd%d0%b0-bqp-%d0%b2-%d0%ba%d0%b2%d0%b0%d0%bd%d1%82%d0%be%d0%b2%d0%b8%d1%82%d0%b5-%d0%b8%d0%b7%d1%87%d0%b8%d1%81%d0%bb%d0%b5%d0%bd%d0%b8%d1%8f/" title="Bulgarian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian">Bulgarian					          </a>
+                                    <a href="https://quantumai.co/cs/porozumeni-bqp-v-kvantove-vypocetni-technice/" title="Czech">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech					          </a>
+                                    <a href="https://quantumai.co/da/forstaelse-af-bqp-i-kvantecomputere/" title="Danish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish">Danish					          </a>
+                                    <a href="https://quantumai.co/nl/bqp-in-kwantumcomputers-begrijpen/" title="Dutch">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch">Dutch					          </a>
+                                    <a href="https://quantumai.co/et/bqp-moistmine-kvantarvutuses/" title="Estonian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian">Estonian					          </a>
+                                    <a href="https://quantumai.co/fi/bqpn-ymmartaminen-kvanttilaskennassa/" title="Finnish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish">Finnish					          </a>
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French</a>
+</div>            </div>
+        </div>
+
+    <div class="trp_model_container" id="trp_ald_modal_container" style="display: none" data-no-dynamic-translation data-no-translation>
+        <div class="trp_ald_modal" id="trp_ald_modal_popup">
+            <div id="trp_ald_popup_text"></div>
+
+        <div class="trp_ald_select_and_button">
+            <div class="trp_ald_ls_container">
+            <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_popup_select_container" data-no-translation>
+                
+                <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                    <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                </div>
+                <div class="trp-ls-shortcode-language">
+                    <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                    </div>
+                                                                    <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German                            </div>
+                                                                        <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French                            </div>
+                                                                        <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech                            </div>
+                                                                        <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch                            </div>
+                                                                        <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish                            </div>
+                                                            </div>
+            </div>
+            </div>
+
+
+            <div class="trp_ald_button">
+            <a href="https://quantumai.co/" id="trp_ald_popup_change_language"></a>
+            </div>
+         </div>
+        <a id="trp_ald_x_button_and_textarea" href="#"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
+    </div>
+</div>
+<template id="trp_ald_no_text_popup_template">
+    <div id="trp_no_text_popup_wrap">
+        <div id="trp_no_text_popup" class="trp_ald_no_text_popup" data-no-dynamic-translation data-no-translation>
+            
+            <div id="trp_ald_not_text_popup_ls_and_button">
+                <div id="trp_ald_no_text_popup_div">
+                    <span id="trp_ald_no_text_popup_text"></span>
+                </div>
+                <div class="trp_ald_ls_container">
+                    <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_no_text_select" data-no-translation>
+                        
+                        <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                            <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                        </div>
+                        <div class="trp-ls-shortcode-language" id="trp_ald_no_text_popup_select_container">
+                            <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                            </div>
+                                                                                            <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish
+                                    </div>
+                                                                                    </div>
+                    </div>
+                </div>
+                <div class="trp_ald_change_language_div">
+                    <a href="https://quantumai.co/" id="trp_ald_no_text_popup_change_language"></a>
+                </div>
+                <div id="trp_ald_no_text_popup_x_button_and_textarea"> <a id="trp_ald_no_text_popup_x_button"></a><span id="trp_ald_no_text_popup_x_button_textarea"></span>
+</div>
+            </div>
+            <div id="trp_ald_no_text_popup_x">
+                <button id="trp_close"></button>
+            </div>
+        </div>
+    </div>
+</template>        <span class="ssp-id" style="display:none">505499</span>
+		<script id="trp-dynamic-translator-js-extra">var trp_data = {"trp_custom_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-multilingual\/includes\/trp-ajax.php","trp_wp_ajax_url":"https:\/\/quantumai.co\/wp-admin\/admin-ajax.php","trp_language_to_query":"fr_FR","trp_original_language":"en_GB","trp_current_language":"fr_FR","trp_skip_selectors":["[data-no-translation]","[data-no-dynamic-translation]","[data-trp-translate-id-innertext]","script","style","head","trp-span","translate-press","[data-trp-translate-id]","[data-trpgettextoriginal]","[data-trp-post-slug]"],"trp_base_selectors":["data-trp-translate-id","data-trpgettextoriginal","data-trp-post-slug"],"trp_attributes_selectors":{"text":{"accessor":"outertext","attribute":false},"block":{"accessor":"innertext","attribute":false},"image_src":{"selector":"img[src]","accessor":"src","attribute":true},"submit":{"selector":"input[type='submit'],input[type='button'], input[type='reset']","accessor":"value","attribute":true},"placeholder":{"selector":"input[placeholder],textarea[placeholder]","accessor":"placeholder","attribute":true},"title":{"selector":"[title]","accessor":"title","attribute":true},"a_href":{"selector":"a[href]","accessor":"href","attribute":true},"button":{"accessor":"outertext","attribute":false},"option":{"accessor":"innertext","attribute":false},"aria_label":{"selector":"[aria-label]","accessor":"aria-label","attribute":true},"video_src":{"selector":"video[src]","accessor":"src","attribute":true},"video_poster":{"selector":"video[poster]","accessor":"poster","attribute":true},"video_source_src":{"selector":"video source[src]","accessor":"src","attribute":true},"audio_src":{"selector":"audio[src]","accessor":"src","attribute":true},"audio_source_src":{"selector":"audio source[src]","accessor":"src","attribute":true},"picture_image_src":{"selector":"picture image[src]","accessor":"src","attribute":true},"picture_source_srcset":{"selector":"picture source[srcset]","accessor":"srcset","attribute":true},"image_alt":{"selector":"img[alt]","accessor":"alt","attribute":true},"meta_desc":{"selector":"meta[name=\"description\"],meta[property=\"og:title\"],meta[property=\"og:description\"],meta[property=\"og:site_name\"],meta[property=\"og:image:alt\"],meta[name=\"twitter:title\"],meta[name=\"twitter:description\"],meta[name=\"twitter:image:alt\"],meta[name=\"DC.Title\"],meta[name=\"DC.Description\"],meta[property=\"article:section\"],meta[property=\"article:tag\"]","accessor":"content","attribute":true},"page_title":{"selector":"title","accessor":"innertext","attribute":false},"meta_desc_img":{"selector":"meta[property=\"og:image\"],meta[property=\"og:image:secure_url\"],meta[name=\"twitter:image\"]","accessor":"content","attribute":true}},"trp_attributes_accessors":["outertext","innertext","src","value","placeholder","title","href","aria-label","poster","srcset","alt","content"],"gettranslationsnonceregular":"0f65ef7370","showdynamiccontentbeforetranslation":"","skip_strings_from_dynamic_translation":[],"skip_strings_from_dynamic_translation_for_substrings":{"href":["amazon-adsystem","googleads","g.doubleclick"]},"duplicate_detections_allowed":"100","trp_translate_numerals_opt":"no","trp_no_auto_translation_selectors":["[data-no-auto-translation]"]};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/js/trp-translate-dom-changes.js" id="trp-dynamic-translator-js"></script>
+<script src="https://quantumai.co/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js" id="ssp-form-webhook-public-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-content/themes/immediate/js/script.min.js" id="immediate-script-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"></script>
+
+</header>
+</div>
+</body>
+</html>

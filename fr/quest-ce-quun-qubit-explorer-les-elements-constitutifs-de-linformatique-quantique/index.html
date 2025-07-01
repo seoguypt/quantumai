@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="fr-FR" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+		<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/7cc0ec6e28dd2386a2cdc6b6/script.js"></script>
+
+<title>Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique - Quantum AI</title>
+<meta name="description" content="Repoussant les frontières de la technologie moderne, l&#039;informatique quantique est prête à révolutionner le paysage numérique. Au cœur de cette technologie se trouvent les qubits, ces énigmatiques objets de la vie quotidienne.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+<link rel="canonical" href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Que sont les Qubits ? Exploration des éléments constitutifs de l&#039;informatique quantique - Quantum AI">
+<meta property="og:description" content="Repoussant les frontières de la technologie moderne, l&#039;informatique quantique est prête à révolutionner le paysage numérique. Au cœur de cette technologie se trouvent les qubits, ces énigmatiques objets de la vie quotidienne.">
+<meta property="og:url" content="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/">
+<meta property="og:site_name" content="quantumai.co">
+<meta property="article:section" content="Informatique quantique">
+<meta property="og:updated_time" content="2023-12-09T22:08:11+00:00">
+<meta property="og:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits.png">
+<meta property="og:image:secure_url" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits.png">
+<meta property="og:image:width" content="1792">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Illustration QU Bit">
+<meta property="og:image:type" content="image/png">
+<meta property="article:published_time" content="2023-12-09T22:03:01+00:00">
+<meta property="article:modified_time" content="2023-12-09T22:08:11+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Que sont les Qubits ? Exploration des éléments constitutifs de l&#039;informatique quantique - Quantum AI">
+<meta name="twitter:description" content="Repoussant les frontières de la technologie moderne, l&#039;informatique quantique est prête à révolutionner le paysage numérique. Au cœur de cette technologie se trouvent les qubits, ces énigmatiques objets de la vie quotidienne.">
+<meta name="twitter:image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits.png">
+<meta name="twitter:label1" content="Écrit par">
+<meta name="twitter:data1" content="Kristof George">
+<meta name="twitter:label2" content="Temps de lecture">
+<meta name="twitter:data2" content="11 minutes">
+<script type="application/ld+json" class="rank-math-schema-pro">{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": [
+                "Person",
+                "Organization"
+            ],
+            "@id": "https:\/\/quantumai.co\/fr\/#person",
+            "name": "quantumai.co",
+            "logo": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/fr\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "fr-FR",
+                "width": "789",
+                "height": "152"
+            },
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/quantumai.co\/fr\/#logo",
+                "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "contentUrl": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/11\/quantum-new.svg",
+                "caption": "quantumai.co",
+                "inLanguage": "fr-FR",
+                "width": "789",
+                "height": "152"
+            }
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https:\/\/quantumai.co\/fr\/#website",
+            "url": "https:\/\/quantumai.co\/fr\/",
+            "name": "quantumai.co",
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/fr\/#person"
+            },
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "ImageObject",
+            "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qubits.png",
+            "url": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qubits.png",
+            "width": "1792",
+            "height": "1024",
+            "caption": "QU Bit Illustration",
+            "inLanguage": "fr-FR"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": "1",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co",
+                        "name": "Accueil"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "2",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/fr\/categorie\/linformatique-quantique\/",
+                        "name": "Informatique quantique"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": "3",
+                    "item": {
+                        "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/",
+                        "name": "Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique"
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#webpage",
+            "url": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/",
+            "name": "Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique - Quantum AI",
+            "datePublished": "2023-12-09T22:03:01+00:00",
+            "dateModified": "2023-12-09T22:08:11+00:00",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/fr\/#website"
+            },
+            "primaryImageOfPage": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qubits.png"
+            },
+            "inLanguage": "fr-FR",
+            "breadcrumb": {
+                "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#breadcrumb"
+            },
+            "headline": "What are Qubits? Exploring the Building Blocks of Quantum Computing - Quantum AI",
+            "lastReviewed": "décembre 9, 2023",
+            "relatedLink": [
+                "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing"
+            ],
+            "significantLink": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/\/elon-musk\/",
+            "mainEntityOfPage": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/",
+            "sameAs": [],
+            "about": [
+                {
+                    "@type": "Thing",
+                    "name": "ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_mechanics",
+                        "https:\/\/www.google.com\/search?q=quantum&kgmid=\/m\/02qvmkh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commerçants",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trader_(finance)",
+                        "https:\/\/www.google.com\/search?q=traders&kgmid=\/m\/0cncxk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bitcoin",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Bitcoin",
+                        "https:\/\/www.google.com\/search?q=bitcoin&kgmid=\/m\/0135y0by"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "application",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Mobile_app",
+                        "https:\/\/www.google.com\/search?q=app&kgmid=\/m\/0h94y36"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto-monnaie",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrency&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligence artificielle",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=artificial+intelligence&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "informatique quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computing&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "outil",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Tool",
+                        "https:\/\/www.google.com\/search?q=tool&kgmid=\/m\/07k1x"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "risque",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Risk",
+                        "https:\/\/www.google.com\/search?q=risk&kgmid=\/m\/06d5f"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "logiciel",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Software",
+                        "https:\/\/www.google.com\/search?q=software&kgmid=\/m\/01mf0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "seo",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Search_engine_optimization",
+                        "https:\/\/www.google.com\/search?q=seo&kgmid=\/m\/019qb_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "algorithmes",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Algorithm",
+                        "https:\/\/www.google.com\/search?q=algorithms&kgmid=\/m\/02qcyvp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "options",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Option_(finance)",
+                        "https:\/\/www.google.com\/search?q=options&kgmid=\/m\/01lm23"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "plate-forme de négociation",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Electronic_trading_platform",
+                        "https:\/\/www.google.com\/search?q=trading+platform&kgmid=\/m\/09rjlk"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "en temps réel",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Real-time_computing",
+                        "https:\/\/www.google.com\/search?q=real-time&kgmid=\/m\/026y7m6"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "paramètres",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Parameter",
+                        "https:\/\/www.google.com\/search?q=parameters&kgmid=\/m\/068f8"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investissement",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investment",
+                        "https:\/\/www.google.com\/search?q=investment&kgmid=\/m\/0g_fl"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "elon musk",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Elon_Musk",
+                        "https:\/\/www.google.com\/search?q=elon+musk&kgmid=\/m\/03nzf1"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "investisseurs",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Investor",
+                        "https:\/\/www.google.com\/search?q=investors&kgmid=\/m\/03krjh"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "courtiers",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Broker",
+                        "https:\/\/www.google.com\/search?q=brokers&kgmid=\/m\/0cmc2y9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "commerce",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Trade",
+                        "https:\/\/www.google.com\/search?q=trading&kgmid=\/m\/07br0"
+                    ]
+                }
+            ],
+            "mentions": [
+                {
+                    "@type": "Thing",
+                    "name": "contrats de différence (cfds)",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=contracts+for+difference+(cfds)&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "cfd",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Contract_for_difference",
+                        "https:\/\/www.google.com\/search?q=cfd&kgmid=\/m\/04sfgv"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "négociation automatisée",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Automated_trading_system",
+                        "https:\/\/www.google.com\/search?q=automated+trading&kgmid=\/m\/02pqr_n"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "crypto-monnaies",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=cryptocurrencies&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "intelligence artificielle quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+artificial+intelligence&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "basé sur le nuage",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cloud_computing",
+                        "https:\/\/www.google.com\/search?q=cloud-based&kgmid=\/m\/02y_9m3"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "stratégie en matière de médias sociaux",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=social+media+strategy&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "analyse prédictive",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Predictive_analytics",
+                        "https:\/\/www.google.com\/search?q=predictive+analytics&kgmid=\/m\/0bl93g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "techniques d'apprentissage automatique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Machine_learning",
+                        "https:\/\/www.google.com\/search?q=machine+learning+techniques&kgmid=\/m\/01hyh_"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "conviviale",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Usability",
+                        "https:\/\/www.google.com\/search?q=user-friendly&kgmid=\/m\/01qb0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "actifs cryptographiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Cryptocurrency",
+                        "https:\/\/www.google.com\/search?q=crypto+assets&kgmid=\/m\/012zcng0"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprentissage automatique quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_machine_learning",
+                        "https:\/\/www.google.com\/search?q=quantum+machine+learning&kgmid=\/m\/012c1btp"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "l'analyse",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Analytics",
+                        "https:\/\/www.google.com\/search?q=analytics&kgmid=\/m\/02gcn9"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "processeurs quantiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+processors&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "ordinateurs quantiques",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_computing",
+                        "https:\/\/www.google.com\/search?q=quantum+computers&kgmid=\/m\/02pr80l"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "marketing numérique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Digital_marketing",
+                        "https:\/\/www.google.com\/search?q=digital+marketing&kgmid=\/m\/02pwzbx"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "preuve de travail",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Proof_of_work",
+                        "https:\/\/www.google.com\/search?q=proof+of+work&kgmid=\/m\/05bdrw"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "information quantique",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Quantum_information",
+                        "https:\/\/www.google.com\/search?q=quantum+information&kgmid=\/m\/06b0g"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "équilibrage de la charge",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Load_balancing_(computing)",
+                        "https:\/\/www.google.com\/search?q=load+balancing&kgmid=\/m\/0gl7w"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "bots ai",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Artificial_intelligence",
+                        "https:\/\/www.google.com\/search?q=ai+bots&kgmid=\/m\/0mkz"
+                    ]
+                },
+                {
+                    "@type": "Thing",
+                    "name": "apprentissage profond",
+                    "sameAs": [
+                        "https:\/\/en.wikipedia.org\/wiki\/Deep_learning",
+                        "https:\/\/www.google.com\/search?q=deep+learning&kgmid=\/m\/0h1fn8h"
+                    ]
+                }
+            ]
+        },
+        {
+            "@type": "Person",
+            "@id": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+            "name": "Kristof George",
+            "url": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "url": "https:\/\/secure.gravatar.com\/avatar\/59d96673f5eb3510d3e4eb1eeeeb4c92013ff614483e0aff8cb2630280dbcf64?s=96&d=mm&r=g",
+                "caption": "Kristof George",
+                "inLanguage": "fr-FR"
+            },
+            "sameAs": [
+                "https:\/\/wordpress-1142890-4220391.cloudwaysapps.com"
+            ]
+        },
+        {
+            "@type": "BlogPosting",
+            "headline": "What are Qubits? Exploring the Building Blocks of Quantum Computing - Quantum AI",
+            "datePublished": "2023-12-09T22:03:01+00:00",
+            "dateModified": "2023-12-09T22:08:11+00:00",
+            "articleSection": "Quantum Computing",
+            "author": {
+                "@id": "https:\/\/quantumai.co\/fr\/author\/gio\/",
+                "name": "Kristof George"
+            },
+            "publisher": {
+                "@id": "https:\/\/quantumai.co\/fr\/#person"
+            },
+            "description": "Repoussant les frontières de la technologie moderne, l'informatique quantique est prête à révolutionner le paysage numérique. Au cœur de cette technologie se trouvent les qubits, ces énigmatiques objets de la vie quotidienne.",
+            "name": "Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique - Quantum AI",
+            "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#richSnippet",
+            "isPartOf": {
+                "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#webpage"
+            },
+            "image": {
+                "@id": "https:\/\/quantumai.b-cdn.net\/wp-content\/uploads\/2023\/12\/qubits.png"
+            },
+            "inLanguage": "fr-FR",
+            "mainEntityOfPage": {
+                "@id": "https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/#webpage"
+            }
+        }
+    ]
+}</script>
+
+
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="preconnect" href="https://quantumai.b-cdn.net/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Flux" href="https://quantumai.co/fr/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; Flux des commentaires" href="https://quantumai.co/fr/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Quantum AI &raquo; What are Qubits? Exploring the Building Blocks of Quantum Computing Flux des commentaires" href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/feed/">
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/quantumai.b-cdn.net\/wp-includes\/js\/wp-emoji-release.min.js"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"🏳️‍⚧️","🏳️​⚧️")?!1:!n(e,"🇺🇳","🇺​🇳")&&!n(e,"🏴󠁧󠁢󠁥󠁮󠁧󠁿","🏴​󠁧​󠁢​󠁥​󠁮​󠁧​󠁿");case"emoji":return!n(e,"🐦‍🔥","🐦​🔥")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id="wp-emoji-styles-inline-css">img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://quantumai.b-cdn.net/wp-includes/css/dist/block-library/style.min.css" media="all">
+<style id="rank-math-toc-block-style-inline-css">.wp-block-rank-math-toc-block nav ol{counter-reset:item}.wp-block-rank-math-toc-block nav ol li{display:block}.wp-block-rank-math-toc-block nav ol li:before{content:counters(item, ".") " ";counter-increment:item}</style>
+<style id="global-styles-inline-css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #ffffff;--wp--preset--color--foreground: #404040;--wp--preset--color--primary: #b91c1c;--wp--preset--color--secondary: #15803d;--wp--preset--color--tertiary: #0369a1;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 40rem;--wp--style--global--wide-size: 60rem; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="trp-floater-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-floater-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-language-switcher-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css" media="all">
+<link rel="stylesheet" id="trp-popup-style-css" href="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/css/trp-popup.css" media="all">
+<link rel="stylesheet" id="immediate-style-css" href="https://quantumai.b-cdn.net/wp-content/themes/immediate/style.css" media="all">
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script id="trp-language-cookie-js-extra">var trp_language_cookie_data = {"abs_home":"https:\/\/quantumai.co","url_slugs":{"en_GB":"en_gb","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi"},"cookie_name":"trp_language","cookie_age":"30","cookie_path":"\/","default_language":"en_GB","publish_languages":["en_GB","de_DE","es_ES","fr_FR","it_IT","ja","ru_RU","pt_BR","bg_BG","cs_CZ","da_DK","nl_NL","et","fi"],"trp_ald_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-business\/add-ons-pro\/automatic-language-detection\/includes\/trp-ald-ajax.php","detection_method":"browser-ip","popup_option":"popup","popup_type":"normal_popup","popup_textarea":"We've detected you might be speaking a different language. Do you want to change to:","popup_textarea_change_button":"Change Language","popup_textarea_close_button":"Close and do not switch language","iso_codes":{"en_GB":"en","de_DE":"de","es_ES":"es","fr_FR":"fr","it_IT":"it","ja":"ja","ru_RU":"ru","pt_BR":"pt","bg_BG":"bg","cs_CZ":"cs","da_DK":"da","nl_NL":"nl","et":"et","fi":"fi","en_US":"en"},"language_urls":{"en_GB":"https:\/\/quantumai.co\/what-are-qubits-exploring-the-building-blocks-of-quantum-computing\/?simply_static_page=12272","de_DE":"https:\/\/quantumai.co\/de\/was-sind-qubits-erforschung-der-bausteine-der-quanteninformatik\/?simply_static_page=12272","es_ES":"https:\/\/quantumai.co\/es\/que-son-los-qubits-exploracion-de-los-componentes-basicos-de-la-informatica-cuantica\/?simply_static_page=12272","fr_FR":"https:\/\/quantumai.co\/fr\/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique\/?simply_static_page=12272","it_IT":"https:\/\/quantumai.co\/it\/cosa-sono-i-qubit-esplorare-gli-elementi-costitutivi-dellinformatica-quantistica\/?simply_static_page=12272","ja":"https:\/\/quantumai.co\/ja\/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ae%e6%a7%8b%e6%88%90%e8%a6%81%e7%b4%a0%e3%82%92%e6%8e%a2%e3%82%8b%e9%87%8f%e5%ad%90%e3%83%93\/?simply_static_page=12272","ru_RU":"https:\/\/quantumai.co\/ru\/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d0%b1%d0%b8%d1%82%d1%8b-%d0%b8%d0%b7%d1%83%d1%87%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%81%d1%82%d1%80%d0%be%d0%b8%d1%82%d0%b5%d0%bb%d1%8c\/?simply_static_page=12272","pt_BR":"https:\/\/quantumai.co\/pt\/o-que-sao-qubits-explorando-os-blocos-de-construcao-da-computacao-quantica\/?simply_static_page=12272","bg_BG":"https:\/\/quantumai.co\/bg\/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b2%d0%b0%d1%82-%d0%ba%d1%8e%d0%b1%d0%b8%d1%82%d0%b8%d1%82%d0%b5-%d0%ba%d0%be%d0%b8%d1%82%d0%be-%d0%b8\/?simply_static_page=12272","cs_CZ":"https:\/\/quantumai.co\/cs\/co-jsou-qubity-ktere-zkoumaji-stavebni-kameny-kvantove-vypocetni-techniky\/?simply_static_page=12272","da_DK":"https:\/\/quantumai.co\/da\/hvad-er-qubits-der-udforsker-kvantecomputerens-byggesten\/?simply_static_page=12272","nl_NL":"https:\/\/quantumai.co\/nl\/wat-zijn-qubits-de-bouwstenen-van-quantum-computing-onderzoeken\/?simply_static_page=12272","et":"https:\/\/quantumai.co\/et\/mis-on-kvantarvutite-ehitusplokid-mis-uurivad-kvantarvutite-ehitusplokke\/?simply_static_page=12272","fi":"https:\/\/quantumai.co\/fi\/mita-qubitit-ovat-kvanttilaskennan-rakennuspalikoita-tutkien\/?simply_static_page=12272"},"english_name":{"en_GB":"English","de_DE":"German","es_ES":"Spanish","fr_FR":"French","it_IT":"Italian","ja":"Japanese","ru_RU":"Russian","pt_BR":"Portuguese","bg_BG":"Bulgarian","cs_CZ":"Czech","da_DK":"Danish","nl_NL":"Dutch","et":"Estonian","fi":"Finnish"},"is_iphone_user_check":""};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-business/add-ons-pro/automatic-language-detection/assets/js/trp-language-cookie.js" id="trp-language-cookie-js"></script>
+
+
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TWTG3RS4" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["quantumai.co"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TWTG3RS4");</script>
+
+
+<link rel="https://api.w.org/" href="https://quantumai.co/fr/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="https://quantumai.co/fr/wp-json/wp/v2/posts/505371">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://quantumai.co/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://quantumai.co/fr/?p=505371">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://quantumai.co/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Ffr%2Fquest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://quantumai.co/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhttps%3A%2F%2Fquantumai.co%2Ffr%2Fquest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique%2F#038;format=xml">
+		<script type="text/javascript">(function(c,l,a,r,i,t,y){
+					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;
+					t.src="https://www.clarity.ms/tag/"+i+"?ref=wordpress";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+				})(window, document, "clarity", "script", "l9090pzye1");</script>
+		<link rel="alternate" hreflang="en-GB" href="https://quantumai.co/what-are-qubits-exploring-the-building-blocks-of-quantum-computing/">
+<link rel="alternate" hreflang="de-DE" href="https://quantumai.co/de/was-sind-qubits-erforschung-der-bausteine-der-quanteninformatik/">
+<link rel="alternate" hreflang="es-ES" href="https://quantumai.co/es/que-son-los-qubits-exploracion-de-los-componentes-basicos-de-la-informatica-cuantica/">
+<link rel="alternate" hreflang="fr-FR" href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/">
+<link rel="alternate" hreflang="it-IT" href="https://quantumai.co/it/cosa-sono-i-qubit-esplorare-gli-elementi-costitutivi-dellinformatica-quantistica/">
+<link rel="alternate" hreflang="ja" href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ae%e6%a7%8b%e6%88%90%e8%a6%81%e7%b4%a0%e3%82%92%e6%8e%a2%e3%82%8b%e9%87%8f%e5%ad%90%e3%83%93/">
+<link rel="alternate" hreflang="ru-RU" href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d0%b1%d0%b8%d1%82%d1%8b-%d0%b8%d0%b7%d1%83%d1%87%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%81%d1%82%d1%80%d0%be%d0%b8%d1%82%d0%b5%d0%bb%d1%8c/">
+<link rel="alternate" hreflang="pt-BR" href="https://quantumai.co/pt/o-que-sao-qubits-explorando-os-blocos-de-construcao-da-computacao-quantica/">
+<link rel="alternate" hreflang="bg-BG" href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b2%d0%b0%d1%82-%d0%ba%d1%8e%d0%b1%d0%b8%d1%82%d0%b8%d1%82%d0%b5-%d0%ba%d0%be%d0%b8%d1%82%d0%be-%d0%b8/">
+<link rel="alternate" hreflang="cs-CZ" href="https://quantumai.co/cs/co-jsou-qubity-ktere-zkoumaji-stavebni-kameny-kvantove-vypocetni-techniky/">
+<link rel="alternate" hreflang="da-DK" href="https://quantumai.co/da/hvad-er-qubits-der-udforsker-kvantecomputerens-byggesten/">
+<link rel="alternate" hreflang="nl-NL" href="https://quantumai.co/nl/wat-zijn-qubits-de-bouwstenen-van-quantum-computing-onderzoeken/">
+<link rel="alternate" hreflang="et" href="https://quantumai.co/et/mis-on-kvantarvutite-ehitusplokid-mis-uurivad-kvantarvutite-ehitusplokke/">
+<link rel="alternate" hreflang="fi" href="https://quantumai.co/fi/mita-qubitit-ovat-kvanttilaskennan-rakennuspalikoita-tutkien/">
+<link rel="alternate" hreflang="en" href="https://quantumai.co/what-are-qubits-exploring-the-building-blocks-of-quantum-computing/">
+<link rel="alternate" hreflang="de" href="https://quantumai.co/de/was-sind-qubits-erforschung-der-bausteine-der-quanteninformatik/">
+<link rel="alternate" hreflang="es" href="https://quantumai.co/es/que-son-los-qubits-exploracion-de-los-componentes-basicos-de-la-informatica-cuantica/">
+<link rel="alternate" hreflang="fr" href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/">
+<link rel="alternate" hreflang="it" href="https://quantumai.co/it/cosa-sono-i-qubit-esplorare-gli-elementi-costitutivi-dellinformatica-quantistica/">
+<link rel="alternate" hreflang="ru" href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d0%b1%d0%b8%d1%82%d1%8b-%d0%b8%d0%b7%d1%83%d1%87%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%81%d1%82%d1%80%d0%be%d0%b8%d1%82%d0%b5%d0%bb%d1%8c/">
+<link rel="alternate" hreflang="pt" href="https://quantumai.co/pt/o-que-sao-qubits-explorando-os-blocos-de-construcao-da-computacao-quantica/">
+<link rel="alternate" hreflang="bg" href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b2%d0%b0%d1%82-%d0%ba%d1%8e%d0%b1%d0%b8%d1%82%d0%b8%d1%82%d0%b5-%d0%ba%d0%be%d0%b8%d1%82%d0%be-%d0%b8/">
+<link rel="alternate" hreflang="cs" href="https://quantumai.co/cs/co-jsou-qubity-ktere-zkoumaji-stavebni-kameny-kvantove-vypocetni-techniky/">
+<link rel="alternate" hreflang="da" href="https://quantumai.co/da/hvad-er-qubits-der-udforsker-kvantecomputerens-byggesten/">
+<link rel="alternate" hreflang="nl" href="https://quantumai.co/nl/wat-zijn-qubits-de-bouwstenen-van-quantum-computing-onderzoeken/">
+<link rel="alternate" hreflang="x-default" href="https://quantumai.co/what-are-qubits-exploring-the-building-blocks-of-quantum-computing/">
+			                <meta name="ssp-config-path" content="/wp-content/uploads/simply-static/configs/">
+			
+						
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-32x32.png" sizes="32x32">
+<link rel="icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-180x180.png">
+<meta name="msapplication-TileImage" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/cropped-quantum-new-icon-270x270.png">
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.0.3/src/fill/style.css">
+</head>
+
+<body class="wp-singular post-template-default single single-post postid-505371 single-format-standard wp-embed-responsive wp-theme-immediate translatepress-fr_FR">
+
+
+	<div id="top-bar-info" class="sticky top-0 z-[60] py-5 bg-gradient-to-tr from-indigo-600 to-blue-600 text-white text-xs lg:text-center pr-6">
+		<div class="max-w-7xl mx-auto px-6 relative">
+			<p>N'investissez pas si vous n'êtes pas prêt à perdre tout l'argent investi. Il s'agit d'un investissement à haut risque et vous ne devez pas vous attendre à être protégé en cas de problème.</p>
+			<button class="absolute right-0 top-0 opacity-25 hover:opacity-50 transition-opacity p-0.5" onclick="hideTopBar()" aria-label="Fermer la barre d&#039;information">
+				<svg class="w-3.5 h-3.5" width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.99979 4.00028C6.74392 4.00028 6.48776 4.09775 6.29276 4.29325L4.29276 6.29325C3.90176 6.68425 3.90176 7.31731 4.29276 7.70731L11.5857 15.0003L4.29276 22.2932C3.90176 22.6842 3.90176 23.3173 4.29276 23.7073L6.29276 25.7073C6.68376 26.0983 7.31682 26.0983 7.70682 25.7073L14.9998 18.4143L22.2928 25.7073C22.6828 26.0983 23.3168 26.0983 23.7068 25.7073L25.7068 23.7073C26.0978 23.3163 26.0978 22.6832 25.7068 22.2932L18.4139 15.0003L25.7068 7.70731C26.0978 7.31731 26.0978 6.68325 25.7068 6.29325L23.7068 4.29325C23.3158 3.90225 22.6828 3.90225 22.2928 4.29325L14.9998 11.5862L7.70682 4.29325C7.51132 4.09775 7.25567 4.00028 6.99979 4.00028Z" fill="white"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<script>// Hide top bar when clicked
+	// Adds a cookie and hides element
+	function hideTopBar() {
+	    document.cookie = "top_bar_disclaimer=hidden;max-age=31536000; path=/";
+	    document.getElementById("top-bar-info").style.display = 'none';
+	}</script>
+
+	
+<div id="page" class="relative">
+	<a href="#content" class="sr-only" data-no-translation="" data-trp-gettext="">Skip to content</a>
+
+	
+<header id="masthead" class="lg:overflow-y-visible absolute w-full z-50 top-2 md:top-4" x-data="{ menuOpen: false }">
+
+	<div class="mx-auto max-w-7xl px-2.5 sm:px-4">
+        <div class="relative flex max-lg:justify-between gap-6 sm:gap-8 px-3 shadow sm:px-6 lg:px-8 rounded-xl h-[70px] md:h-[88px]">
+          <div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-75 backdrop-blur-md rounded-xl z-0"></div>
+          <div class="flex flex-shrink-0 items-center relative z-10">
+          							<a href="https://quantumai.co/fr/">
+	            		<img class="block h-7 md:h-8 w-auto" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+	            	</a>
+				          </div>
+          
+          <div class="flex items-center gap-2 lg:hidden relative z-10">
+          					    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			              
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Ouvrir le menu" x-show="!menuOpen">
+                <i class="ph-fill ph-list"></i>
+              </button>
+              <button type="button" class="inline-flex text-xl items-center justify-center gap-1 sm:gap-1.5 rounded-md p-2 text-gray-600 hover:bg-white hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false" x-on:click="[menuOpen = ! menuOpen, searchOpen = false]" :aria-expanded="menuOpen" aria-controls="mobile-menu" aria-label="Fermer le menu" x-show="menuOpen">
+                <i class="ph-fill ph-x"></i>
+              </button>
+          </div>
+          <nav class="hidden lg:flex lg:justify-between w-full z-10 menu-nav-desktop">
+
+          	<div class="flex gap-6">
+          		<div id="menu-nav-desktop">
+          		<ul id="menu-main" class="lg:flex flex-shrink-0 gap-6 text-base relative z-10 h-full">
+<li id="menu-item-505175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 h-full relative"><a href="https://quantumai.co/fr/produits/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Produits</a></li>
+<li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 h-full relative"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">A propos de nous</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 h-full relative"><a href="https://quantumai.co/fr/equipe/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">L'équipe</a></li>
+<li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 h-full relative"><a href="https://quantumai.co/fr/blog/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 h-full relative"><a href="https://quantumai.co/fr/nous-contacter/" class="h-full flex items-center border-b-2 border-transparent px-1 pt-1 text-gray-700 hover:text-gray-900 gap-1.5">Contactez nous</a></li>
+</ul>          	</div>
+
+          	<div id="menu-nav-desktop-multi-page" class="relative" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		
+          		<div class="absolute left-0 top-full z-30 mt-2 py-1 w-auto origin-top focus:outline-none" x-show="dropdownOpen" x-transition x-cloak>
+          			<div class="absolute w-full h-full top-0 left-0 bg-white bg-opacity-80 backdrop-blur-md shadow-lg ring-1 ring-black ring-opacity-5 rounded-lg z-0"></div>
+          			<ul id="menu-dropdown" class="min-w-[200px] menu-nav-desktop-multi-page-menu py-1">
+<li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex justify-between items-center gap-x-4 px-6 py-2.5 text-base text-gray-700 hover:text-gray-900 relative z-10 leading-5">A propos de nous</a></li>
+</ul>          		</div>
+          		
+          	</div>
+          	</div>
+          	
+          	
+          	<div class="flex gap-3 items-center flex-shrink-0">
+          					    <a href="https://quantumai.co/fr/se-connecter/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Se connecter</a>
+									    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			            </div>
+          </nav>
+
+          <script>
+          	let menuElements = document.querySelectorAll('#menu-nav-desktop .menu-item-has-children');
+          	for (let i=0, il=menuElements.length; i < il; ++i) {
+		        let menuElementObj = menuElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:keydown.escape.stop', 'dropdownOpen = false');
+		        menuElement.setAttribute('x-on:click.away', 'dropdownOpen = false');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiElements = document.querySelectorAll('#menu-nav-desktop-multi-page .menu-item-has-children');
+          	
+		    for (let i=0, il=menuMultiElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiElements[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElement.setAttribute('x-on:mouseover', 'dropdownOpen = true');
+		        menuElement.setAttribute('x-on:mouseleave', 'dropdownOpen = false');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-right transition"><\/i>'
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+
+		    let menuMultiSubmenuElements = document.querySelectorAll('.menu-nav-desktop-multi-page-menu .sub-menu');
+		    for (let i=0, il=menuMultiSubmenuElements.length; i < il; ++i) {
+		        let menuElementObj = menuMultiSubmenuElements[i];
+		        let div = document.createElement("div");
+		        div.classList.add('absolute', 'w-[calc(100%_-_8px)]', 'h-full', 'top-0', 'right-0', 'bg-white', 'bg-opacity-80', 'backdrop-blur-md', 'shadow-lg', 'ring-1', 'ring-black', 'ring-opacity-5', 'rounded-lg', 'z-0');
+				menuElementObj.prepend(div);
+		    }
+          </script>
+          
+          
+        </div>
+      </div>
+      
+      <nav class="lg:hidden mt-3 md:max-w-lg px-4 sm:px-6 lg:px-8 ml-auto relative z-10" aria-label="Mondial" x-show="menuOpen" @keydown.escape.stop="menuOpen = false" @click.away="menuOpen = false" x-trap="menuOpen" x-transition x-cloak id="menu-nav-mobile">
+      	<div class="overflow-hidden bg-white bg-opacity-80 backdrop-blur-md shadow rounded-xl text-gray-700 py-2">
+      		<ul id="menu-main-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505175 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/produits/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Produits</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">A propos de nous</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-396 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/equipe/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">L'équipe</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-397 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/blog/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/nous-contacter/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">Contactez nous</a></li>
+</ul>
+          	<div id="menu-nav-desktop-multi-page" class="relative flex flex-col items-center" x-data="{ dropdownOpen: false }" x-on:keydown.escape.stop="dropdownOpen = false" x-on:click.away="dropdownOpen = false">
+          		<button class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent" x-on:click.prevent="dropdownOpen = !dropdownOpen">
+          			Ressources          			<i class="ph-fill ph-caret-down transition" :class="{ 'rotate-180': dropdownOpen }"></i>
+          		</button>
+          		<div class="flex flex-col gap-y-1.5 items-center text-center px-6 w-full min-w-full">
+          			<div class="flex flex-col gap-y-1 p-4 rounded-lg bg-gray-900/5 w-full min-w-full" x-show="dropdownOpen" x-transition x-cloak>
+	          			<ul id="menu-dropdown-1" class="flex flex-col gap-y-1.5 items-center text-center px-6">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332 flex flex-col gap-y-1 items-center gap-x-1 min-w-full"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="flex items-center gap-x-1 py-1.5 text-base hover:text-gray-900 border-b-2 border-transparent">A propos de nous</a></li>
+</ul>	          		</div>
+          		</div>
+          		
+          	</div>
+
+          	
+
+          	<div class="flex gap-3 items-center flex-shrink-0 px-6 pb-3 justify-center pt-3">
+              			    <a href="https://quantumai.co/fr/se-connecter/" target="_self" class="inline-flex items-center rounded-full border border-gray-200 bg-white shadow px-7 py-2 font-medium text-gray-700 hover:opacity-90">Se connecter</a>
+									    <a href="https://quantumai.co/fr/sinscrire/" target="_self" class="inline-flex items-center rounded-full border border-transparent bg-gradient-to-tr from-indigo-600 to-blue-600 shadow px-7 py-2 font-medium text-white hover:opacity-90">S'inscrire</a>
+			            </div>
+      	</div>
+          	
+          </nav>
+          <script>
+          	let menuElementsMobile = document.querySelectorAll('#menu-nav-mobile .menu-item-has-children');
+          	for (let i=0, il=menuElementsMobile.length; i < il; ++i) {
+		        let menuElementObj = menuElementsMobile[i];
+		        let menuElement = menuElementObj;
+		        menuElement.setAttribute('x-data', '{ dropdownOpen: false }');
+		        menuElementObj.children[0].setAttribute('x-on:click.prevent', 'dropdownOpen = !dropdownOpen');
+		        menuElementObj.children[0].innerHTML += '<i class="ph-fill ph-caret-down transition" :class="{ \'rotate-180\': dropdownOpen }"><\/i>'
+
+		       menuElementObj.children[1].setAttribute('x-show', 'dropdownOpen');
+		       menuElementObj.children[1].setAttribute('x-transition', '');
+		       menuElementObj.children[1].setAttribute('x-cloak', '');
+		    }
+          </script>
+	<div>
+
+
+
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+
+<article itemscope itemtype="https://schema.org/NewsArticle" id="post-505371" class="post-505371 post type-post status-publish format-standard has-post-thumbnail hentry category-quantum-computing">
+	<div class="relative">
+	    	<img class="absolute z-0 w-full h-full object-cover pointer-events-none hero-angle" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/bg.svg" alt="">
+		<div class="relative pt-4 pb-16 sm:pb-24">
+		<main class="mt-16 sm:mt-16 pt-[60px] md:pt-[75px]">
+          <div class="mx-auto max-w-7xl px-6 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 relative z-10">
+              <div class="text-center max-lg:mx-auto md:max-w-2xl lg:col-span-6 xl:col-span-7 lg:flex lg:items-center lg:text-left lg:pb-20 lg:pt-10">
+                <div>
+                	<ol class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+	  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+	    <a itemprop="item" href="https://quantumai.co/fr/">
+	        <span itemprop="name">Accueil</span></a>
+	    <meta itemprop="position" content="1">
+	  </li> / 
+  
+
+		<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		<a itemprop="item" href="https://quantumai.co/fr/blog/">
+		    <span itemprop="name">Blog</span></a>
+		<meta itemprop="position" content="2">
+		</li> / 
+	  
+	  <li class="hidden" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+		    <span itemprop="name">Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique</span>
+		<meta itemprop="position" content="2">
+		</li>
+	  </ol>                							<h1 itemprop="headline" class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-[66px]">Que sont les Qubits ? Exploration des éléments constitutifs de l'informatique quantique</h1>					
+					<meta itemprop="image" content="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits.png">
+                		                  
+	                <div class="mt-3 text-base sm:text-lg text-gray-600 sm:mt-5 lg:mt-7 flex items-center max-lg:justify-center flex-wrap gap-x-4 gap-y-2">
+	                	<div class="text-gray-700"><a href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/" rel="bookmark"><time datetime="2023-12-09T22:03:01+00:00" itemprop="datePublished" content="2023-12-09T22:03:01+00:00">9 décembre 2023</time></a></div>
+<a class="relative z-10 rounded-full bg-blue-600 px-4 py-1.5 font-medium text-white hover:bg-blue-600/90" href="https://quantumai.co/fr/categorie/linformatique-quantique/">Informatique quantique</a>	                </div>
+                </div>
+              </div>
+
+              														<div class="mt-8 sm:mt-12 lg:col-span-6 xl:col-span-5 lg:mt-0 max-w-2xl mx-auto flex items-center">
+							
+			<figure>
+				<img width="1024" height="585" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits-1024x585.png" class="aspect-[16/9] w-full rounded-xl bg-gray-100 object-cover wp-post-image" alt="Illustration QU Bit" decoding="async" fetchpriority="high" srcset="https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits-1024x585.png 1024w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits-300x171.png 300w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits-768x439.png 768w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits-1536x878.png 1536w, https://quantumai.b-cdn.net/wp-content/uploads/2023/12/qubits.png 1792w" sizes="(max-width: 1024px) 100vw, 1024px" title="Que sont les Qubits ? Exploration des éléments constitutifs de l&#039;informatique quantique 1">			</figure>
+
+									</div>
+						
+							             
+            </div>
+          </div>
+        </main>
+	</div>
+</div>
+
+	<div class="mt-20 sm:mt-24 pb-32 sm:pb-40 max-w-6xl px-6 sm:px-8 mx-auto">
+															
+		<div class="mt-16 sm:mt-24">
+				<div class="entry-content prose prose-neutral max-w-none prose-a:text-primary">
+			<p>Repoussant les frontières de la technologie moderne, l'informatique quantique est prête à révolutionner le paysage numérique. Au cœur de cette technologie émergente se trouvent les qubits, qui en constituent les fondements énigmatiques. Plongez dans l'univers captivant des qubits. Découvrez leurs propriétés particulières. Comprenez comment ils modifient radicalement nos capacités de calcul. Accrochez-vous à vos électrons - ce sera une course aux particules à grande vitesse !</p>
+<p><em>Les qubits, abréviation de "bits quantiques", sont les éléments fondamentaux des ordinateurs quantiques. Contrairement aux bits classiques qui ne peuvent représenter que 0 ou 1, les qubits peuvent exister dans un état de superposition, représentant à la fois 0 et 1 simultanément. Cette propriété permet aux ordinateurs quantiques de traiter des calculs complexes plus efficacement. Les qubits utilisent des principes tels que la superposition et l'enchevêtrement, ce qui leur permet de traiter des informations en parallèle et de résoudre certains problèmes à une vitesse exponentielle par rapport aux ordinateurs classiques. Toutefois, leur nature délicate nécessite un contrôle précis et une protection contre les influences extérieures afin de maintenir leurs fragiles états quantiques.</em></p>
+<h2>Comprendre les Qubits</h2>
+<div data-body>
+<p>Dans le domaine fascinant de l'informatique quantique, les qubits sont les éléments de base qui rendent tout possible. Ainsi, les qubits sont les éléments de base qui rendent tout cela possible, <em>Qu'est-ce qu'un qubit ?</em> Un qubit peut être considéré comme l'équivalent quantique d'un bit classique, qui est l'unité d'information fondamentale de l'informatique classique. Cependant, les qubits possèdent des propriétés uniques dérivées des principes de la mécanique quantique, telles que la superposition et l'intrication.</p>
+<p>Pour bien comprendre les qubits, il faut se plonger dans leur nature quantique. Contrairement aux bits classiques qui ne peuvent être que dans un état 0 ou 1, les qubits peuvent exister dans une superposition cohérente des deux états simultanément. Cela signifie qu'un qubit peut représenter plusieurs possibilités et effectuer des calculs sur toutes ces possibilités simultanément.</p>
+<p>Imaginons un exemple simple pour mieux comprendre ce concept. Considérons un qubit comme une pièce de monnaie qui tourne dans l'air. Alors que la pièce tourne encore et qu'elle n'est tombée ni sur pile ni sur face, elle existe dans un état de superposition représentant à la fois pile et face. Ce n'est que lorsque la pièce est observée ou mesurée que son état s'effondre, révélant soit pile, soit face.</p>
+<p>Il est essentiel de comprendre les qubits pour exploiter la puissance potentielle de l'informatique quantique. Grâce à leur capacité à contenir et à traiter simultanément des informations dans plusieurs états, les qubits ouvrent de nouvelles voies pour résoudre des problèmes complexes qui sont hors de portée des ordinateurs classiques.</p>
+<p>Maintenant que nous savons ce que sont les qubits, voyons en quoi ils diffèrent des bits classiques et comment leurs capacités révolutionnent l'informatique.</p>
+</div>
+<h2>Distinction entre Qubits et bits classiques</h2>
+<div data-body>
+<p>La distinction entre les qubits et les bits classiques est au cœur même du potentiel révolutionnaire de l'informatique quantique. Alors que les bits classiques représentent l'information sous la forme de 0 ou de 1, les qubits possèdent une dimension supplémentaire : la superposition.</p>
+<p>Un bit traditionnel ne peut occuper qu'une seule valeur à un moment donné : 0 ou 1. En revanche, un qubit peut exister en tant que superposition cohérente de 0 et de 1 simultanément. Cette propriété unique confère aux qubits un immense avantage informatique en leur permettant d'effectuer des calculs parallèles sur plusieurs valeurs en une seule opération.</p>
+<p>De plus, les qubits peuvent être intriqués, un phénomène qui permet la corrélation de leurs états quantiques indépendamment de leur séparation spatiale. Cette intrication confère aux qubits la capacité de partager des informations instantanément, même sur de grandes distances. Elle ouvre la voie à des communications sécurisées et à des capacités accrues de résolution de problèmes.</p>
+<p>Imaginez deux qubits intriqués comme des danseurs synchronisés, exécutant des mouvements identiques même s'ils sont séparés par des années-lumière. Toute modification apportée à l'un des qubits affecte instantanément l'autre, quelle que soit la distance qui les sépare. Cette intrication ouvre de nouvelles voies de communication et de calcul.</p>
+<p>La distinction entre les qubits et les bits classiques représente un changement de paradigme dans les capacités informatiques. En exploitant la puissance des qubits et en approfondissant la mécanique des systèmes quantiques, nous ouvrons la voie à des avancées révolutionnaires dans divers domaines, notamment la cryptographie, l'optimisation, la science des matériaux, etc.</p>
+</div>
+<ul>
+<li>Selon Nature Physics, en 2023, le plus grand ordinateur quantique rapporté aura un total de 1000 qubits physiques.</li>
+<li>Une étude publiée dans Quantum Science and Technology indique que le maintien du temps de cohérence d'un qubit - crucial pour sa capacité à traiter l'information - est un défi important, les temps se situant actuellement en moyenne entre 10 et 100 microsecondes selon le type de qubit.</li>
+<li>Les entreprises spécialisées dans l'informatique quantique mènent des recherches actives pour augmenter le nombre de qubits. Par exemple, IBM prévoit de déployer un ordinateur quantique de 433 qubits d'ici la fin de l'année (2023).</li>
+</ul>
+<h3>Comment Qubits stocke et traite les informations</h3>
+<div data-body>
+<p>Dans le domaine fascinant de l'informatique quantique, les qubits jouent un rôle essentiel dans le stockage et le traitement des informations. Contrairement aux bits classiques qui représentent soit un 0, soit un 1, les qubits tirent parti des principes de la mécanique quantique pour exister dans plusieurs états simultanément. Cette propriété, connue sous le nom de superposition, permet aux qubits de contenir et de manipuler exponentiellement plus de données que les bits classiques.</p>
+<p>En outre, les qubits peuvent également présenter un enchevêtrement, un phénomène intriguant où l'état d'un qubit est intimement lié à un autre, quelle que soit la distance qui les sépare. Cette caractéristique permet aux qubits d'effectuer des calculs en parallèle, ce qui permet d'accélérer de manière exponentielle la résolution de certains problèmes complexes.</p>
+<p>Considérons un scénario dans lequel vous disposez de deux qubits. Dans le monde classique, vous pourriez représenter quatre états possibles : 00, 01, 10 et 11. Toutefois, en tirant parti de la superposition et de l'enchevêtrement, ces deux qubits peuvent exister collectivement dans les quatre états à la fois.</p>
+<p>Comment les qubits stockent-ils et traitent-ils l'information ? Bien qu'il existe diverses applications des qubits - comme l'utilisation du spin des électrons ou le codage d'informations sur les états polarisés des photons - l'idée fondamentale reste la même : manipuler des états quantiques pour effectuer des calculs.</p>
+<p>Les portes quantiques sont des composants essentiels qui permettent de manipuler les états des qubits. Ces portes peuvent faire pivoter l'état d'un seul qubit ou enchevêtrer plusieurs qubits. En orchestrant habilement des séquences d'opérations sur les portes, il est possible d'effectuer des calculs sur les informations quantiques stockées dans ces qubits.</p>
+<p>Maintenant que nous avons exploré la manière dont les qubits stockent et traitent l'information, plongeons dans le monde passionnant des ordinateurs quantiques de pointe.</p>
+</div>
+<h3>Ordinateurs quantiques de pointe</h3>
+<div data-body>
+<p>L'informatique quantique a fait des progrès remarquables ces dernières années, les chercheurs et les ingénieurs continuant à repousser les limites du possible. Les progrès réalisés dans différents domaines - du comptage des qubits à la cohérence et à la réduction du bruit - ont abouti à la mise au point d'ordinateurs quantiques à la pointe de la technologie.</p>
+<p>Les ordinateurs quantiques à porte universelle, qui permettent de résoudre un large éventail de problèmes, sont à l'avant-garde de ces progrès. Ces machines de pointe utilisent des qubits pour effectuer des calculs complexes qui étaient auparavant inimaginables. Elles ont le potentiel de révolutionner des domaines tels que la cryptographie, la découverte de médicaments, l'optimisation et la simulation.</p>
+<p>Cependant, il est essentiel de reconnaître que l'état actuel de l'informatique quantique peut être décrit comme "un mille de large et un pouce de profondeur". Si les ordinateurs quantiques universels à portes offrent une certaine souplesse dans la résolution des problèmes, leur utilité pratique est limitée. L'utilité des ordinateurs quantiques à portes est limitée par des facteurs tels que le nombre de qubits, la cohérence et le bruit.</p>
+<p>Pour mettre les choses en perspective, imaginez que vous essayez de résoudre des problèmes massifs d'optimisation ou de simulation sur un ordinateur ne comportant qu'une poignée de qubits sujets à l'erreur. Bien qu'ils soient prometteurs pour l'avenir, il reste encore un long chemin à parcourir avant que les ordinateurs quantiques universels basés sur des portes ne se généralisent.</p>
+<p>Cela a conduit à l'exploration d'autres approches prometteuses telles que l'informatique quantique analogique et le recuit quantique. Les ordinateurs quantiques analogiques fournissent des solutions spécialisées à des problèmes spécifiques en s'appuyant sur les principes de la mécanique quantique. Le recuit quantique, quant à lui, vise à résoudre les problèmes d'optimisation par une approche différente de celle des ordinateurs quantiques à base de portes.</p>
+<p>Alors que les progrès se poursuivent dans divers aspects de l'informatique quantique, nous nous trouvons à l'aube d'une nouvelle ère où les possibilités s'élargissent. Il est impératif d'explorer plus avant ces développements de pointe pour comprendre comment ils façonnent le futur paysage de l'informatique quantique.</p>
+</div>
+<ul>
+<li>L'état actuel de l'informatique quantique progresse rapidement, avec des avancées significatives dans des domaines tels que le nombre de qubits, la cohérence et la réduction du bruit. Les ordinateurs quantiques à porte universelle sont à la pointe de ces progrès et ont le potentiel de révolutionner des domaines tels que la cryptographie, la découverte de médicaments, l'optimisation et la simulation. Cependant, il est important de reconnaître que, bien qu'ils offrent une certaine flexibilité dans la résolution des problèmes, leur utilité pratique est actuellement limitée en raison de facteurs tels que le nombre de qubits et la cohérence. C'est pourquoi d'autres approches, comme l'informatique quantique analogique et le recuit quantique, sont explorées. Malgré les défis, les progrès en cours dans divers aspects de l'informatique quantique ouvrent de nouvelles possibilités pour l'avenir et nécessitent une exploration plus approfondie pour façonner le paysage futur de ce domaine.</li>
+</ul>
+<h2>Types de Qubits et leur importance</h2>
+<div data-body>
+<p>Dans le domaine de l'informatique quantique, le qubit occupe une place centrale en tant qu'élément fondamental. Il existe plusieurs types de qubits, chacun exploitant des propriétés physiques différentes pour le traitement de l'information. Examinons quelques types de qubits importants et leurs caractéristiques uniques :</p>
+<p>L'un d'entre eux est le <strong>qubit de spin</strong>Les qubits sont des systèmes d'information quantique qui reposent sur l'orientation du spin de particules quantiques telles que les électrons ou les noyaux. Ces qubits peuvent être manipulés en contrôlant la direction du spin, ce qui constitue un moyen efficace de stocker et de manipuler des informations quantiques.</p>
+<p>Un autre type est basé sur <strong>atomes et ions piégés</strong>. Ici, les niveaux d'énergie des électrons dans les atomes ou les ions neutres sont exploités pour créer des qubits. La manipulation de ces niveaux d'énergie permet un contrôle précis des opérations quantiques.</p>
+<p><strong>Qubits photoniques</strong> utilisent les propriétés des photons, telles que la polarisation, la trajectoire ou le temps d'arrivée. Les photons peuvent être intriqués les uns avec les autres, ce qui les rend idéaux pour la communication quantique à longue distance.</p>
+<p>Enfin, <strong>circuits supraconducteurs</strong> constituent une autre voie essentielle de l'informatique quantique. Ils utilisent le flux de courant électrique pour encoder et manipuler les états des qubits. Les qubits supraconducteurs sont prometteurs en raison de leur évolutivité et de leur compatibilité avec les appareils électroniques.</p>
+<p>Il est essentiel de comprendre l'importance des différents types de qubits pour développer diverses technologies quantiques adaptées à des demandes spécifiques. Chaque type présente des avantages et des défis et peut être associé à des domaines d'application uniques, ce qui permet de repousser les limites de l'informatique quantique et d'autres disciplines connexes.</p>
+</div>
+<h3>Analyse comparative des calculs au Qubit et au Bit</h3>
+<div data-body>
+<p>Pour comprendre la puissance de l'informatique quantique, il est important de la comparer à l'informatique classique basée sur des bits traditionnels. Alors que les ordinateurs classiques stockent et traitent les informations à l'aide de bits qui représentent soit un 0, soit un 1, les qubits fonctionnent selon des principes totalement différents : la superposition et l'enchevêtrement.</p>
+<p>Un seul qubit peut exister dans un état de superposition où il représente simultanément 0 et 1, grâce aux propriétés quantiques. En revanche, les bits classiques ne peuvent contenir qu'une seule valeur à la fois. Cette propriété de superposition permet aux qubits d'effectuer plusieurs calculs en parallèle, ce qui entraîne une accélération exponentielle des calculs.</p>
+<p>En outre, les qubits peuvent être enchevêtrés les uns avec les autres, créant ainsi des corrélations complexes que les bits classiques ne peuvent pas atteindre. Cette intrication permet aux qubits de communiquer et de partager des informations instantanément sur de grandes distances, dépassant ainsi les limites des canaux de communication classiques.</p>
+<p>Cependant, l'exploitation de la puissance des qubits s'accompagne de difficultés. Les qubits sont très sensibles aux facteurs externes tels que le bruit et nécessitent des techniques rigoureuses de correction d'erreurs pour maintenir leurs états quantiques. En outre, l'augmentation du nombre de qubits tout en maintenant leur cohérence constitue un obstacle de taille.</p>
+<p>Lorsque l'on évalue les capacités et les défis des calculs de qubits et de bits, il devient évident que l'informatique quantique recèle un immense potentiel pour résoudre des problèmes complexes qui échappent aux ordinateurs classiques. Il ouvre de nouvelles voies pour la recherche scientifique, les problèmes d'optimisation, la cryptographie et la simulation de systèmes quantiques, pour ne citer que quelques applications passionnantes.</p>
+</div>
+<h2>Progrès et défis de l'informatique quantique</h2>
+<div data-body>
+<p>L'informatique quantique a fait des progrès considérables ces dernières années, la propulsant du domaine de la théorie à celui des applications pratiques. L'une des principales avancées est le développement et l'amélioration des qubits, les éléments fondamentaux des ordinateurs quantiques. Les qubits sont analogues aux bits classiques mais possèdent des propriétés remarquables dues à la mécanique quantique. Ils peuvent exister dans une superposition d'états, ce qui permet des calculs parallèles et une augmentation exponentielle de la puissance de calcul. Cette percée a suscité l'optimisme quant au potentiel de transformation de l'informatique quantique dans divers domaines tels que la cryptographie, les problèmes d'optimisation, les simulations en science des matériaux et la découverte de médicaments.</p>
+<p>Cependant, parallèlement à ces avancées remarquables, l'informatique quantique doit faire face à de nombreux défis. Un obstacle majeur est la décohérence des qubits, où de petites perturbations font perdre aux qubits leurs délicates propriétés quantiques dans un laps de temps très court. Le maintien de la cohérence des qubits sur de longues périodes est crucial pour l'exécution précise d'algorithmes complexes. Les chercheurs explorent activement différentes approches telles que les codes de correction d'erreur et les matériaux améliorés pour relever ce défi.</p>
+<p>Pour illustrer davantage ce défi, imaginez que vous essayez de lire un livre dont les mots changent ou disparaissent toutes les quelques secondes - il serait pratiquement impossible de donner un sens au texte de manière cohérente.</p>
+<p>Un autre défi consiste à augmenter la taille des ordinateurs quantiques tout en maintenant des niveaux élevés de cohérence et des taux d'erreur faibles. Actuellement, les ordinateurs quantiques sont constitués d'un nombre relativement faible de qubits en raison des difficultés liées au contrôle et à la manipulation de systèmes plus importants. La réalisation d'une informatique quantique tolérante aux pannes avec des milliers ou des millions de qubits nécessitera des efforts d'ingénierie rigoureux et des solutions de conception innovantes.</p>
+<p>En outre, le développement du matériel en termes de création de composants fiables et de haute qualité joue un rôle crucial dans l'avancement des capacités de l'informatique quantique. La capacité de fabriquer des qubits avec moins d'erreurs et des temps de cohérence plus longs est essentielle pour construire des ordinateurs quantiques pratiques et puissants.</p>
+<p>Le développement de logiciels est un autre aspect important qui va de pair avec les progrès du matériel. De nouveaux langages de programmation, outils et algorithmes doivent être développés spécifiquement pour l'informatique quantique. Les chercheurs travaillent activement à la conception de langages de programmation qui optimisent les algorithmes quantiques et les rendent accessibles à un plus grand nombre d'utilisateurs.</p>
+<p>Des méthodes efficaces de transfert de données entre ordinateurs classiques et quantiques sont également essentielles pour les applications pratiques. Des protocoles de communication quantique doivent être développés pour assurer une transmission fiable et sécurisée des informations entre différentes plateformes informatiques.</p>
+<p>Les normes et les protocoles sont nécessaires pour assurer la compatibilité et l'interopérabilité entre les différents systèmes d'informatique quantique. L'établissement de cadres communs permettra aux chercheurs, aux développeurs et aux organisations de collaborer plus efficacement et d'adopter une approche unifiée pour faire progresser le domaine.</p>
+<p>Malgré ces défis de taille, l'espoir pointe à l'horizon. Les organismes de financement reconnaissent le potentiel de l'informatique quantique et investissent des ressources importantes pour surmonter ces obstacles. En outre, des chercheurs de diverses disciplines se réunissent pour aborder les aspects techniques et scientifiques de l'informatique quantique, repoussant ainsi les limites du possible.</p>
+</div>
+		</div>
+
+		</div>
+	</div>
+
+</article>
+
+
+		
+	<nav class="navigation post-navigation" aria-label="Publications" data-no-translation-aria-label="">
+		<h2 class="screen-reader-text" data-no-translation="" data-trp-gettext="">Navigation de l’article</h2>
+		<div class="nav-links"><div class="nav-next"><a href="https://quantumai.co/fr/score-de-volume-quantique-definition-importance-et-lien-avec-linformatique-quantique/" rel="next"><span aria-hidden="true" data-no-translation="" data-trp-gettext="">Article suivant</span> <span class="sr-only" data-no-translation="" data-trp-gettext="">Prochain article :</span> <br><span>Score de volume quantique : Définition, importance et rapport avec l'informatique quantique</span></a></div></div>
+	</nav>
+<div id="comments">
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://quantumai.co/fr/quest-ce-quun-qubit-explorer-les-elements-constitutifs-de-linformatique-quantique/#respond" style="display:none;" data-no-translation="" data-trp-gettext="">Annuler la réponse</a></small>
+</h3>
+<form action="https://quantumai.co/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate data-trp-original-action="https://quantumai.co/wp-comments-post.php">
+<p class="comment-notes"><span id="email-notes" data-no-translation="" data-trp-gettext="">Votre adresse e-mail ne sera pas publiée.</span> <span class="required-field-message" data-no-translation="" data-trp-gettext="">Les champs obligatoires sont indiqués avec <span class="required">*</span></span></p>
+<p class="comment-form-comment"><label for="comment">Commentaire <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="5" maxlength="65525" required></textarea></p>
+<p class="comment-form-author"><label for="author">Nom <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required></p>
+<p class="comment-form-email"><label for="email">E-mail <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required></p>
+<p class="comment-form-url"><label for="url" data-no-translation="" data-trp-gettext="">Site web</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" autocomplete="url"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent" data-no-translation="" data-trp-gettext="">Enregistrer mon nom, mon e-mail et mon site dans le navigateur pour mon prochain commentaire.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Laisser un commentaire" data-no-translation-value=""> <input type="hidden" name="comment_post_ID" value="505371" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p>
+<input type="hidden" name="trp-form-language" value="fr">
+</form>	</div>
+
+	
+</div>
+
+
+		</main>
+	</section>
+
+
+	</div>
+
+
+	
+<footer class="py-10 bg-gray-100 sm:pt-16 lg:pt-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-12 text-sm">
+            <div class="max-md:col-span-2">
+            		            	<img class="w-auto h-8" src="https://quantumai.b-cdn.net/wp-content/uploads/2023/11/quantum-new.svg" alt="Logo Quantum AI">
+				
+				<div class="pt-5 -mb-1">
+
+					<div class="flex items-center gap-x-2 text-sm md:text-base font-medium tracking-wide text-gray-800">
+						<svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="currentColor">
+						  <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd"></path>
+						</svg>
+
+						<span>+442035970878</span>
+					</div>
+
+										
+				</div>
+
+				<ul id="menu-footer-main" class="mt-8 space-y-3">
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-405"><a href="https://quantumai.co/fr/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Page d'accueil</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-406"><a href="https://quantumai.co/fr/blog/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Blog</a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://quantumai.co/fr/a-propos-de-nous/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">A propos de nous</a></li>
+<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-409"><a href="https://quantumai.co/fr/equipe/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">L'équipe</a></li>
+<li id="menu-item-505485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505485"><a href="https://quantumai.co/fr/glossaire/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Glossaire</a></li>
+<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408"><a href="https://quantumai.co/fr/nous-contacter/" class="text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Contactez nous</a></li>
+</ul>            </div>
+            <div class="col-span-2 md:col-span-3 space-y-10">
+            	            		<div class="flex md:justify-end gap-x-2 md:mt-8">
+            			<i class="ph-fill ph-map-pin text-lg text-gray-500 mt-1"></i>
+											<div id="Headoffice" itemscope itemprop="parentOrganization" itemtype="http://schema.org/FinancialService">
+						   <h3 itemprop="name" class="text-lg font-medium leading-7 text-gray-900">Quantum AI - Bureau du Royaume-Uni</h3>
+						   
+						   <div class="mt-2.5 space-y-1 text-sm not-italic leading-6 text-gray-600" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						   		<div></div>
+						      <div itemprop="streetAddress">35 rue John</div>
+						      <div>
+						      	<span itemprop="postalCode">LU1 2JE</span>, <span itemprop="addressLocality">Luton, Royaume-Uni</span>
+						      </div>
+						   </div>
+						</div>
+										</div>
+				            	
+            	            </div>
+        </div>
+        <div class="py-8 md:py-10 2xl:py-12 my-8 md:my-12 2xl:my-16 prose prose-sm max-w-none text-gray-500 border-y border-gray-300">
+          <p>Le trading offre la possibilité de réaliser des profits substantiels, mais il comporte aussi le risque de perdre une partie ou la totalité de son capital. Il est important de noter qu'environ 70% des traders subissent des pertes financières.</p>
+<p>Veuillez noter que <a class="wpil_keyword_link" href="https://quantumai.co/fr/" title="Quantum AI" data-wpil-keyword-link="linked">Quantum AI</a> et les autres marques mentionnées sur notre site web sont utilisées uniquement à des fins de marketing et ne correspondent pas à des entreprises ou à des services spécifiques. La vidéo associée est destinée à un usage promotionnel uniquement et met en scène des personnes dans des rôles d'acteurs.</p>
+<p>Avant d'investir, il est conseillé de lire attentivement les conditions générales et la page d'avertissement de la plateforme d'investissement fournie par un tiers. En outre, veuillez tenir compte des obligations fiscales sur les plus-values personnelles qui peuvent s'appliquer dans votre pays de résidence. Il est illégal d'inciter les résidents américains à s'engager dans l'achat et la vente d'options sur matières premières, y compris les contrats "prédictifs", à moins qu'ils ne soient cotés sur une bourse enregistrée auprès de la CFTC ou qu'ils ne soient légalement exemptés.</p>
+<p>En outre, la Financial Conduct Authority (FCA) du Royaume-Uni a mis en œuvre la déclaration de politique générale PS20/10, qui interdit la vente, le marketing et la distribution de contrats sur la différence (CFD) liés à des produits de négociation. Cette réglementation limite également la diffusion de contenus promotionnels concernant les CFD et d'autres produits financiers auprès des consommateurs britanniques.</p>
+<p>En nous fournissant vos données personnelles, vous acceptez que nous partagions ces informations avec des fournisseurs de services de trading tiers, conformément à notre politique de confidentialité et à nos conditions générales. En ce qui concerne les stratégies de trading, les traders peuvent choisir entre différentes options telles que l'utilisation d'un logiciel de trading, l'engagement avec des courtiers humains ou la réalisation de leurs transactions de manière indépendante. La sélection de ces méthodes est du ressort exclusif de chaque trader.</p>
+        </div>
+        <div>
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="sm:flex sm:items-center sm:justify-start sm:space-x-8">
+                	<ul id="menu-footer-legal" class="flex flex-wrap items-center justify-start mt-5 gap-x-8 sm:mt-0 gap-y-3">
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a href="https://quantumai.co/fr/politique-de-confidentialite/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Politique de confidentialité</a></li>
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="https://quantumai.co/fr/conditions-generales/" class="text-sm text-gray-600 transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Conditions générales d'utilisation</a></li>
+</ul>                </div>
+
+                <p class="mt-6 text-sm text-gray-600 lg:mt-0">© <script>document.write(/\d{4}/.exec(Date())[0])</script> Copyright Quantum AI Ltd. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+<template id="tp-language" data-tp-language="fr_FR"></template><script type="speculationrules">{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/fr\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/immediate\/*","\/fr\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}</script>
+        <div id="trp-floater-ls" onclick="" data-no-translation class="trp-language-switcher-container trp-floater-ls-names trp-bottom-right trp-color-dark flags-full-names">
+            <div id="trp-floater-ls-current-language" class="trp-with-flags">
+
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()">
+					<img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French				</a>
+
+            </div>
+            <div id="trp-floater-ls-language-list" class="trp-with-flags">
+
+                <div class="trp-language-wrap trp-language-wrap-bottom">                    <a href="https://quantumai.co/what-are-qubits-exploring-the-building-blocks-of-quantum-computing/" title="English">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English">English					          </a>
+                                    <a href="https://quantumai.co/de/was-sind-qubits-erforschung-der-bausteine-der-quanteninformatik/" title="German">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German">German					          </a>
+                                    <a href="https://quantumai.co/es/que-son-los-qubits-exploracion-de-los-componentes-basicos-de-la-informatica-cuantica/" title="Spanish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish">Spanish					          </a>
+                                    <a href="https://quantumai.co/it/cosa-sono-i-qubit-esplorare-gli-elementi-costitutivi-dellinformatica-quantistica/" title="Italian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian">Italian					          </a>
+                                    <a href="https://quantumai.co/ja/%e9%87%8f%e5%ad%90%e3%82%b3%e3%83%b3%e3%83%94%e3%83%a5%e3%83%bc%e3%83%86%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ae%e6%a7%8b%e6%88%90%e8%a6%81%e7%b4%a0%e3%82%92%e6%8e%a2%e3%82%8b%e9%87%8f%e5%ad%90%e3%83%93/" title="Japanese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese">Japanese					          </a>
+                                    <a href="https://quantumai.co/ru/%d1%87%d1%82%d0%be-%d1%82%d0%b0%d0%ba%d0%be%d0%b5-%d0%ba%d1%83%d0%b1%d0%b8%d1%82%d1%8b-%d0%b8%d0%b7%d1%83%d1%87%d0%b0%d1%8e%d1%89%d0%b8%d0%b5-%d1%81%d1%82%d1%80%d0%be%d0%b8%d1%82%d0%b5%d0%bb%d1%8c/" title="Russian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian">Russian					          </a>
+                                    <a href="https://quantumai.co/pt/o-que-sao-qubits-explorando-os-blocos-de-construcao-da-computacao-quantica/" title="Portuguese">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese">Portuguese					          </a>
+                                    <a href="https://quantumai.co/bg/%d0%ba%d0%b0%d0%ba%d0%b2%d0%be-%d0%bf%d1%80%d0%b5%d0%b4%d1%81%d1%82%d0%b0%d0%b2%d0%bb%d1%8f%d0%b2%d0%b0%d1%82-%d0%ba%d1%8e%d0%b1%d0%b8%d1%82%d0%b8%d1%82%d0%b5-%d0%ba%d0%be%d0%b8%d1%82%d0%be-%d0%b8/" title="Bulgarian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian">Bulgarian					          </a>
+                                    <a href="https://quantumai.co/cs/co-jsou-qubity-ktere-zkoumaji-stavebni-kameny-kvantove-vypocetni-techniky/" title="Czech">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech">Czech					          </a>
+                                    <a href="https://quantumai.co/da/hvad-er-qubits-der-udforsker-kvantecomputerens-byggesten/" title="Danish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish">Danish					          </a>
+                                    <a href="https://quantumai.co/nl/wat-zijn-qubits-de-bouwstenen-van-quantum-computing-onderzoeken/" title="Dutch">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch">Dutch					          </a>
+                                    <a href="https://quantumai.co/et/mis-on-kvantarvutite-ehitusplokid-mis-uurivad-kvantarvutite-ehitusplokke/" title="Estonian">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian">Estonian					          </a>
+                                    <a href="https://quantumai.co/fi/mita-qubitit-ovat-kvanttilaskennan-rakennuspalikoita-tutkien/" title="Finnish">
+          						  <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish">Finnish					          </a>
+                <a href="#" class="trp-floater-ls-disabled-language trp-ls-disabled-language" onclick="event.preventDefault()"><img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French">French</a>
+</div>            </div>
+        </div>
+
+    <div class="trp_model_container" id="trp_ald_modal_container" style="display: none" data-no-dynamic-translation data-no-translation>
+        <div class="trp_ald_modal" id="trp_ald_modal_popup">
+            <div id="trp_ald_popup_text"></div>
+
+        <div class="trp_ald_select_and_button">
+            <div class="trp_ald_ls_container">
+            <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_popup_select_container" data-no-translation>
+                
+                <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                    <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                </div>
+                <div class="trp-ls-shortcode-language">
+                    <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                    </div>
+                                                                    <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German                            </div>
+                                                                        <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French                            </div>
+                                                                        <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese                            </div>
+                                                                        <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech                            </div>
+                                                                        <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish                            </div>
+                                                                        <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch                            </div>
+                                                                        <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian                            </div>
+                                                                        <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish                            </div>
+                                                            </div>
+            </div>
+            </div>
+
+
+            <div class="trp_ald_button">
+            <a href="https://quantumai.co/" id="trp_ald_popup_change_language"></a>
+            </div>
+         </div>
+        <a id="trp_ald_x_button_and_textarea" href="#"> <span id="trp_ald_x_button"></span><span id="trp_ald_x_button_textarea"></span></a>
+    </div>
+</div>
+<template id="trp_ald_no_text_popup_template">
+    <div id="trp_no_text_popup_wrap">
+        <div id="trp_no_text_popup" class="trp_ald_no_text_popup" data-no-dynamic-translation data-no-translation>
+            
+            <div id="trp_ald_not_text_popup_ls_and_button">
+                <div id="trp_ald_no_text_popup_div">
+                    <span id="trp_ald_no_text_popup_text"></span>
+                </div>
+                <div class="trp_ald_ls_container">
+                    <div class="trp-language-switcher trp-language-switcher-container" id="trp_ald_no_text_select" data-no-translation>
+                        
+                        <div class="trp-ls-shortcode-current-language" id="en_GB" special-selector="trp_ald_popup_current_language" data-trp-ald-selected-language="en_GB">
+                            <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                        </div>
+                        <div class="trp-ls-shortcode-language" id="trp_ald_no_text_popup_select_container">
+                            <div class="trp-ald-popup-select" id="en_GB" data-trp-ald-selected-language="en_GB">
+                                <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png" width="18" height="12" alt="en_GB" title="English"> English                            </div>
+                                                                                            <div class="trp-ald-popup-select" id="de_DE" data-trp-ald-selected-language="de_DE">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/de_DE.png" width="18" height="12" alt="de_DE" title="German"> German
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="es_ES" data-trp-ald-selected-language="es_ES">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/es_ES.png" width="18" height="12" alt="es_ES" title="Spanish"> Spanish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fr_FR" data-trp-ald-selected-language="fr_FR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fr_FR.png" width="18" height="12" alt="fr_FR" title="French"> French
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="it_IT" data-trp-ald-selected-language="it_IT">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/it_IT.png" width="18" height="12" alt="it_IT" title="Italian"> Italian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ja" data-trp-ald-selected-language="ja">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ja.png" width="18" height="12" alt="ja" title="Japanese"> Japanese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="ru_RU" data-trp-ald-selected-language="ru_RU">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/ru_RU.png" width="18" height="12" alt="ru_RU" title="Russian"> Russian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="pt_BR" data-trp-ald-selected-language="pt_BR">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/pt_BR.png" width="18" height="12" alt="pt_BR" title="Portuguese"> Portuguese
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="bg_BG" data-trp-ald-selected-language="bg_BG">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/bg_BG.png" width="18" height="12" alt="bg_BG" title="Bulgarian"> Bulgarian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="cs_CZ" data-trp-ald-selected-language="cs_CZ">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/cs_CZ.png" width="18" height="12" alt="cs_CZ" title="Czech"> Czech
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="da_DK" data-trp-ald-selected-language="da_DK">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/da_DK.png" width="18" height="12" alt="da_DK" title="Danish"> Danish
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="nl_NL" data-trp-ald-selected-language="nl_NL">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/nl_NL.png" width="18" height="12" alt="nl_NL" title="Dutch"> Dutch
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="et" data-trp-ald-selected-language="et">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/et.png" width="18" height="12" alt="et" title="Estonian"> Estonian
+                                    </div>
+                                                                                                <div class="trp-ald-popup-select" id="fi" data-trp-ald-selected-language="fi">
+                                        <img class="trp-flag-image" src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/images/flags/fi.png" width="18" height="12" alt="fi" title="Finnish"> Finnish
+                                    </div>
+                                                                                    </div>
+                    </div>
+                </div>
+                <div class="trp_ald_change_language_div">
+                    <a href="https://quantumai.co/" id="trp_ald_no_text_popup_change_language"></a>
+                </div>
+                <div id="trp_ald_no_text_popup_x_button_and_textarea"> <a id="trp_ald_no_text_popup_x_button"></a><span id="trp_ald_no_text_popup_x_button_textarea"></span>
+</div>
+            </div>
+            <div id="trp_ald_no_text_popup_x">
+                <button id="trp_close"></button>
+            </div>
+        </div>
+    </div>
+</template>        <span class="ssp-id" style="display:none">505371</span>
+		<script id="trp-dynamic-translator-js-extra">var trp_data = {"trp_custom_ajax_url":"https:\/\/quantumai.co\/wp-content\/plugins\/translatepress-multilingual\/includes\/trp-ajax.php","trp_wp_ajax_url":"https:\/\/quantumai.co\/wp-admin\/admin-ajax.php","trp_language_to_query":"fr_FR","trp_original_language":"en_GB","trp_current_language":"fr_FR","trp_skip_selectors":["[data-no-translation]","[data-no-dynamic-translation]","[data-trp-translate-id-innertext]","script","style","head","trp-span","translate-press","[data-trp-translate-id]","[data-trpgettextoriginal]","[data-trp-post-slug]"],"trp_base_selectors":["data-trp-translate-id","data-trpgettextoriginal","data-trp-post-slug"],"trp_attributes_selectors":{"text":{"accessor":"outertext","attribute":false},"block":{"accessor":"innertext","attribute":false},"image_src":{"selector":"img[src]","accessor":"src","attribute":true},"submit":{"selector":"input[type='submit'],input[type='button'], input[type='reset']","accessor":"value","attribute":true},"placeholder":{"selector":"input[placeholder],textarea[placeholder]","accessor":"placeholder","attribute":true},"title":{"selector":"[title]","accessor":"title","attribute":true},"a_href":{"selector":"a[href]","accessor":"href","attribute":true},"button":{"accessor":"outertext","attribute":false},"option":{"accessor":"innertext","attribute":false},"aria_label":{"selector":"[aria-label]","accessor":"aria-label","attribute":true},"video_src":{"selector":"video[src]","accessor":"src","attribute":true},"video_poster":{"selector":"video[poster]","accessor":"poster","attribute":true},"video_source_src":{"selector":"video source[src]","accessor":"src","attribute":true},"audio_src":{"selector":"audio[src]","accessor":"src","attribute":true},"audio_source_src":{"selector":"audio source[src]","accessor":"src","attribute":true},"picture_image_src":{"selector":"picture image[src]","accessor":"src","attribute":true},"picture_source_srcset":{"selector":"picture source[srcset]","accessor":"srcset","attribute":true},"image_alt":{"selector":"img[alt]","accessor":"alt","attribute":true},"meta_desc":{"selector":"meta[name=\"description\"],meta[property=\"og:title\"],meta[property=\"og:description\"],meta[property=\"og:site_name\"],meta[property=\"og:image:alt\"],meta[name=\"twitter:title\"],meta[name=\"twitter:description\"],meta[name=\"twitter:image:alt\"],meta[name=\"DC.Title\"],meta[name=\"DC.Description\"],meta[property=\"article:section\"],meta[property=\"article:tag\"]","accessor":"content","attribute":true},"page_title":{"selector":"title","accessor":"innertext","attribute":false},"meta_desc_img":{"selector":"meta[property=\"og:image\"],meta[property=\"og:image:secure_url\"],meta[name=\"twitter:image\"]","accessor":"content","attribute":true}},"trp_attributes_accessors":["outertext","innertext","src","value","placeholder","title","href","aria-label","poster","srcset","alt","content"],"gettranslationsnonceregular":"0f65ef7370","showdynamiccontentbeforetranslation":"","skip_strings_from_dynamic_translation":[],"skip_strings_from_dynamic_translation_for_substrings":{"href":["amazon-adsystem","googleads","g.doubleclick"]},"duplicate_detections_allowed":"100","trp_translate_numerals_opt":"no","trp_no_auto_translation_selectors":["[data-no-auto-translation]"]};</script>
+<script src="https://quantumai.co/wp-content/plugins/translatepress-multilingual/assets/js/trp-translate-dom-changes.js" id="trp-dynamic-translator-js"></script>
+<script src="https://quantumai.co/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js" id="ssp-form-webhook-public-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-content/themes/immediate/js/script.min.js" id="immediate-script-js"></script>
+<script src="https://quantumai.b-cdn.net/wp-includes/js/comment-reply.min.js" id="comment-reply-js" async data-wp-strategy="async"></script>
+
+</header>
+</div>
+</body>
+</html>
